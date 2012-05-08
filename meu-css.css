@@ -1,0 +1,1047 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background-color:#E9E9E9;
+}
+
+.fundo{
+	/*border-width:3px; /*tamaho em pixels da bordar*/
+	/*border-style:solid;/* Estila da borda, deixa consistente*/
+	/*border-color: #333; /* cor da borda*/
+}
+
+/*retirei por enquanto pra testar
+.passando_pelo_icone{
+	background-color: #CCC;
+	color: white;
+}*/
+
+/* retirei por enquanto pra testar
+.clicando_no_icone_topo{
+	//background-color: #F00;
+	//color: white;
+	padding-top: 5px;
+}*/
+
+/*retirei pra testar 
+.clicando_no_icone_rodape{
+	padding-bottom: 5px;
+}
+*/
+/* @@@@@@@@@@@@@@@@@@@@@ */
+/* COMEÇO - GLOBAL - */
+.estilo:link{
+	text-decoration: none;
+}
+
+.fundo_cabecalho{
+	border-width: medium;
+	color:#999999;
+	background-color: #CCFFFF;
+	
+}
+#fundo_topo{
+	background:url(images/Img/fundo_icones.png) repeat-x;
+	height:35px;
+	
+}
+/* Navbar Header */
+.header-inicio{
+	background-color: #CCFFFF;
+	height:60px;
+}
+
+#titulo_home{
+	font-size:20px; 
+	font-weight:bold;
+	float: left;
+	width: 80%;
+    left: 0;
+	position:absolute;
+	text-align:center;
+}
+#titulo{
+	font-size:20px; 
+	font-weight:bold;
+}
+
+
+#change_language{
+	font-size:14px; 
+	float: right;
+	width: 20%;
+	right:0;
+	position:absolute;
+	text-align:center;
+	margin-right:5px;
+}
+#titulo-pergunta{
+	font-size:16px; 
+	font-weight:bold;
+}
+#navbar-header{
+	margin-left:2px; 
+	margin-right:2px; 
+	max-height:45px; 
+	width:100%;
+	/*position: absolute;
+	bottom:0px;*/
+	top:60px;
+	clear: both; 
+}
+#home{
+	margin-top:-6px;
+	height:35px;
+}
+#home-us{
+	margin-top:-8px;
+}
+#home-recuperar{
+	margin-top:-5px;
+}
+#home-us-recuperar{
+	margin-top:-5px;
+}
+#home-instrucao-NEO{
+	margin-top:-5px;
+}
+#home-instrucao-NEO-us{
+	margin-top:-5px;
+}
+#home-instrucao-TIPI{
+	margin-top:-5px;
+}
+#home-instrucao-TIPI-us{
+	margin-top:-5px;
+}
+#home-cadastro{
+	margin-top:-5px;
+}
+#home-cadastro-us{
+	margin-top:-5px;
+}
+#home-contato{
+	margin-top:-5px;
+}
+#home-contato-us{
+	margin-top:-5px;
+}
+#home-sobre{
+	margin-top:-5px;
+}
+#home-sobre-us{
+	margin-top:-5px;
+}
+#home-ipip{
+	margin-top:-5px;
+}
+#home-ipip-us{
+	margin-top:-5px;
+}
+#home-tipi{
+	margin-top:-5px;
+}
+#home-tipi-us{
+	margin-top:-5px;
+}
+#home-escolha{
+	margin-top:-5px;
+}
+#home-escolha-us{
+	margin-top:-5px;
+}
+#home-opcoes{
+	margin-top:-5px;
+}
+#home-opcoes-us{
+	margin-top:-5px;
+}
+#home-saudacao-neo{
+	margin-top:-6px;
+}
+#home-saudacao-neo-us{
+	margin-top:-6px;
+}
+#home-saudacao-tipi{
+	margin-top:-6px;
+}
+#home-saudacao-tipi-us{
+	margin-top:-6px;
+}
+#home-grafico-tipi{
+	margin-top:-5px;
+}
+#home-grafico-tipi-us{
+	margin-top:-5px;
+}
+#home-grafico-neo{
+	margin-top:-5px;
+}
+#home-grafico-neo-us{
+	margin-top:-5px;
+}
+#home-extroversão{
+	margin-top:-6px;
+}
+#home-extroversão-us{
+	margin-top:-6px;
+}
+#home-socializacao{
+	margin-top:-6px;
+}
+#home-socializacao-us{
+	margin-top:-6px;
+}
+#home-realizacao{
+	margin-top:-6px;
+}
+#home-realizacao-us{
+	margin-top:-6px;
+}
+#home-neuroticismo{
+	margin-top:-6px;
+}
+#home-neuroticismo-us{
+	margin-top:-6px;
+}
+#home-abertura{
+	margin-top:-6px;
+}
+#home-abertura-us{
+	margin-top:-6px;
+}
+#home-extroversao-tipi{
+	margin-top:-6px;
+}
+#home-extroversao-tipi-us{
+	margin-top:-6px;
+}
+#home-socializacao-tipi{
+	margin-top:-6px;
+}
+#home-socializacao-tipi-us{
+	margin-top:-6px;
+}
+#home-realizacao-tipi{
+	margin-top:-6px;
+}
+#home-realizacao-tipi-us{
+	margin-top:-6px;
+}
+#home-estabilidade-emocional-tipi{
+	margin-top:-6px;
+}
+#home-estabilidade-emocional-tipi-us{
+	margin-top:-6px;
+}
+#home-abertura-tipi{
+	margin-top:-6px;
+}
+#home-abertura-tipi-us{
+	margin-top:-6px;
+}
+#opcoes{ 
+ 	margin-top:-5px;
+}
+#opcoes-instrucao-NEO{ 
+ 	margin-top:-5px;
+}
+#opcoes-instrucao-NEO-us{ 
+ 	margin-top:-5px;
+}
+#opcoes-instrucao-TIPI{ 
+ 	margin-top:-5px;
+}
+#opcoes-instrucao-TIPI-us{ 
+ 	margin-top:-5px;
+}
+#opcoes-escolha{ 
+ 	margin-top:-5px;
+}
+#opcoes-escolha-us{ 
+ 	margin-top:-5px;
+}
+#opcoes-opcoes{ 
+ 	margin-top:-5px;
+}
+#opcoes-opcoes-us{ 
+ 	margin-top:-5px;
+}
+#register{
+	margin-top:-6px;
+	height:35px;
+}
+#register-us{
+	margin-top:-5px;
+}
+#register-recuperar{
+	margin-top:-5px;
+}
+#register-us-recuperar{
+	margin-top:-5px;
+}
+#register-cadastro{
+	margin-top:-5px;
+}
+#register-cadastro-us{
+	margin-top:-5px;
+}
+#register-contato{
+	margin-top:-5px;
+}
+#register-contato-us{
+	margin-top:-5px;
+}
+#register-sobre{
+	margin-top:-5px;
+}
+#register-sobre-us{
+	margin-top:-5px;
+}
+#register-ipip{
+	margin-top:-5px;
+}
+#register-ipip-us{
+	margin-top:-5px;
+}
+#register-tipi{
+	margin-top:-5px;
+}
+#register-tipi-us{
+	margin-top:-5px;
+}
+#brasil{
+	margin-top:-4px;
+}
+#usa{
+	margin-top:-4px;
+}
+#brasil-recuperar{
+	margin-top:-4px;
+}
+#usa-recuperar{
+	margin-top:-4px;
+}
+#brasil-cadastro{
+	margin-top:-4px;
+}
+#usa-cadastro{
+	margin-top:-4px;
+}
+/* Footer */
+#navbar-rodape{
+	margin-left:2px; 
+	margin-right:2px; 
+	margin-top:0px;
+	margin-bottom:0px;
+	max-height:42px;
+	
+}
+#contato{
+	margin-top:-6px;
+}
+#contato-us{
+	margin-top:-6px;
+}
+#contato-recuperar{
+	margin-top:-6px;
+}
+#contato-us-recuperar{
+	margin-top:-6px;
+}
+#contato-cadastro{
+	margin-top:-6px;
+}
+#contato-cadastro-us{
+	margin-top:-6px;
+}
+#contato-contato{
+	margin-top:-6px;
+}
+#contato-contato-us{
+	margin-top:-6px;
+}
+#contato-sobre{
+	margin-top:-6px;
+}
+#contato-sobre-us{
+	margin-top:-6px;
+}
+#contato-ipip{
+	margin-top:-6px;
+}
+#contato-ipip-us{
+	margin-top:-6px;
+}
+#contato-tipi{
+	margin-top:-6px;
+}
+#contato-tipi-us{
+	margin-top:-6px;
+}
+#sobre{
+	margin-top:-6px;
+}
+#sobre-us{
+	margin-top:-6px;
+}
+#sobre-recuperar{
+	margin-top:-6px;
+}
+#sobre-us-recuperar{
+	margin-top:-6px;
+}
+#sobre-cadastro{
+	margin-top:-6px;
+}
+#sobre-cadastro-us{
+	margin-top:-6px;
+}
+#sobre-contato{
+	margin-top:-6px;
+}
+#sobre-contato-us{
+	margin-top:-6px;
+}
+#sobre-sobre{
+	margin-top:-6px;
+}
+#sobre-sobre-us{
+	margin-top:-6px;
+}
+#sobre-ipip{
+	margin-top:-6px;
+}
+#sobre-ipip-us{
+	margin-top:-6px;
+}
+#sobre-tipi{
+	margin-top:-6px;
+}
+#sobre-tipi-us{
+	margin-top:-6px;
+}
+#sobre-escolha{
+	margin-top:-6px;
+}
+#sobre-escolha-us{
+	margin-top:-6px;
+}
+#sobre-opcoes{
+	margin-top:-6px;
+}
+#sobre-opcoes-us{
+	margin-top:-6px;
+}
+#sobre-quest-neo{
+	margin-top:-6px;
+}
+#sobre-quest-neo-us{
+	margin-top:-6px;
+}
+#sobre-quest-tipi{
+	margin-top:-6px;
+}
+#sobre-quest-tipi-us{
+	margin-top:-6px;
+}
+#sair{
+	margin-top:-6px;
+}
+#sair-instrucao-NEO{
+	margin-top:-6px;
+}
+#sair-instrucao-NEO-us{
+	margin-top:-6px;
+}
+#sair-instrucao-TIPI{
+	margin-top:-6px;
+}
+#sair-instrucao-TIPI-us{
+	margin-top:-6px;
+}
+#sair-escolha{
+	margin-top:-6px;
+}
+#sair-escolha-us{
+	margin-top:-6px;
+}
+#sair-opcoes{
+	margin-top:-6px;
+}
+#sair-opcoes-us{
+	margin-top:-6px;
+}
+#sair-quest-neo{
+	margin-top:-6px;
+}
+#sair-quest-neo-us{
+	margin-top:-6px;
+}
+#sair-quest-tipi{
+	margin-top:-6px;
+}
+#sair-quest-tipi-us{
+	margin-top:-6px;
+}
+#sair-saudacao-neo{
+	margin-top:-6px;
+}
+#sair-saudacao-neo-us{
+	margin-top:-6px;
+}
+#sair-saudacao-tipi{
+	margin-top:-6px;
+}
+#sair-saudacao-tipi-us{
+	margin-top:-6px;
+}
+#sair-grafico-tipi{
+	margin-top:-6px;
+}
+#sair-grafico-tipi-us{
+	margin-top:-6px;
+}
+#sair-grafico-neo{
+	margin-top:-6px;
+}
+#sair-grafico-neo-us{
+	margin-top:-6px;
+}
+#sair-extroversão{
+	margin-top:-6px;
+}
+#sair-extroversão-us{
+	margin-top:-6px;
+}
+#sair-socializacao{
+	margin-top:-6px;
+}
+#sair-socializacao-us{
+	margin-top:-6px;
+}
+#sair-realizacao{
+	margin-top:-6px;
+}
+#sair-realizacao-us{
+	margin-top:-6px;
+}
+#sair-neuroticismo{
+	margin-top:-6px;
+}
+#sair-neuroticismo-us{
+	margin-top:-6px;
+}
+#sair-abertura{
+	margin-top:-6px;
+}
+#sair-abertura-us{
+	margin-top:-6px;
+}
+#sair-extroversao-tipi{
+	margin-top:-6px;
+}
+#sair-extroversao-tipi-us{
+	margin-top:-6px;
+}
+#sair-socializacao-tipi{
+	margin-top:-6px;
+}
+#sair-socializacao-tipi-us{
+	margin-top:-6px;
+}
+#sair-realizacao-tipi{
+	margin-top:-6px;
+}
+#sair-realizacao-tipi-us{
+	margin-top:-6px;
+}
+#sair-estabilidade-emocional-tipi{
+	margin-top:-6px;
+}
+#sair-estabilidade-emocional-tipi-us{
+	margin-top:-6px;
+}
+#sair-abertura-tipi{
+	margin-top:-6px;
+}
+#sair-abertura-tipi-us{
+	margin-top:-6px;
+}
+#continuar{
+	margin-top:-6px;
+}
+#continuar-instrucao-NEO{
+	margin-top:-6px;
+}
+#continuar-instrucao-NEO-us{
+	margin-top:-6px;
+}
+#continuar-instrucao-TIPI{
+	margin-top:-6px;
+}
+#continuar-instrucao-TIPI-us{
+	margin-top:-6px;
+}
+/* FINAL - GLOBAL - */
+/* @@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@ */
+/* COMEÇO - PAGINA INICIO -  */
+#inicio{
+	position:inherit;
+	margin: 0 auto;
+	width:100%; 
+	
+}
+#conteudo-inicio{
+	background-color:#E9E9E9;
+	font-size:16px;
+	height:320px;
+}
+#esqueceu-senha{
+	font-size:16px;
+}
+/* Forms */
+#form-inicio{
+	padding-top:0px;
+}
+#par_senha-inicio{
+	padding-top:0px;
+}
+#text_email-inicio{
+	width:90%;
+	height:16px;
+	font-size:16px;
+}
+#text_senha-inicio{
+	width:90%;
+	height:16px;
+	font-size:16px;
+}
+#par-conteudo-inicio{
+	margin-top:20px;
+}
+#button-login{
+}
+#esqueceu_senha{
+	font-size:16px;
+	margin-top:20px;
+}
+#rodape-inicio{
+	height:45px;
+}
+/* FINAL - PAGINA INICIO - */
+
+
+/* COMEÇO - PAGINA RECUPERAR - */
+/* @@@@@@@@@@@@@@ */
+#recuperar{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+}
+#conteudo-recuperar{
+	background-color:#E9E9E9;
+	height:255px;
+	font-size:16px;
+}
+#header-recuperar{
+}
+#parg-email{
+	margin-top:60px;
+}
+#text-email{
+	height:16px;
+	font-size:16px;
+}
+#parag-button-recuperar{
+	margin-top: 20px;
+}
+#footer-recuperar{
+	height:45px;
+}
+#navbar-recuperar{
+	margin-left:2px; 
+	margin-right:2px; 
+	margin-top:0px;
+	height:42px; 
+}
+/* @@@@@@@@@@@@@@@@ */
+/* FINAL - PAGINA RECUPERAR - */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA INSTRUÇÃO-NEO*/
+#instrução-neo{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;	
+}
+#conteudo-instrução-neo{	
+	font-size:16px;
+}
+#rodape-instrução-neo{
+	height:45px;
+}
+/* FINAL - PAGINA INSTRUÇÃO-NEO*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA INSTRUÇÃO-TIPI*/
+#instrução-tipi{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;	
+}
+#conteudo-instrução-tipi{	
+	font-size:16px;
+}
+#rodape-instrução-tipi{
+	height:45px;
+}
+/* FINAL - PAGINA INSTRUÇÃO-TIPI*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA CADASTRO */
+#cadastro{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;	
+	font-size:16px;
+}
+/* ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨ */
+#conteudo-cadastro{
+	font-size:16px;
+	padding-bottom:60px;
+}
+#form-nome{
+	margin-top:10px;
+}
+#text-nome-cadastro{
+	width:90%;
+	font-size:16px;
+	height:16px;
+}
+#form-email{
+	margin-top:-15px;
+}
+#text-email-cadastro{
+	width:90%;
+	font-size:16px;
+	height:16px;
+}
+#form-senha{
+	margin-top:-15px;
+}
+#text-senha-cadastro{
+	width:90%;
+	font-size:16px;
+	height:16px;
+}
+#form-re_senha{
+	margin-top:-15px;
+}
+#text-re_senha-cadastro{
+	width:90%;
+	font-size:16px;
+	height:16px;
+}
+#form-sexo{
+	margin-top:-15px;
+}
+#form-idade{
+	margin-top:-15px;
+}
+#text-idade{
+	width:30%;
+	font-size:16px;
+	height:16px;
+}
+#form-idioma{
+	margin-top:-15px;
+}
+#par-politica-cadastro{
+	margin-top:-15px;
+}
+#aceita-cadastro{
+	margin-top:10px;
+}
+#par-button-cadastrar{
+	margin-top:15px;
+}
+#button-cadastrar{
+	width:90%;
+}
+/* ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨ */
+#rodape_cadastro{
+	height:45px;
+}
+/* FINAL - PAGINA CADASTRO */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA CONTATO */
+#pagina-contato{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:16px;
+}
+#conteudo-contato{
+	font-size:16px;
+	padding-bottom:60px;
+}
+/* FINAL - PAGINA CONTATO */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA SOBRE */
+#pagina-sobre{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+}
+#conteudo-sobre{
+	padding-bottom:60px;
+}
+#footer-sobre{
+	height:45px;
+}
+/* FINAL - PAGINA SOBRE*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA SOBRE IPIP */
+#sobre-IPIP{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+}
+#conteudo-sobre-IPIP{
+	font-size:16px;
+}
+#footer-sobre-IPIP{
+	height:45px;
+}
+/* FINAL - PAGINA SOBRE IPIP*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA SOBRE TIPI */
+#sobre-TIPI{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+}
+#conteudo-sobre-TIPI{
+	font-size:16px;
+}
+#footer-sobre-TIPI{
+	height:45px;
+}
+/* FINAL - PAGINA SOBRE TIPI */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA ESCOLHA-DE-INVENTARIO */
+#escolha-de-inventario{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+}
+#conteudo-escolha{
+	background-color:#E9E9E9;
+	height: 260px;
+}
+#footer-escolha{
+	height:45px;
+}
+/* FINAL - PAGINA ESCOLHA-DE-INVENTARIO */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA OPCOES */
+#pagina-opcoes{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+}
+#conteudo-opcoes{
+	background-color:#E9E9E9;
+	height: 265px;
+	font-size:16px;
+}
+#form-opcoes{
+	padding-top:20px;
+}
+#text-senha-atual{
+	height:16px;
+	font-size:16px;
+}
+#text-senha-nova{
+	height:16px;
+	font-size:16px;
+}
+#footer-opcoes{
+	height:45px;
+}
+/* FINAL - PAGINA OPCOES */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA QUESTIONARIO-NEO-IPIP*/
+#questionario-NEO-IPIP{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+}
+#conteudo-questionario-neo{
+	font-size:16px;
+}
+#rodape-questionario-neo{
+	height:45px;
+}
+/* FINAL - PAGINA QUESTIONARIO-NEO-IPIP*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA QUESTIONARIO-TIPI*/
+#questionario-TIPI{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+}
+#conteudo-questionario-tipi{
+	font-size:16px;
+}
+#rodape-questionario-tipi{
+	height:45px;
+}
+/* FINAL - PAGINA QUESTIONARIO-TIPI*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA SOBRE OS 5 FATORES TIPI */
+#grafico-TIPI{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:16px;
+}
+#conteudo-grafico-TIPI{
+	font-size:16px;
+}
+#rodape-grafico-TIPI{
+	height:45px;
+}
+/* FINAL - PAGINA SOBRE OS 5 FATORES TIPI */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA SOBRE OS 5 FATORES NEO */
+#sobre-os-fatores-NEO{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:16px;
+}
+#conteudo-sobre-os-fatores-NEO{
+	font-size:16px;
+	height:860px;
+}
+/* FINAL - PAGINA SOBRE OS 5 FATORES NEO */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA SOBRE OS 5 FATORES TIPI */
+#sobre-os-fatores-TIPI{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:16px;
+}
+#conteudo-sobre-os-fatores-TIPI{
+	font-size:16px;
+	height:840px;
+}
+/* FINAL - PAGINA SOBRE OS 5 FATORES TIPI */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA EXTROVERSÃO */
+#extroversão{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+}
+#conteudo-extroversão{
+	font-size:16px;
+}
+/* FINAL - PAGINA EXTROVERSÃO*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA ABERTURA */
+#abertura{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+}
+#conteudo-abertura{
+	font-size:16px;
+}
+#rodape-abertura{
+	height:45px;
+}
+/* FINAL - PAGINA EXTROVERSÃO*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA SAUDACAO - NEO */
+#conteudo-saudacao-neo{
+	height:320px;
+}
+
+/* FINAL - PAGINA SAUDACAO - NEO */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA SAUDACAO - TIPI */
+#conteudo-saudacao-tipi{
+	height:320px;
+}
+
+/* FINAL - PAGINA SAUDACAO - TIPI */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+

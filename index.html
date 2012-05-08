@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html> 
 <html>
 <head>
@@ -272,6 +273,2171 @@
 		<h4>Page Footer</h4>
 	</div>
 </div>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Inventory Mobile</title>
+<link href="jquery.mobile-1.1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="jquery.i18n.js" type="text/javascript"></script>
+<script src="scripts.js" type="text/javascript"  charset="utf-8"></script>
+<script src="lang.js" type="text/javascript"></script>
+
+<script type="text/javascript" charset="utf-8" src="database.js"></script>
+<script src="jquery.mobile-1.1.0.min.js" type="text/javascript"></script>
+<script type="text/javascript" charset="utf-8">
+
+$(document).ready(function(e) {
+	
+	//$(".btn").click(authorize);
+	//$("#botao_us").click(inicializeLanguage("en"));
+	//$("#botao_pt").click(inicializeLanguage("pt"));
+	
+	
+});
+
+var questoes =  new Array (300);
+
+    questoes[1] =  "Me preocupo com as coisas.";
+    questoes[2] =  "Faço amigos facilmente.";
+    questoes[3] =  "Tenho uma imaginação vívida.";
+    questoes[4] =  "Confio nos outros.";
+    questoes[5] =  "Completo tarefas com sucesso.";
+    questoes[6] =  "Fico com raiva facilmente.";
+    questoes[7] =  "Adoro festas com muitas pessoas.";
+    questoes[8] =  "Acredito na importância da arte.";
+    questoes[9] =  "Nunca sonegaria impostos.";
+    questoes[10] =  "Gosto de ordem.";
+    questoes[11] =  "Frequentemente me sinto triste.";
+    questoes[12] =  "Assumo o comando das situações.";
+    questoes[13] =  "Vivo minhas emoções intensamente.";
+    questoes[14] =  "Faço as pessoas se sentirem queridas.";
+    questoes[15] =  "Tento obedecer às regras.";
+    questoes[16] =  "Sou intimidado(a) facilmente.";
+    questoes[17] =  "Estou sempre ocupado(a).";
+    questoes[18] =  "Prefiro variedade à rotina.";
+    questoes[19] =  "Sou fácil de satisfazer.";
+    questoes[20] =  "Vou direto ao objetivo.";
+    questoes[21] =  "Frequentemente como demasiadamente.";
+    questoes[22] =  "Adoro adrenalina.";
+    questoes[23] =  "Gosto de solucionar problemas complexos.";
+    questoes[24] =  "Detesto ser o centro das atenções.";
+    questoes[25] =  "Faço minhas tarefas o mais rápido possível.";
+    questoes[26] =  "Entro em pânico com facilidade.";
+    questoes[27] =  "Irradio alegria.";
+    questoes[28] =  "Tendo a votar em políticos de esquerda.";
+    questoes[29] =  "Tenho compaixão pelos desabrigados.";
+    questoes[30] =  "Evito cometer erros.";
+    questoes[31] =  "Tenho medo do pior.";
+    questoes[32] =  "Me aproximo das pessoas com facilidade.";
+    questoes[33] =  "Curto altos vôos na minha imaginação.";
+    questoes[34] =  "Acredito que os outros têm boas intenções.";
+    questoes[35] =  "Sobressaio nas coisas que faço.";
+    questoes[36] =  "Me irrito facilmente.";
+    questoes[37] =  "Converso com diversas pessoas em festas.";
+    questoes[38] =  "Gosto de música.";
+    questoes[39] =  "Sigo as regras.";
+    questoes[40] =  "Gosto de arrumar as coisas.";
+    questoes[41] =  "Não gosto de mim mesmo(a).";
+    questoes[42] =  "Tento liderar os outros.";
+    questoes[43] =  "Sinto as emoções dos outros.";
+    questoes[44] =  "Antecipo as necessidades dos outros.";
+    questoes[45] =  "Mantenho as minhas promessas.";
+    questoes[46] =  "Tenho medo de fazer a coisa errada.";
+    questoes[47] =  "Estou sempre ativo(a).";
+    questoes[48] =  "Gosto de conhecer lugares novos.";
+    questoes[49] =  "Não suporto confrontos.";
+    questoes[50] =  "Trabalho duro.";
+    questoes[51] =  "Não sei porque faço algumas das coisas que faço.";
+    questoes[52] =  "Busco aventura.";
+    questoes[53] =  "Adoro ler coisas que me desafiam.";
+    questoes[54] =  "Não gosto de falar sobre mim mesmo(a).";
+    questoes[55] =  "Estou sempre preparado(a).";
+    questoes[56] =  "Muitas vezes me sinto sobrecarregado(a).";
+    questoes[57] =  "Divirto-me bastante.";
+    questoes[58] =  "Acredito que não existe verdade absoluta.";
+    questoes[59] =  "Sinto compaixão por aqueles menos abastados que eu.";
+    questoes[60] =  "Escolho minhas palavras com cuidado.";
+    questoes[61] =  "Tenho medo de muitas coisas.";
+    questoes[62] =  "Me sinto à vontade perto de pessoas.";
+    questoes[63] =  "Amo sonhar acordado(a).";
+    questoes[64] =  "Confio no que as pessoas falam.";
+    questoes[65] =  "Lido com minhas tarefas tranquilamente.";
+    questoes[66] =  "Aborreço-me facilmente.";
+    questoes[67] =  "Gosto de fazer parte de um grupo.";
+    questoes[68] =  "Vejo beleza em coisas que outros podem não notar.";
+    questoes[69] =  "Uso de bajulação para avançar.";
+    questoes[70] =  "Quero que tudo esteja perfeito.";
+    questoes[71] =  "Frequentemente me sinto um lixo.";
+    questoes[72] =  "Convenço pessoas a agirem.";
+    questoes[73] =  "Sou apaixonado(a) por causas.";
+    questoes[74] =  "Adoro ajudar o próximo.";
+    questoes[75] =  "Pago minhas contas em dia.";
+    questoes[76] =  "Tenho dificuldade de me aproximar das pessoas.";
+    questoes[77] =  "Faço diversas coisas no meu tempo livre.";
+    questoes[78] =  "Me interesso por muitas coisas.";
+    questoes[79] =  "Odeio parecer muito controlador ou exigente.";
+    questoes[80] =  "Transformo planos em ações.";
+    questoes[81] =  "Faço coisas de que me arrependo posteriormente.";
+    questoes[82] =  "Adoro ação.";
+    questoes[83] =  "Tenho um vocabulário rico.";
+    questoes[84] =  "Me considero uma pessoa comum.";
+    questoes[85] =  "Inicio meus trabalhos o mais rápido possível.";
+    questoes[86] =  "Sinto que sou incapaz de lidar com as situações.";
+    questoes[87] =  "Expresso alegria como uma criança.";
+    questoes[88] =  "Acredito que criminosos deveriam receber ajuda ao invés de punição.";
+    questoes[89] =  "Valorizo mais cooperação do que competição.";
+    questoes[90] =  "Sigo no caminho que escolho.";
+    questoes[91] =  "Me estresso facilmente.";
+    questoes[92] =  "Ajo confortavelmente perto de outras pessoas.";
+    questoes[93] =  "Gosto de me perder nos meus pensamentos.";
+    questoes[94] =  "Acredito que as pessoas são essencialmente boas.";
+    questoes[95] =  "Sei da minha capacidade.";
+    questoes[96] =  "Estou frequentemente de mau humor.";
+    questoes[97] =  "Envolvo outras pessoas no que estou fazendo.";
+    questoes[98] =  "Amo flores.";
+    questoes[99] =  "Uso outras pessoas para conseguir os meus objetivos.";
+    questoes[100] =  "Gosto de ordem e harmonia.";
+    questoes[101] =  "Tenho uma opinião ruim sobre mim mesmo(a).";
+    questoes[102] =  "Procuro influenciar outros.";
+    questoes[103] =  "Gosto de analisar a mim mesmo(a) e à minha vida.";
+    questoes[104] =  "Me preocupo com os outros.";
+    questoes[105] =  "Falo a verdade.";
+    questoes[106] =  "Tenho medo de chamar atenção.";
+    questoes[107] =  "Consigo fazer muitas coisas ao mesmo tempo.";
+    questoes[108] =  "Gosto de iniciar coisas novas.";
+    questoes[109] =  "Tenho uma língua afiada.";
+    questoes[110] =  "Mergulho de coração nas minhas tarefas.";
+    questoes[111] =  "Gosto de farras.";
+    questoes[112] =  "Gosto de fazer parte de multidões barulhentas.";
+    questoes[113] =  "Consigo lidar com muitas informações.";
+    questoes[114] =  "Raramente conto vantagem.";
+    questoes[115] =  "Começo logo a trabalhar.";
+    questoes[116] =  "Não consigo me decidir.";
+    questoes[117] =  "Estou sempre de bem com a vida.";
+    questoes[118] =  "Acredito numa única religião verdadeira.";
+    questoes[119] =  "Sofro com as perdas dos outros.";
+    questoes[120] =  "Faço coisas sem pensar.";
+    questoes[121] =  "Sou consumido pelos meus problemas.";
+    questoes[122] =  "Faço as pessoas se alegrarem.";
+    questoes[123] =  "Entrego-me às minhas fantasias.";
+    questoes[124] =  "Acredito na bondade do ser humano.";
+    questoes[125] =  "Tenho boas ideias para solucionar problemas.";
+    questoes[126] =  "Perco a calma.";
+    questoes[127] =  "Adoro festas surpresas.";
+    questoes[128] =  "Aprecio a beleza da natureza.";
+    questoes[129] =  "Sei burlar as regras.";
+    questoes[130] =  "Faço coisas de acordo com um plano.";
+    questoes[131] =  "Tenho constantes variações de humor.";
+    questoes[132] =  "Assumo o controle das situações.";
+    questoes[133] =  "Tento me entender.";
+    questoes[134] =  "Tenho sempre uma palavra de conforto pra alguém.";
+    questoes[135] =  "Escuto a minha consciência.";
+    questoes[136] =  "Me sinto à vontade somente com os meus amigos.";
+    questoes[137] =  "Reajo rapidamente.";
+    questoes[138] =  "Prefiro lidar com coisas que eu já conheço.";
+    questoes[139] =  "Contradigo os outros.";
+    questoes[140] =  "Faço mais do que esperam de mim.";
+    questoes[141] =  "Adoro comer.";
+    questoes[142] =  "Gosto de correr riscos.";
+    questoes[143] =  "Gosto de pensar.";
+    questoes[144] =  "Acredito que sou melhor que os outros.";
+    questoes[145] =  "Ponho os meus planos em prática.";
+    questoes[146] =  "Emoções tomam conta de mim.";
+    questoes[147] =  "Amo a vida.";
+    questoes[148] =  "Tendo a votar em candidatos de direita.";
+    questoes[149] =  "Não me importo com os problemas dos outros.";
+    questoes[150] =  "Tomo decisões precipitadas.";
+    questoes[151] =  "Não sou facilmente incomodado(a).";
+    questoes[152] =  "Sou uma pessoa difícil de se conhecer.";
+    questoes[153] =  "Gasto tempo para refletir sobre as coisas.";
+    questoes[154] =  "Acredito que tudo vai ficar bem.";
+    questoes[155] =  "Eu sei como conseguir as coisas.";
+    questoes[156] =  "Raramente fico irritado(a).";
+    questoes[157] =  "Prefiro ficar sozinho(a).";
+    questoes[158] =  "Não gosto de arte.";
+    questoes[159] =  "Trapaceio para chegar onde quero.";
+    questoes[160] =  "Frequentemente me esqueço de colocar as coisas de volta onde encontrei.";
+    questoes[161] =  "Me desespero.";
+    questoes[162] =  "Espero que outros tomem a liderança.";
+    questoes[163] =  "Raramente me emociono.";
+    questoes[164] =  "Olho os outros com desprezo.";
+    questoes[165] =  "Quebro as regras.";
+    questoes[166] =  "Tropeço nas minhas palavras.";
+    questoes[167] =  "Gosto de levar uma vida tranquila.";
+    questoes[168] =  "Não gosto de mudanças.";
+    questoes[169] =  "Adoro uma boa briga.";
+    questoes[170] =  "Eu sou exigente comigo mesmo(a) e com os outros.";
+    questoes[171] =  "Raramente excedo-me.";
+    questoes[172] =  "Ajo loucamente, com ousadia.";
+    questoes[173] =  "Não me interesso por coisas abstratas.";
+    questoes[174] =  "Tenho uma opinião positiva ao meu respeito.";
+    questoes[175] =  "Não gosto de trabalhar.";
+    questoes[176] =  "Mantenho a calma quando estou sobre pressão.";
+    questoes[177] =  "Olho pelo lado bom da vida.";
+    questoes[178] =  "Acho que os artistas recebem muito apoio financeiro do governo desnecessariamente.";
+    questoes[179] =  "Não gosto de pessoas bondosas.";
+    questoes[180] =  "Eu ajo por impulso.";
+    questoes[181] =  "Na maior parte do tempo sou calmo(a).";
+    questoes[182] =  "Não me sinto à vontade perto de outras pessoas.";
+    questoes[183] =  "Raramente sonho acordado(a).";
+    questoes[184] =  "Desconfio dos outros.";
+    questoes[185] =  "Costumo fazer maus julgamentos das situações.";
+    questoes[186] =  "Raramente fico zangado(a).";
+    questoes[187] =  "Prefiro que me deixem só.";
+    questoes[188] =  "Não gosto de poesia.";
+    questoes[189] =  "Pressiono as pessoas.";
+    questoes[190] =  "Deixo o meu quarto bagunçado.";
+    questoes[191] =  "Sinto que a minha vida está sem rumo.";
+    questoes[192] =  "Me coloco em segundo plano.";
+    questoes[193] =  "Não me deixo afetar pelas minhas emoções.";
+    questoes[194] =  "Sou indiferente aos sentimentos dos outros.";
+    questoes[195] =  "Quebro as minhas promessas.";
+    questoes[196] =  "Não me envergonho facilmente.";
+    questoes[197] =  "Gosto de fazer as coisas com calma.";
+    questoes[198] =  "Não gosto de mudanças.";
+    questoes[199] =  "Grito com os outros.";
+    questoes[200] =  "Exijo qualidade.";
+    questoes[201] =  "Resisto às tentações com facilidade.";
+    questoes[202] =  "Estou aberto(a) a novas experiências.";
+    questoes[203] =  "Evito discussões filosóficas.";
+    questoes[204] =  "Tenho um ótimo conceito sobre mim mesmo(a).";
+    questoes[205] =  "Desperdiço o meu tempo.";
+    questoes[206] =  "Sei lidar com problemas complexos.";
+    questoes[207] =  "Dou gargalhadas.";
+    questoes[208] =  "Acredito que as leis deveriam ser rigorosamente aplicadas.";
+    questoes[209] =  "Acredito em olho por olho, dente por dente.";
+    questoes[210] =  "Costumo me precipitar.";
+    questoes[211] =  "Não me transtorno facilmente com os problemas.";
+    questoes[212] =  "Evito contato com outros.";
+    questoes[213] =  "Não tenho uma boa imaginação.";
+    questoes[214] =  "Suspeito das intenções dos outros.";
+    questoes[215] =  "Não tenho uma boa compreensão das coisas.";
+    questoes[216] =  "Não me incomodo facilmente.";
+    questoes[217] =  "Não gosto de multidão.";
+    questoes[218] =  "Não curto visitar museus de arte.";
+    questoes[219] =  "Finjo me importar com os outros.";
+    questoes[220] =  "Costumo deixar os meus pertences em todo lugar.";
+    questoes[221] =  "Raramente me sinto pra baixo.";
+    questoes[222] =  "Tenho pouco a dizer.";
+    questoes[223] =  "Raramente percebo as minhas reações emocionais.";
+    questoes[224] =  "Costumo fazer as pessoas se sentirem desconfortáveis.";
+    questoes[225] =  "Convenço as pessoas a fazerem as minhas obrigações.";
+    questoes[226] =  "Consigo lidar bem com novas situações.";
+    questoes[227] =  "Gosto de um estilo de vida tranquilo.";
+    questoes[228] =  "Gosto de rotina.";
+    questoes[229] =  "Insulto os outros.";
+    questoes[230] =  "Não tenho motivação para o sucesso.";
+    questoes[231] =  "Consigo controlar as minhas vontades.";
+    questoes[232] =  "Procuro perigo.";
+    questoes[233] =  "Tenho dificuldade em entender ideias abstratas.";
+    questoes[234] =  "Sei as respostas para muitas perguntas.";
+    questoes[235] =  "Necessito de um empurrão para começar algo.";
+    questoes[236] =  "Sei como superar situações difíceis.";
+    questoes[237] =  "Divirto os meus amigos.";
+    questoes[238] =  "Acredito que tratamos os criminosos com muitas regalias.";
+    questoes[239] =  "Tento não pensar nos necessitados.";
+    questoes[240] =  "Faço coisas malucas.";
+    questoes[241] =  "Não me preocupo com coisas que já aconteceram.";
+    questoes[242] =  "Não me interesso sinceramente pelos outros.";
+    questoes[243] =  "Raramente me perco nos meus pensamentos.";
+    questoes[244] =  "Sou cauteloso(a) com relação aos outros.";
+    questoes[245] =  "Tenho pouco a contribuir.";
+    questoes[246] =  "Não perco a cabeça.";
+    questoes[247] =  "Evito multidões.";
+    questoes[248] =  "Não gosto de ir a shows.";
+    questoes[249] =  "Tiro vantagem dos outros.";
+    questoes[250] =  "Não me incomodo com pessoas bagunceiras.";
+    questoes[251] =  "Estou satisfeito(a) comigo mesmo(a).";
+    questoes[252] =  "Não gosto de chamar atenção.";
+    questoes[253] =  "Raramente passo por altos e baixos emocionais.";
+    questoes[254] =  "Viro as costas para os outros.";
+    questoes[255] =  "Faço o oposto daquilo que me foi pedido.";
+    questoes[256] =  "Não me incomodo com situações embaraçosas.";
+    questoes[257] =  "Deixo as coisas acontecerem no seu ritmo natural.";
+    questoes[258] =  "Não gosto de experimentar comidas novas.";
+    questoes[259] =  "Me vingo dos outros.";
+    questoes[260] =  "Faço apenas o necessário.";
+    questoes[261] =  "Nunca gasto mais do que eu posso.";
+    questoes[262] =  "Nunca voaria de asa delta ou faria bungee jumping.";
+    questoes[263] =  "Não me interesso por discussões teóricas.";
+    questoes[264] =  "Me gabo sobre as minhas qualidades.";
+    questoes[265] =  "Tenho dificuldade em iniciar tarefas.";
+    questoes[266] =  "Prontamente supero qualquer contratempo.";
+    questoes[267] =  "Não me divirto facilmente.";
+    questoes[268] =  "Deveríamos ser mais duros com o crime.";
+    questoes[269] =  "Acredito que as pessoas deveriam cuidar de si mesmas.";
+    questoes[270] =  "Ajo sem pensar.";
+    questoes[271] =  "Me adapto facilmente a novas situações.";
+    questoes[272] =  "Mantenho os outros à distância.";
+    questoes[273] =  "Tenho dificuldade em imaginar coisas.";
+    questoes[274] =  "Acredito que as pessoas são essencialmente más.";
+    questoes[275] =  "Não vejo as consequências das coisas.";
+    questoes[276] =  "Raramente reclamo.";
+    questoes[277] =  "Busco tranquilidade.";
+    questoes[278] =  "Não gosto de assistir a performances de dança.";
+    questoes[279] =  "Atrapalho os planos dos outros.";
+    questoes[280] =  "Não me incomodo com a desordem.";
+    questoes[280] =  "Não me incomodo com a disordem.";
+    questoes[281] =  "Estou muito satisfeito(a) comigo mesmo(a).";
+    questoes[282] =  "Não expresso a minha opinião.";
+    questoes[283] =  "Não entendo por que as pessoas se emocionam.";
+    questoes[284] =  "Nunca reservo um tempo para os outros.";
+    questoes[285] =  "Distorço os fatos.";
+    questoes[286] =  "Estou apto(a) a defender meus princípios.";
+    questoes[287] =  "Tenho um poder de reação lento.";
+    questoes[288] =  "Estou preso(a) a tradições.";
+    questoes[289] =  "Guardo rancor.";
+    questoes[290] =  "Dedico pouco tempo e esforço ao meu trabalho.";
+    questoes[291] =  "Nunca esbanjo.";
+    questoes[292] =  "Não gosto de música alta.";
+    questoes[293] =  "Evito ler coisas difíceis.";
+    questoes[294] =  "Me coloco no centro das atenções.";
+    questoes[295] =  "Adio as minhas decisões.";
+    questoes[296] =  "Mantenho a calma mesmo em situações tensas.";
+    questoes[297] =  "Raramente faço brincadeiras.";
+    questoes[298] =  "Prefiro de ficar em pé durante o Hino Nacional.";
+    questoes[299] =  "Não suporto pessoas fracas.";
+    questoes[300] =  "Frequentemente faço planos de última hora."
+
+var pergunta = 1; 
+var resposta = 0; 
+
+//document.getElementById("titulo-pergunta-tipi").innerHTML = questoes[pergunta];
+
+function armazenarResposta(resp){
+	this.pergunta = this.pergunta + 1;
+	this.resposta = resp;
+     document.getElementById("titulo-pergunta-tipi").innerHTML = questoes[pergunta];
+	
+	db = window.openDatabase("personality", "1.0", "Personality DB", 1000000);
+    db.transaction(gravarResposta, updateResposta_error, gravarRespostaSucess);	
+
+	 
+}
+
+
+function gravarResposta(tx){
+    var sqlcadastrar = "UPDATE tipi set q" + this.pergunta + " = " + this.resposta;
+    tx.executeSql(sqlcadastrar);
+}
+
+function gravarRespostaSucess() {
+	//alert("Resposta cadastrado com sucesso!");
+}
+
+function updateResposta_error() {
+	alert("Erro ao cadastrar resposta!");
+}
+
+</script>
+
+<!-- This reference to phonegap.js will allow for code hints as long as the current site has been configured as a mobile application. 
+	 To configure the site as a mobile application, go to Site -> Mobile Applications -> Configure Application Framework... -->
+<script src="phonegap.js" type="text/javascript"></script>
+<script language="javascript" type="text/javascript" src="meu-jquery.js"></script>
+
+
+<link type="text/css" rel="stylesheet" href="meu-css.css" >
+<link rel="stylesheet" type="text/css" media="screen and (max-width:240px)" href="mediaqueries.css">
+<link rel="stylesheet" type="text/css" media="screen and (min-width:480px)" href="mediaqueries.css">
+<link rel="stylesheet" type="text/css" media="screen and (min-width:768px)" href="mediaqueries.css">
+<link rel="stylesheet" type="text/css" media="screen and (min-width:800px)" href="mediaqueries.css">
+<link rel="stylesheet" type="text/css" media="screen and (min-width:800px) and (max-height:480px)" href="mediaqueries.css">
+<link rel="stylesheet" type="text/css" media="screen and (min-width:480px) and (max-height:322px)" href="mediaqueries.css">
+
+
+</head> 
+<body onload="onLoad()"> 
+
+<div data-role="page" id="inicio"  class="fundo"><!-- /Inicio da pagina Inicio-->
+<!-- ************************************************************* -->
+<div data-role="header" class="header-inicio"  data-position="fixed" data-backbtn="false">
+    <div id="titulo_home">
+    	<p align="center">
+        	<label id="titulo1">Personality Inventory</label>
+        </p>
+    </div>
+    <div id="change_language" align="center" >
+    	<p align="center"><img align="middle" src="images/flag_uk.png" width="32" height="32" id="uk" onClick="inicializeLanguage('en')" style="vertical-align:middle"><label style="vertical-align:middle"> EN</label></img></p>
+    </div>
+ </div><!-- /header -->
+<!-- ************************************************************* -->
+    
+<div data-role="content" id="conteudo-inicio">
+	<form name="menu_principal" method="post" id="form-inicio" >
+    		<p id="par-email-inicio">
+            	<label id="label-email-inicio"><b>E-mail:</b></label>
+                <input type="email" id="text_email-inicio">
+            </p>
+        	<p id="par_senha-inicio">
+            	<label id="label-senha-inicio-pt"><b>Senha:</b></label>
+                <input type="password" id="text_senha-inicio">
+            </p>
+            <center>
+            <p id="par-conteudo-inicio">
+            	<a href="#escolha-de-inventario" id="button_login" data-role="button"><label id="button-login"><b>Login</b></label></a>
+            	<a href="#recuperar" id="esqueceu_senha" data-role="button">
+                    <label id="esqueceu-senha"><b>Esqueceu a Senha?</b></label>
+                </a>
+            </p>
+            </center>
+    </form>
+</div><!-- /content-->
+                
+    <!-- ************************************************************** --> 
+<div data-role="footer" id="rodape-inicio" data-position="fixed" data-id="rodape" >
+	<div data-role="navbar" align="center" id="navbar-rodape">
+		<ul>
+        	<li id="lista1">
+                	<a href="#" id="nav_home" class="ui-btn-active ui-state-persist"><img src="images/Img/icon_home.png" id="home"/>
+                     </a></li>
+     			<li id="lista2">
+                    <a href="#cadastro" id="nav_register" data-transition=""><img src="images/Img/icon_cadastro.png" id="register"/>
+                    </a></li>
+     			<li>
+                	<a href="#pagina-contato" id="nav_contact" data-transition="" ><img src="images/Img/icon_contato.png" id="contato" />
+                	</a></li>
+            	<li>
+            		<a href="#pagina-sobre" id="nav_about" data-transition=""><img src="images/Img/icon_sobre.png" id="sobre" />
+                	</a></li>
+		</ul>
+	</div>
+</div>
+</div><!-- /page  final da pagina-->
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<div data-role="page" id="recuperar"><!-- /Inicio da pagina recuperar-->
+	<!-- ***************************************************** -->
+<div data-role="header" class="header-inicio"  data-position="fixed" data-backbtn="false">
+    <div id="titulo_home">
+    	<p align="center">
+        	<label id="titulo-recuperar"><b>Recuperar Senha</b></label>
+        </p>
+    </div>
+    <div id="change_language" align="center" >
+    	<p align="center"><img align="middle" src="images/flag_uk.png" width="32" height="32" id="uk" onClick="inicializeLanguage('en')" style="vertical-align:middle"><label style="vertical-align:middle"> EN</label></img></p>
+    </div>
+ </div>
+<!-- /header -->
+    <!-- ***************************************************** -->
+    
+<div data-role="content" id="conteudo-recuperar">
+	<form id="form-recuperar">
+    	<p id="parg-email">
+            <label id="label-email"><b>E-mail:</b></label>
+            <input type="email" id="text-email">
+        </p>
+        <p id="parag-button-recuperar" align="center">
+        	<a href="#inicio" data-role="button" data-transition="" id="button-recuperar">
+            <label id="label-button-recuperar"><b>Recuperar</b></label>
+            </a>
+        </p>
+    </form>
+</div><!-- /content-->
+           
+    <!-- ************************************************ -->
+<div data-role="footer" id="rodape-inicio" data-position="fixed" data-id="rodape" >
+	<div data-role="navbar" align="center" id="navbar-rodape">
+		<ul>
+        	<li id="lista1">
+                	<a href="#inicio" id="nav_home"><img src="images/Img/icon_home.png" id="home"/>
+                    </a></li>
+     			<li id="lista2">
+                    <a href="#cadastro" id="nav_register" data-transition=""><img src="images/Img/icon_cadastro.png" id="register"/>
+                    </a></li>
+     			<li>
+                	<a href="#pagina-contato" id="nav_contact" data-transition="" ><img src="images/Img/icon_contato.png" id="contato" />
+                	</a></li>
+            	<li>
+            		<a href="#pagina-sobre" id="nav_about" data-transition=""><img src="images/Img/icon_sobre.png" id="sobre" />
+                	</a></li>
+		</ul>
+	</div>
+</div><!-- /footer -->
+	<!-- ************************************************ -->
+          
+</div><!-- /page recuperar - Final da pagina-->
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+<div data-role="page" id="instrução-neo"><!-- /Inicio da pagina -->
+    <!-- ************************************************************* -->
+<div data-role="header" id="header_instrução" data-backbtn="false" >
+	<p id="titulo" align="center">
+        <label id="titulo-instrucao-NEO">Instru&ccedil;&otilde;es NEO-IPIP</label>
+    </p>
+	<div data-role="navbar" id="navbar-header">
+		<ul>
+        	<li><a href="#inicio" id="nav_home" data-transition="">
+                <img src="images/Img/icon_home.png" id="home-instrucao-NEO"/></a></li>
+            <li><a href="#pagina-opcoes" id="nav_options"  data-transition="">
+            	<img src="images/Img/icon_opcoes.png" id="opcoes-instrucao-NEO"/>
+                </a></li>
+        </ul>
+	</div><!-- /navbar-->
+</div><!-- /header-->
+    <!-- ************************************************************* -->
+		
+<div data-role="content" id="conteudo-instrução-neo" class="fundo">
+	<p align="justify" id="par-instrução-neo">
+    <label id="conteudo-instrucao-NEO">
+    	As pesquisas que utilizam os Inventarios de Personalidade est&atilde;o vinculados a v&aacute;rios projetos de pesquisa em desenvolvimento no <a href="http://www.decomp.ufs.br" target="_blank">Departamento de Computa&ccedil;&atilde;o</a> da <a href="http://www.ufs.br" target="_blank">UFS</a> sob Coordena&ccedil;&atilde;o da <a href="http://www.dcomp.ufs.br/~gutanunes/" target="_blank">Prof. Dra. Maria Augusta Silveira Netto Nunes</a> e sob tutela dos criadores dos testes, <a href="http://john.johnson.socialpsychology.org/" target="_blank">Dr. John Johnson</a> e <a href="http://homepage.psy.utexas.edu/homepage/faculty/gosling/index.htm" target="_blank">Dr. Samuel Gosling.</a>
+Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira: Ao iniciar o teste, ser&atilde;o apresentados a voce diversas senten&ccedil;as. Leia cada frase com aten&ccedil;&atilde;o e, em seguida, clique no bot&atilde;o que melhor indica a sua concordancia com o quanto a frase descreve voc&ecirc;, seguindo uma escala que vai desde "discordo totalmente" a "concordo totalmente" para o NEO-IPIP e para o TIPI. Ao final do questionario ser&aacute; gerado um relatorio com os resultados descritivos de sua Personalidade.
+	</label>
+	</p>       
+</div><!-- /content-->
+          
+    <!-- ******************************************************** -->
+<div data-role="footer" id="rodape-instrução-neo">
+	<div data-role="navbar" id="navbar-rodape">
+    	<ul>
+            <li><a href="#inicio" id="nav_exit" data-transition="">
+            	<img src="images/Img/icon_sair.png" id="sair-instrucao-NEO"/>
+            	</a>
+            <li><a href="#questionario-NEO-IPIP" id="nav_continue" data-transition="">
+            	<img src="images/Img/icon_continuar.png" id="continuar-instrucao-NEO"/>
+            	</a>
+    	</ul>
+    </div><!-- /navbar -->
+</div><!-- /footer->
+    <!-- ******************************************************** -->   
+        
+</div><!-- /page instrução - Final da pagina instrução-neo -->
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<div data-role="page" id="instrução-tipi"><!-- /Inicio da pagina-->
+	<!-- ******************************************************** -->
+<div data-role="header" id="header-instrução-tipi" data-backbtn="false" >
+	<p id="titulo" align="center">
+    	<label id="titulo-instrucao-TIPI">Instru&ccedil;&otilde;es TIPI</label>
+    </p>
+	<div data-role="navbar" id="navbar-header">
+		<ul>
+        	<li><a href="#inicio" id="nav_home" data-transition="">
+             	<img src="images/Img/icon_home.png" id="home-instrucao-TIPI"/>
+                </a></li>
+            <li><a href="#pagina-opcoes" id="nav_options" data-transition="">
+	            <img src="images/Img/icon_opcoes.png" id="opcoes-instrucao-TIPI"/>
+                </a></a></li>
+        </ul>
+ 	</div><!-- /navbar-->
+ </div><!-- /header-->
+    <!-- ******************************************************* -->
+	
+<div data-role="content" id="conteudo-instrução-tipi" class="fundo">
+	<p align="justify" id="par-instrução-tipi">
+         <label id="conteudo-instrucao-TIPI">
+    	As pesquisas que utilizam os Inventarios de Personalidade est&atilde;o vinculados a v&aacute;rios projetos de pesquisa em desenvolvimento no <a href="http://www.dcomp.ufs.br" target="_blank">Departamento de Computa&ccedil;&atilde;o</a> da <a href="http://www.ufs.br" target="_blank">UFS</a> sob Coordena&ccedil;&atilde;o da <a href="http://www.dcomp.ufs.br/~gutanunes/" target="_blank">Prof. Dra. Maria Augusta Silveira Netto Nunes</a> e sob tutela dos criadores dos testes, <a href="http://john.johnson.socialpsychology.org/" target="_blank">Dr. John Johnson</a> e <a href="http://homepage.psy.utexas.edu/homepage/faculty/gosling/index.htm" target="_blank">Dr. Samuel Gosling.</a>
+Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira: Ao iniciar o teste, ser&atilde;o apresentados a voce diversas senten&ccedil;as. Leia cada frase com aten&ccedil;&atilde;o e, em seguida, clique no bot&atilde;o que melhor indica a sua concordancia com o quanto a frase descreve voc&ecirc;, seguindo uma escala que vai desde "discordo totalmente" a "concordo totalmente" para o NEO-IPIP e para o TIPI. Ao final do questionario ser&aacute; gerado um relatorio com os resultados descritivos de sua Personalidade.
+	</label>
+	</p>       
+</div><!-- /content-->
+      
+	<!-- ********************************************************** -->
+<div data-role="footer" id="rodape-instrução-tipi">
+    <div data-role="navbar" id="navbar-rodape">
+    	<ul>
+    		<li><a href="#inicio" id="nav_exit" data-transition="">
+	            <img src="images/Img/icon_sair.png" id="sair-instrucao-TIPI"/>
+            	</a></a>
+            <li><a href="#questionario-TIPI" id="nav_continue" data-transition="">
+	            <img src="images/Img/icon_continuar.png" id="continuar-instrucao-TIPI"/>
+            	</a></a>
+        </ul>
+    </div><!-- /navbar -->
+</div><!-- /footer->
+	<!-- ********************************************************** -->
+</div><!-- /page instrução - Final da pagina-->
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<div data-role="page" id="cadastro"><!-- /Inicio da pagina-->
+	<!-- ************************************************* -->
+<div data-role="header" class="header-inicio"  data-position="fixed" data-backbtn="false">
+    <div id="titulo_home">
+    	<p align="center">
+        	<label id="titulo-instrucao-cadastro"><b>Novo Usu&aacute;rio</b></label>
+        </p>
+    </div>
+    <div id="change_language" align="center" >
+    	<p align="center"><img align="middle" src="images/flag_uk.png" width="32" height="32" id="uk" onClick="inicializeLanguage('en')" style="vertical-align:middle"><label style="vertical-align:middle"> EN</label></img></p>
+    </div>
+ </div>
+    	
+<!-- /header -->
+    <!-- ************************************************** -->
+
+<div data-role="content" id="conteudo-cadastro">
+	<form id="form-cadastro" method="post">
+    	<p id="form-nome">
+        	<label id="nome-cadastro"><b>Nome:</b></label>
+        	<input type="text" id="text-nome-cadastro"><br>
+        </p>
+        <p id="form-email">
+        	<label id="email-cadastro"><b>E-mail:</b></label>
+        	<input type="email" id="text-email-cadastro"><br>
+        </p>
+        <p id="form-senha">
+        	<label id="senha-cadastro"><b>Senha:</b></label>
+        	<input type="password" id="text-senha-cadastro"><br>
+        </p>
+        <p id="form-re_senha">
+        	<label id="re_senha-cadastro"><b>Redigite senha:</b></label>
+        	<input type="password" id="text-re_senha-cadastro" ><br>
+        </p>
+        <p id="form-sexo">
+        	<label id="sexo-cadastro"><b>Sexo:</b></label>
+        	<select id="escolha-sexo" size="1">
+            	<option value="Masculino">Masculino</option>
+                <option value="Feminino">Feminino</option>
+            </select>
+        </p>
+        <br>     
+        <p id="form-idade">
+            <label id="idade-cadastro"><b>Idade:</b></label>
+            <input type="number" id="text-idade"><br>
+        </p>
+        <p id="form-idioma">
+        	<label id="idioma-cadastro"><b>Idioma:</b></label>
+            <label id="idioma-cadastro-us" style="display:none"><b>Language:</b></label> 
+        	<select name="idioma" size="1">
+                <option value="English">English</option>
+            	<option value="Portugues">Portugu&ecirc;s</option>
+            </select><br></p>    
+        <p align="justify" id="par-politica-cadastro">
+        <label id="politica"><b>Pol&iacute;tica:</b></label>
+        <br>
+            <label id="texto-politica">Todas as respostas deste question&aacute;rio 
+                s&atilde;o completamente confidenciais e n&atilde;o ser&atilde;o associadas 
+                a voc&ecirc; como indiv&iacute;duo.
+            </label>
+        </p>
+        <p id="aceita">
+        <label id="aceita-cadastro"><b>Aceita?</b></label>
+        	<select id="escolha-de-idioma" size="1">
+               	<option value="Sim">Sim</option>
+                <option value="Não">N&atilde;o</option>
+            </select>
+       </p>
+       <center>
+        	<p id="par-button-cadastrar" align="center"><a href="#inicio" data-role="button" data-transition="" id="button-cadastrar" class="btn_cadastro">
+            <label id="label-button-cadastrar"><b>Cadastrar</b></label></a></p></center>
+        </form>
+</div><!-- /content-->
+   
+   <!-- ************************************************* --> 
+<div data-role="footer" id="rodape-inicio" data-position="fixed" data-id="rodape" data-fullscreen="false" >
+	<div data-role="navbar" align="center" id="navbar-rodape">
+		<ul>
+        	<li id="lista1">
+                	<a href="#inicio"><img src="images/Img/icon_home.png" id="home"/>
+                    </a></li>
+     			<li id="lista2">
+                    <a href="#cadastro" id="nav_register" class="ui-btn-active ui-state-persist"><img src="images/Img/icon_cadastro.png" id="register"/>
+                    </a></li>
+     			<li>
+                	<a href="#pagina-contato" id="nav_contact" data-transition="" ><img src="images/Img/icon_contato.png" id="contato" />
+                	</a></li>
+            	<li>
+            		<a href="#pagina-sobre" id="nav_about" data-transition=""><img src="images/Img/icon_sobre.png" id="sobre" />
+                	</a></li>
+		</ul>
+	</div>
+</div><!-- /footer -->
+   <!-- ************************************************ -->
+    
+</div><!-- /page cadastro - Final da pagina-->
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<div data-role="page" id="pagina-contato"><!-- Inicio da pagina contato-->
+	<!-- *********************************************** -->
+<div data-role="header" class="header-inicio"  data-position="fixed" data-backbtn="false">
+    <div id="titulo_home">
+    	<p align="center">
+        	<label id="titulo-contato"><b>Contato</b></label>
+        </p>
+    </div>
+    <div id="change_language" align="center" >
+    	<p align="center"><img align="middle" src="images/flag_uk.png" width="32" height="32" id="uk" onClick="inicializeLanguage('en')" style="vertical-align:middle"><label style="vertical-align:middle"> EN</label></img></p>
+    </div>
+ </div>
+    	
+   <!-- /header -->    
+    <!-- *********************************************** -->    
+    
+    <div data-role="content" id="conteudo-contato" class="fundo">
+    <p align="center">
+    	<label id="titulo-conteudo-contato"><b>Entre em contato conosco:</b></label>
+    </p>
+        <p align="justify"><label id="orientadora">Dr&ordf; Maria Augusta Silveira Neto Nunes&nbsp; (Orientadora):</label>
+        </p>
+        <ul data-role="listview">
+        	<li><label style="margin-left:15px">Email:&nbsp;</label><br><a href=""="mailto:gutanunes@gmail.com" target="_blank">gutanunes@...</a></li>
+            <li><label style="margin-left:15px">Site:&nbsp;</label><br><a href="http://www.dcomp.ufs.br/~gutanunes/" target="_blank">dcomp.ufs.br/~gutanunes/</a></li>
+        </ul>
+        <br>        
+        <p align="justify"><label id="christiano">Christiano Santana (Graduando em Sistemas de Informa&ccedil;&atilde;o):</label>
+        </p>
+        <ul data-role="listview">
+        	<li><label style="margin-left:15px">Email:&nbsp;</label><br><a href="mailto:chris.santana.si@gmail.com" target="_blank">chris.santana.si@...</a>
+            </li>
+        </ul>
+        <br>        
+        <p align="justify"><label id="igor">Igor Pontes (Graduando em Ci&ecirc;ncia da Computa&ccedil;&atilde;o):</label>
+        </p>
+        <ul data-role="listview">
+        	<li><label style="margin-left:15px">Email:&nbsp;</label><br><a href="mailto: igorgpontes@gmail.com" target="_blank"> igorgpontes@...</a>
+            </li>
+        </ul>
+        <br>
+        <p align="justify"><label id="railan">Railan Xisto (Graduando em Ci&ecirc;ncia da Computa&ccedil;&atilde;o):</label>
+        </p>
+        <ul data-role="listview">
+        	<li><label style="margin-left:15px">Email:&nbsp;</label><br><a href="mailto:railanxisto@hotmail.com" target="_blank">railanxisto@...</a></li>
+        </ul><br>
+    </div><!-- /content-->
+    
+    <!-- ************************************************* -->
+<div data-role="footer" id="rodape-inicio" data-position="fixed" data-id="rodape" >
+	<div data-role="navbar" align="center" id="navbar-rodape">
+		<ul>
+        	<li id="lista1">
+                	<a href="#inicio"><img src="images/Img/icon_home.png" id="home"/>
+                    </a></li>
+     			<li id="lista2">
+                    <a href="#cadastro"><img src="images/Img/icon_cadastro.png" id="register"/>
+                    </a></li>
+     			<li>
+                	<a href="#pagina-contato" id="nav_contact"  class="ui-btn-active ui-state-persist"><img src="images/Img/icon_contato.png" id="contato" />
+                	</a></li>
+            	<li>
+            		<a href="#pagina-sobre" id="nav_about" data-transition=""><img src="images/Img/icon_sobre.png" id="sobre" />
+                	</a></li>
+		</ul>
+	</div>
+</div><!-- /footer -->
+    <!-- ************************************************* -->
+    
+</div><!-- /page - Final da pagina contato-->	
+    
+    
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<div data-role="page" id="pagina-sobre">
+	<!-- ************************************************ -->
+<div data-role="header" class="header-inicio"  data-position="fixed" data-backbtn="false">
+    <div id="titulo_home">
+    	<p align="center">
+        	<label id="titulo-sobre"><b>Sobre</b></label>
+        </p>
+    </div>
+    <div id="change_language" align="center" >
+    	<p align="center"><img align="middle" src="images/flag_uk.png" width="32" height="32" id="uk" onClick="inicializeLanguage('en')" style="vertical-align:middle"><label style="vertical-align:middle"> EN</label></img></p>
+    </div>
+ </div>
+    	
+   <!-- /header -->
+	<!-- ************************************************* -->
+    
+<div data-role="content"  id="conteudo-sobre" class="fundo">
+	<p align="justify">
+    <label id="texto-conteudo-sobre">
+        Este projeto foi desenvolvido pelos alunos de gradua&ccedil;&atilde;o 
+        Christiano Santana - Igor Pontes - Jonas Bezerra - Railan Xisto sob orienta&ccedil;&atilde;o 
+        da professora <a href="http://www.dcomp.ufs.br/~gutanunes/" target="_blank">Dr&ordf;. Maria Augusta Silveira Netto Nunes</a> do <a href="http://www.dcomp.ufs.br" target="_blank">Departamento de Computa&ccedil;&atilde;o</a> da <a href="http://www.ufs.br" target="_blank">Universidade Federal de Sergipe</a>.
+    	<br>
+			<br>As pesquisas que utilizam os Invent&aacute;rios de Personalidade 
+            citados abaixo est&atilde;o vinculados a v&aacute;rios projetos de pesquisa em 		
+            desenvolvimento no Departamento de Computa&ccedil;&atilde;o da Universidade Federal de 
+            Sergipe sob coordena&ccedil;&atilde;o da <a href="http://www.dcomp.ufs.br/~gutanunes/" target="_blank">
+            Prof. Dr&ordf;. Maria Augusta Silveira Netto Nunes</a> e 
+            sob tutela dos criadores dos Testes, <a href=" 
+            http://john.johnson.socialpsychology.org/" target="_blank">Dr. John Johnson</a> e <a href=
+            "http://homepage.psy.utexas.edu/homepage/faculty/gosling/index.htm" target="_blank">Dr. 
+            Samuel Gosling</a>.
+    </label>
+            </p>
+          	<p id="par-list-sobre">
+            	<label id="sobre-inventario"><b>Sobre os invent&aacute;rios:</b></label>
+            	<p>
+            	<ul data-role="listview">
+                	<li><a href="#sobre-IPIP"><label id="ipip">Invent&aacute;rio IPIP<br>(International Personality Item Pool)</label>
+					</a></li>
+                    <li style="margin-top:2px"><a href="#sobre-TIPI" >
+                    	<label id="tipi">Invent&aacute;rio do TIPI<br>(Ten Item Personality Inventory)</label>
+					</a></li>
+                </ul>
+            </p>
+</div><!-- /content-->
+    
+    <!-- ************************************************************ -->    
+<div data-role="footer" id="rodape-inicio" data-position="fixed" data-id="rodape" >
+	<div data-role="navbar" align="center" id="navbar-rodape">
+		<ul>
+        	<li id="lista1">
+                	<a href="#inicio"><img src="images/Img/icon_home.png" id="home"/>
+                     </a></li>
+     			<li id="lista2">
+                    <a href="#cadastro"><img src="images/Img/icon_cadastro.png" id="register"/>
+                    </a></li>
+     			<li>
+                	<a href="#pagina-contato" id="nav_contact" data-transition="" ><img src="images/Img/icon_contato.png" id="contato" />
+                	</a></li>
+            	<li>
+            		<a href="#pagina-sobre" id="nav_about" class="ui-btn-active ui-state-persist"><img src="images/Img/icon_sobre.png" id="sobre" />
+                	</a></li>
+		</ul>
+	</div>
+</div><!-- /footer-->
+    <!-- ******************************************************** -->
+        
+</div><!-- /page - Final da pagina Sobre-->
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->    
+<div data-role="page" id="sobre-IPIP"><!-- /Inicio da pagina Sobre-IPIP-->
+	<!-- ********************************************************** -->
+<div data-role="header" id="header-sobre-IPIP" data-backbtn="false">
+	<p id="titulo" align="center">
+    	<label id="titulo-ipip"><b>Invent&aacute;rio IPIP</b></label>
+    </p>
+    <div data-role="navbar" id="navbar-header">
+    	<ul>
+        	<li><a href="#inicio" id="nav_home" data-transition="">
+            	<img src="images/Img/icon_home.png" id="home-ipip"/>
+                </a></li>
+            <li><a href="#cadastro" id="nav_register" data-transition="">
+            	<img src="images/Img/icon_cadastro.png" id="register-ipip"/>
+                </a></li>
+     		
+        </ul>
+    </div><!-- /navbar -->
+</div><!-- /header-->
+	<!-- ********************************************************** -->
+        
+<div data-role="content" class="fundo" id="conteudo-sobre-IPIP">
+	<p align="justify" id="par-sobre-ipip">
+    <label id="texto-conteudo-ipip">
+    		Segundo o Dr. Lewis R. Goldberg e o Dr. Gerard Saucier (Investigador 
+            principal e Co-investigador, respectivamente), o <a href=
+            "http://ipip.ori.org/ipip/">cons&oacute;rcio IPIP</a> é um 
+            trabalho científico em conjunto para o desenvolvimento de medidas avançadas 
+            de personalidade e outras Diferenças Individuais.<br>
+			<br>O IPIP destina-se a fornecer acesso r&aacute;pido &agrave;s medidas de diferen&ccedil;as 		
+            individuais, tudo no dom&iacute;nio p&uacute;blico, a serem desenvolvidas conjuntamente 	
+            entre os cientistas de todo o mundo. Mais tarde, o site poder&aacute; incluir dados 	
+            brutos dispon&iacute;veis para re-an&aacute;lise e, al&eacute;m disso, deve servir como um f&oacute;rum 
+            para a dissemina&ccedil;&atilde;o de id&eacute;ias e resultados de pesquisas psicom&eacute;tricas.
+    </label>
+    </p>
+</div><!-- content-->
+
+<!-- **************************************************** -->        
+<div data-role="footer" id="footer-sobre-IPIP">
+	<div data-role="navbar" id="navbar-rodape">
+    	<ul>
+        	<li><a href="#pagina-contato" id="nav_contact" data-transition="">
+            	<img src="images/Img/icon_contato.png" id="contato-ipip"/>
+                </a></li>
+       		<li><a href="#pagina-sobre" id="nav_about" data-transition="">
+            	<img src="images/Img/icon_sobre.png" id="sobre-ipip" />
+                </a></li>
+        </ul>
+    </div><!-- /navbar -->
+</div><!-- /footer-->
+<!-- **************************************************** --> 
+
+</div><!-- /page - Final da pagina Sobre-IPIP-->
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<div data-role="page" id="sobre-TIPI"><!-- /Inicio da pagina Sobre-TIPI-->
+	<!-- ************************************************ -->
+<div data-role="header" id="header-sobre-TIPI" data-backbtn="false">
+	<p id="titulo" align="center">
+    	<label id="titulo-tipi"><b>Invent&aacute;rio TIPI</b></label>
+    </p>
+	<div data-role="navbar" id="navbar-header">
+    	<ul>
+        	<li><a href="#inicio" id="nav_home" data-transition="">
+            	<img src="images/Img/icon_home.png" id="home-tipi"/>
+                </a></li>
+            <li><a href="#cadastro" id="nav_register" data-transition="">
+            	<img src="images/Img/icon_cadastro.png" id="register-tipi"/>
+                </a></li>
+     		
+     	</ul>
+    </div><!-- /navbar -->
+</div><!-- /header-->
+<!-- ****************************************************** -->
+        
+<div data-role="content" class="fundo" id="conteudo-sobre-TIPI">
+	<p align="justify" id="par-sobre-tipi">
+    <label id="texto-conteudo-tipi">
+            Segundo Gosling, &ldquo;Quando o tempo &eacute; limitado, os pesquisadores podem ser 
+            confrontados com a escolha entre utilizar uma medida extremamente sucinta das 
+            Cinco Grandes dimens&otilde;es de personalidade ou n&atilde;o utilizar medida alguma. Para 
+            atender &agrave; necessidade de uma medida muito breve, invent&aacute;rios de 5 a 10 itens 
+            foram desenvolvidos e avaliados. Embora um tanto inferiores aos instrumentos 
+            multi-itens padronizados, os instrumentos atingiram n&iacute;veis adequados em 
+            termos de (a) converg&ecirc;ncia com medidas amplamente utilizadas dos Cinco 
+            Grandes Fatores em relat&oacute;rios pr&oacute;prios, de observadores e de pares, (b) 
+            confiabilidade teste - reteste, (c) padr&otilde;es de correla&ccedil;&otilde;es externas previstas 
+            e (d) converg&ecirc;ncia entre as avalia&ccedil;&otilde;es pr&oacute;prias e de observadores."
+     </label>
+     </p>
+</div><!-- content-->
+
+	<!-- ********************************************** -->        
+<div data-role="footer" id="footer-sobre-TIPI">
+	<div data-role="navbar" id="navbar-rodape">
+    	<ul>
+        	<li><a href="#pagina-contato" id="nav_contact" data-transition="">
+                <img src="images/Img/icon_contato.png" id="contato-tipi"/>
+                </a></li>
+       		<li><a href="#pagina-sobre" id="nav_about" data-transition="">
+            	<img src="images/Img/icon_sobre.png" id="sobre-tipi" />
+                </a></li>
+        </ul>
+    </div><!-- /navbar -->
+</div><!-- /footer-->
+	<!-- ********************************************** -->
+ 
+</div><!-- /page - Final da pagina Sobre-TIPI-->
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+<div data-role="page" id="escolha-de-inventario">
+	<!-- ******************************************* -->
+<div data-role="header" id="header-escolha" data-backbtn="false">
+	<p id="titulo" align="center"><b>Personality Inventory</b></p>
+    <div data-role="navbar" id="navbar-header">
+		<ul>
+        	<li><a href="#inicio" id="nav_home" data-transition="">
+            	<img src="images/Img/icon_home.png" id="home-escolha" />
+                </a></li>
+     		<li><a href="#pagina-opcoes" id="nav_options" data-transition="">
+            	<img src="images/Img/icon_opcoes.png" id="opcoes-escolha" />
+                </a></li>	
+        </ul>
+	</div><!-- /navbar -->
+</div><!-- /header-->
+<!-- ********************************************** --> 
+    
+<div data-role="content" id="conteudo-escolha" class="fundo">
+ 		<p align="justify" id="par-escolha">
+        	<br>
+    	    <label id="texto-conteudo-escolha">Ol&aacute;. Selecione uma das op&ccedil;&otilde;es abaixo para continuar o invent&aacute;rio:</label>
+        </p>
+        <br>
+        <ul data-role="listview">
+        	<p><br><li id="list-neo"><a href="#instrução-neo"><b>NEO-IPIP</b></a></li></p>
+            <p><br><li id="list-tipi"><a href="#instrução-tipi"><b>TIPI</b></a></li></p>
+        </ul>
+</div><!-- /content-->
+    
+    <!-- ****************************************************** -->
+<div data-role="footer" id="footer-escolha" data-position="fixed">
+	<div data-role="navbar" id="navbar-rodape"> 
+    	<ul>
+         	<li><a href="#inicio" id="nav_exit" data-transition="">
+            	<img src="images/Img/icon_sair.png" id="sair-escolha" />
+                </a></li>
+   			<li><a href="#pagina-sobre" id="nav_about" data-transition="" >
+            	<img src="images/Img/icon_sobre.png" id="sobre-escolha" />
+                </a></li>
+		</ul>
+    </div><!-- /navbar -->
+</div><!-- /footer-->
+    <!-- ***************************************************** -->
+    
+</div><!-- /page - Final da pagina Escolha-de-inventario-->
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<div data-role="page" id="pagina-opcoes">
+	<!-- ************************************************** -->
+<div data-role="header" id="header-opcoes" data-backbtn="false">
+	<p id="titulo" align="center">
+    	<label id="titulo-opcoes"><b>Alterar Senha</b></label>
+    </p>
+	<div data-role="navbar" id="navbar-header">
+		<ul>
+        	<li><a href="#inicio" id="nav_home" data-transition="">
+            	<img src="images/Img/icon_home.png" id="home-opcoes" />
+                </a></li>
+     		<li><a href="#pagina-opcoes" id="nav_options" data-transition="">
+            	<img src="images/Img/icon_opcoes.png" id="opcoes-opcoes" />
+                </a></li>
+        </ul>
+	</div><!-- /navbar -->
+</div><!-- /header-->
+<!-- ***************************************************** -->
+    
+<div data-role="content" id="conteudo-opcoes" class="fundo">
+	<form id="form-opcoes">
+       	<p id="par-senha-atual">
+        	<label id="label-senha-opcoes"><b>Digite senha atual:</b></label>
+       	<input type="password" id="text-senha-atual"></p>
+       	<p id="par-senha-nova">
+        	<label id="label-novasenha-opcoes"><b>Digite nova senha:</b></label>
+       	<input type="password" id="text-senha-nova"></p>
+        <br>
+        <center>
+       		<a href="#escolha-de-inventario" data-role="button" data-transition="" id="button-alterar">
+            	<label id="label-button-alterar"><b>Alterar</b></label>
+			</a>
+        </center>
+    </form>
+</div><!-- /content-->
+
+	<!-- ************************************************** -->    
+<div data-role="footer" id="footer-opcoes" data-position="fixed">
+	<div data-role="navbar" id="navbar-rodape">
+		<ul>
+       	 	<li><a href="#inicio" id="nav_exit" data-transition="">
+            	<img src="images/Img/icon_sair.png" id="sair-opcoes" />
+                </a></li>
+     	 	<li><a href="#pagina-sobre" id="nav_about" data-transition="">
+            	<img src="images/Img/icon_sobre.png" id="sobre-opcoes" />
+                </a></li>
+        </ul>
+     </div><!-- /navbar -->
+</div><!-- /footer-->
+	<!-- *************************************************** -->
+    
+</div><!-- /page - Final da pagina opcoes-->
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<div data-role="page" id="questionario-NEO-IPIP" ><!-- /Inicio da pagina-->
+<div data-role="header" id="header-questionario" data-backbtn="false">
+	<a href="#saudacao-neo" data-role="button" data-icon="back" style="margin-top:5px" data-transition="" id="button-voltar">
+    <label id="label-button-voltar-neo">Voltar</label>
+	</a>
+	<p id="titulo" align="center">NEO-IPIP</p>
+</div><!-- /header-->
+    
+<div data-role="content" id="conteudo-questionario-neo" class="fundo">
+	<p id="titulo-pergunta" align="center">Me preocupo com as coisas</p>
+    <form method="post" id="form-questionario-neo">
+    	<center>
+        <!--<p id="par-button-cadastrar" align="center">-->
+        	<a href="#" data-role="button" id="disc-total-neo" >
+            <label id="label-disc-total-neo"><b>Discordo totalmente</b></label>
+            </a>
+        
+        	<a href="#" data-role="button" id="disc-parci-neo" >
+            <label id="label-disc-parci-neo"><b>Discordo parcialmente</b></label>
+            </a>
+        
+        	<a href="#" data-role="button" id="nem-disc-nem-cord-neo" >
+            <label id="label-nem-disc-nem-cord-neo"><b>Nem discordo nem concordo</b></label>
+            </a>
+            
+            <a href="#" data-role="button" id="conc-parcial-neo" >
+            <label id="label-conc-parcial-neo"><b>Concordo parcialmente</b></label>
+            </a>
+            
+            <a href="#" data-role="button" id="conc-total-neo" >
+            <label id="label-conc-total-neo"><b>Concordo totalmente</b></label>
+            </a>
+        <!--</p>-->
+        </center>
+    </form>
+</div><!-- /content-->
+
+	<!-- **************************************************************** -->    
+<div data-role="footer" id="rodape-questionario-neo" data-position="fixed">
+	<div data-role="navbar" id="navbar-rodape">
+    	<ul>
+         	<li><a href="#inicio" id="nav_exit" data-transition="">
+            	<img src="images/Img/icon_sair.png" id="sair-quest-neo"/>
+                </a></li>
+     	 	<li><a href="#pagina-sobre" id="nav_about" data-transition="">
+            	<img src="images/Img/icon_sobre.png" id="sobre-quest-neo" />
+                </a></li>
+         </ul>
+     </div><!-- /navbar -->
+</div><!-- /footer-->
+	<!-- ************************************************************** -->
+
+</div><!-- /page questionario-NEO-IPIP - Final da pagina-->
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<div data-role="page" id="questionario-TIPI" ><!-- /Inicio da pagina-->
+<div data-role="header" id="header-questionario-tipi" data-backbtn="false">
+	<a href="#saudacao-tipi" data-role="button" data-icon="back" style="margin-top:5px" data-transition="" id="button-voltar-tipi">
+    <label id="label-button-voltar-tipi">Voltar</label>
+	</a>
+	<p id="titulo" align="center">TIPI</p>
+</div><!-- /header-->
+    
+<div data-role="content" id="conteudo-questionario-tipi" class="fundo">
+	<p align="center" id="titulo-pergunta-tipi"></p>   
+    <form id="form-questionario-tipi" method="post">
+		<input type="hidden" name="resposta" value="0">
+		<input type="hidden" name="pergunta" value="0">
+    	<center>
+			<input type="button" value="Discordo totalmente" id="disc-total" onclick="armazenarResposta(1)">
+			<input type="button" value="Discordo parcialmente" id="disc-parci" onclick="armazenarResposta(2)">
+			<input type="button" value="Nem discordo nem concordo" id="nem-disc-nem-cord" onclick="armazenarResposta(3)">
+			<input type="button" value="Concordo parcialmente" id="conc-parcial" onclick="armazenarResposta(4)">
+			<input type="button" value="Concordo totalmente" id="conc-total" onclick="armazenarResposta(5)">
+        </center>
+    </form>
+<script>
+ document.getElementById("titulo-pergunta-tipi").innerHTML =  
+  questoes[pergunta];
+</script>
+
+</div><!-- /content-->
+
+	<!-- ********************************************** -->    
+<div data-role="footer" id="rodape-questionario-tipi" data-position="fixed">
+	<div data-role="navbar" id="navbar-rodape">
+    	<ul>
+        	<li><a href="#inicio" id="nav_exit" data-transition="">
+            	<img src="images/Img/icon_sair.png" id="sair-quest-tipi"/>
+                </a></li>
+     	 	<li><a href="#pagina-sobre" id="nav_about" data-transition="">
+            	<img src="images/Img/icon_sobre.png" id="sobre-quest-tipi" />
+                </a></li>
+    	</ul>    
+	</div><!-- /navbar -->
+</div><!-- /footer-->
+	<!-- *********************************************** -->
+    
+</div><!-- /page questionario-NEO-IPIP - Final da pagina-->
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<div data-role="page" id="saudacao-neo" ><!-- /Inicio da pagina-->
+<div data-role="header" id="header-saudacao-neo" data-backbtn="false">
+	<p id="titulo" align="center">
+    	<label id="titulo-saudacao-neo">Conclus&atilde;o do Invent&aacute;rio</label>
+    </p>
+</div><!-- /header-->
+    
+<div data-role="content" id="conteudo-saudacao-neo" class="fundo" data-theme="e">
+	<div id="conteudo-saudacao-neo" align="justify"> 
+        <label id="texto-conteudo-saudacao-neo">
+            <br><center>PARAB&Eacute;NS!</center><br>
+            Seu Question&aacute;rio NEO-IPIP
+            foi realizado e efetuado com Sucesso.<br>
+            <br>Clique no bot&atilde;o abaixo para ver o gr&aacute;fico
+            referente a sua personalidade com detalhes
+            corespondente ao invent&aacute;rio.
+        </label><br>
+        <br><br>
+        <a href="#grafico-NEO" id="button-saudacao-neo" data-role="button" data-theme="c">
+                <label id="label-button-saudacao-neo"><b>Gr&aacute;fico NEO</b></label>
+        </a>
+    </div>
+</div><!-- /content-->
+
+	<!-- ********************************************** -->    
+<div data-role="footer" id="rodape-saudacao-neo" data-theme="a"   data-position="fixed">
+	<div data-role="navbar" id="navbar-rodape">
+    	<ul>
+        	<li><a href="#escolha-de-inventario" id="nav_exit" data-transition="">
+            	<img src="images/Img/icon_sair.png" id="sair-saudacao-neo"/>
+                </a></li>
+     		<li><a href="#inicio" id="nav_home" data-transition="">
+            	<img src="images/Img/icon_home.png" id="home-saudacao-neo"/>
+                </a></li>
+    	</ul>    
+	</div><!-- /navbar -->
+</div><!-- /footer-->
+	<!-- *********************************************** -->
+    
+</div><!-- /page saudação-NEO - Final da pagina-->
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<div data-role="page" id="saudacao-tipi" ><!-- /Inicio da pagina-->
+<div data-role="header" id="header-saudacao-tipi" data-backbtn="false">
+	<p id="titulo" align="center">
+    	<label id="titulo-saudacao-tipi">Conclus&atilde;o do Invent&aacute;rio</label>
+        
+    </p>
+</div><!-- /header-->
+    
+<div data-role="content" id="conteudo-saudacao-tipi" class="fundo" data-theme="e">
+	<div id="conteudo-saudacao-tipi" align="justify"> 
+        <label id="texto-conteudo-saudacao-tipi">
+            <br><center>PARAB&Eacute;NS!</center><br>
+            Seu Question&aacute;rio TIPI
+            foi realizado e efetuado com Sucesso.<br>
+            <br>Clique no bot&atilde;o abaixo para ver o gr&aacute;fico
+            referente a sua personalidade com detalhes
+            corespondente ao invent&aacute;rio.
+        </label><br>
+        <br><br>
+        <a href="#grafico-TIPI" id="button-saudacao-tipi" data-role="button" data-theme="c" data-transition="">
+                <label id="label-button-saudacao-tipi"><b>Gr&aacute;fico TIPI</b></label>
+        </a>
+    </div>
+</div><!-- /content-->
+
+	<!-- ********************************************** -->    
+<div data-role="footer" id="rodape-saudacao-tipi" data-theme="a"  data-position="fixed">
+	<div data-role="navbar" id="navbar-rodape">
+    	<ul>
+        	<li><a href="#escolha-de-inventario" id="nav_exit" data-transition="">
+            	<img src="images/Img/icon_sair.png" id="sair-saudacao-tipi"/>
+                </a></li>
+     		<li><a href="#inicio" id="nav_home" data-transition="">
+            	<img src="images/Img/icon_home.png" id="home-saudacao-tipi"/>
+                </a></li>
+    	</ul>    
+	</div><!-- /navbar -->
+</div><!-- /footer-->
+	<!-- *********************************************** -->
+    
+</div><!-- /page saudação-TIPI - Final da pagina-->
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<div data-role="page" id="grafico-NEO" ><!-- /Inicio da pagina-->
+<div data-role="header" id="header-grafico-NEO" data-backbtn="false">
+	<p id="titulo" align="center">
+    	<label id="titulo-grafico-neo">Resultado NEO</label>
+    </p>
+</div><!-- /header-->
+    
+<div data-role="content" id="conteudo-grafico-NEO">
+		
+    	<div id="grafico_cinco_fatores" align="center">Gráfico 1 Download...</div>
+        <div id="div-grandes-fatores" align="center" style="display:none">
+        	<a href="#sobre-os-fatores-NEO" id="button-grandes-fatores" data-role="button" data-transition="">
+            	<label id="label-button-grafico-neo">Ver os 5 Fatores</label>
+            </a>
+        </div>
+        
+        <div id="grafico_extroversao" align="center">Grafico 2 Download...</div>
+        <div id="div-detalhe-extroversão" align="center">
+        	<a href="#extroversão" id="button-extroversão" data-role="button" data-transition="">
+            	<label id="label-button-ver-extroversão-neo">Ver Extrovers&atilde;o</label>
+            </a>
+        </div>
+        
+        <div id="grafico_socializacao" align="center">Grafico 3 Download...</div>
+        <div id="div-detalhe-socializacao" align="center">
+        	<a href="#socializacao" id="button-socializacao" data-role="button" data-transition="">
+            	<label id="label-button-ver-socializacao-neo">Ver Socializa&ccedil;&atilde;o</label>
+            </a>
+        </div>
+        
+        <div id="grafico_realizacao" align="center">Grafico 4 Download...</div>
+        <div id="div-detalhe-realizacao" align="center">
+        	<a href="#realizacao" id="button-socializacao" data-role="button" data-transition="">
+            	<label id="label-button-ver-realizacao-neo">Ver Realiza&ccedil;&atilde;o</label>
+                </a>
+        </div>
+        
+        <div id="grafico_neuroticismo" align="center">Grafico 5 Download...</div>
+        <div id="div-detalhe-neuroticismo" align="center">
+        	<a href="#neuroticismo" id="button-neuroticismo" data-role="button" data-transition="">
+            	<label id="label-button-ver-neuroticismo-neo">Ver Neuroticismo</label>
+            </a>
+        </div>
+        
+        <div id="grafico_abertura" align="center">Grafico 6 Download...</div>
+    	<div id="div-detalhe-realizacao" align="center">
+        	<a href="#abertura" id="button-abertura" data-role="button" data-transition="">
+            	<label id="label-button-ver-abertura-neo">Ver Abertura</label>
+            </a>
+        </div>
+        
+</div><!-- /content-->
+
+	<!-- ********************************************** -->    
+<div data-role="footer" id="rodape-grafico-NEO">
+	<div data-role="navbar" id="navbar-rodape">
+    	<ul>
+        	<li><a href="#escolha-de-inventario" id="nav_exit" data-transition="">
+            	<img src="images/Img/icon_sair.png" id="sair-grafico-neo"/>
+                </a></li>
+     		<li><a href="#inicio" id="nav_home" data-transition="">
+            	<img src="images/Img/icon_home.png" id="home-grafico-neo"/>
+                </a></li>
+    	</ul>    
+	</div><!-- /navbar -->
+</div><!-- /footer-->
+	<!-- *********************************************** -->
+    
+</div><!-- /page grafico-NEO-IPIP - Final da pagina-->
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<!--<div data-role="page" id="grafico-NEO" ><!-- /Inicio da pagina-->
+<!--<div data-role="header" id="header-grafico-NEO" data-backbtn="false">
+	<p id="titulo" align="center">
+    	<label id="titulo-grafico-neo">Resultado NEO</label>
+        <label id="titulo-grafico-neo-us" style="display:none">Result NEO</label>
+    </p>
+</div><!-- /header-->
+    
+<!--<div data-role="content" id="conteudo-grafico-NEO">
+		
+    	<div id="grafico_cinco_fatores" align="center">Grafico 1 Download...</div>
+        <div id="grafico_cinco_fatores-us" align="center" style="display:none">Graph 1 Download...</div>
+        
+        <div id="grafico_extroversao" align="center">Grafico 2 Download...</div>
+        <div id="grafico_extroversao-us" align="center" style="display:none">Graph 2 Download...</div>
+        <div id="div-detalhe-extroversão" align="center">
+        	<a href="#extroversão" id="button-extroversão" data-role="button" data-transition="">
+            	<label id="label-button-ver-extroversão-neo">Ver Extroversão</label>
+                <label id="label-button-ver-extroversão-neo-us" style="display:none">See Extroversion</label></a>
+        </div>
+        
+        <div id="grafico_socializacao" align="center">Grafico 3 Download...</div>
+        <div id="grafico_socializacao-us" align="center" style="display:none">Graph 3 Download...</div>
+        <div id="div-detalhe-socializacao" align="center">
+        	<a href="#socializacao" id="button-socializacao" data-role="button" data-transition="">
+            	<label id="label-button-ver-socializacao-neo">Ver Socialização</label>
+                <label id="label-button-ver-socializacao-neo-us" style="display:none">See Socialization</label></a>
+        </div>
+        
+        <div id="grafico_realizacao" align="center">Grafico 4 Download...</div>
+        <div id="grafico_realizacao-us" align="center" style="display:none">Graph 4 Download...</div>
+        <div id="div-detalhe-realizacao" align="center">
+        	<a href="#realizacao" id="button-socializacao" data-role="button" data-transition="">
+            	<label id="label-button-ver-realizacao-neo">Ver Realização</label>
+                <label id="label-button-ver-realizacao-neo-us" style="display:none">See Realization</label></a>
+        </div>
+        
+        <div id="grafico_neuroticismo" align="center">Grafico 5 Download...</div>
+        <div id="grafico_neuroticismo-us" align="center" style="display:none">Graph 5 Download...</div>
+        <div id="div-detalhe-neuroticismo" align="center">
+        	<a href="#neuroticismo" id="button-neuroticismo" data-role="button" data-transition="">
+            	<label id="label-button-ver-neuroticismo-neo">Ver Neuroticismo</label>
+                <label id="label-button-ver-neuroticismo-neo-us" style="display:none">See Neuroticism</label></a>
+        </div>
+        
+        <div id="grafico_abertura" align="center">Grafico 6 Download...</div>
+        <div id="grafico_abertura-us" align="center" style="display:none">Graph 6 Download...</div>
+    	<div id="div-detalhe-realizacao" align="center">
+        	<a href="#abertura" id="button-abertura" data-role="button" data-transition="">
+            	<label id="label-button-ver-abertura-neo">Ver Abertura</label>
+                <label id="label-button-ver-abertura-neo-us" style="display:none">See Opening</label></a>
+        </div>
+        
+</div><!-- /content-->
+
+	<!-- ********************************************** -->    
+<!--<div data-role="footer" id="rodape-grafico-NEO">
+	<div data-role="navbar" id="navbar-rodape">
+    	<ul>
+        	<li><a href="#escolha-de-inventario"  id="nav_exit" data-transition="">
+            	<img src="images/Img/icon_sair.png" id="sair-grafico-neo"/>
+                </a></li>
+     		<li><a href="#inicio" id="nav_home" data-transition="">
+            	<img src="images/Img/icon_home.png" id="home-grafico-neo"/>
+                </a></li>
+    	</ul>    
+	</div><!-- /navbar -->
+<!--</div><!-- /footer-->
+	<!-- *********************************************** -->
+    
+<!--</div><!-- /page grafico-NEO-IPIP - Final da pagina-->
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    
+<div data-role="page" id="grafico-TIPI" ><!-- /Inicio da pagina-->
+<div data-role="header" id="header-grafico-TIPI" data-backbtn="false">
+	<p id="titulo" align="center">
+    	<label id="titulo-grafico-tipi"><b>Resultado TIPI</b></label>
+    </p>
+</div><!-- /header-->
+    
+<div data-role="content" id="conteudo-grafico-TIPI">
+    	<div id="grafico_cinco_fatores-TIPI" align="center">Grafico TIPI  Download...</div>
+        <div id="div-grandes-fatores-tipi" align="center">
+        	<!--<a href="#sobre-os-fatores-TIPI" id="button-grandes-fatores" data-role="button" data-transition="" style="font-size:14px">
+            	<label id="label-button-ver-fatores-tipi">Ver os 5 Fatores</label></a>-->
+            <ul data-role="listview">
+                <p><br><li id="list-neo"><a href="#extroversao-tipi"><center><b>Ver Extrovers&atilde;o</b></center></a></li></p>
+                <p><br><li id="list-tipi"><a href="#socializacao-tipi"><center><b>Ver Socializa&ccedil;&atilde;o</b></center></a></li></p>
+                <p><br><li id="list-neo"><a href="#realizacao-tipi"><center><b>Ver Realiza&ccedil;&atilde;o</b></center></a></li></p>
+                <p><br><li id="list-tipi"><a href="#estabilidade-emocional-tipi"><center><b>Ver Estabilidade Emocional</b></center></a></li></p>
+                <p><br><li id="list-tipi"><a href="#abertura-tipi"><center><b>Ver Abertura</b></center></a></li></p>
+            </ul>
+        </div>
+</div><!-- /content-->
+
+	<!-- ********************************************** -->    
+<div data-role="footer" id="rodape-grafico-TIPI">
+	<div data-role="navbar" id="navbar-rodape">
+    	<ul>
+        	<li><a href="#escolha-de-inventario" id="nav_exit" data-transition="">
+            	<img src="images/Img/icon_sair.png" id="sair-grafico-tipi"/>
+                </a></li>
+     		<li><a href="#inicio" id="nav_home" data-transition="">
+            	<img src="images/Img/icon_home.png" id="home-grafico-tipi"/>
+                </a></li>
+    	</ul>    
+	</div><!-- /navbar -->
+</div><!-- /footer-->
+	<!-- *********************************************** -->
+    
+</div><!-- /page grafico-TIPI - Final da pagina-->
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<div data-role="page" id="extroversão" ><!-- /Inicio da pagina-->
+<div data-role="header" id="header-extroversão" data-backbtn="false">
+	<a href="#grafico-NEO" data-role="button" data-icon="back" style="margin-top:5px" data-transition="" id="button-voltar-extroversão">
+    	<label id="label-button-voltar-extroversão-neo">Voltar</label>
+    </a>
+	<p id="titulo" align="center">
+    	<label id="titulo-ver-extroversão-neo">Extrovers&atilde;o NEO</label>
+    </p>
+</div><!-- /header-->
+<div data-role="content" id="conteudo-extroversão" class="fundo">
+	<p align="justify">
+    <label id="label-conteudo-extroversão">
+    	<b>Extrovers&atilde;o</b> - A Extrovers&atilde;o &eacute; marcada por um forte engajamento com o mundo externo. Extrovertidos gostam de estar com as pessoas, s&atilde;o cheios de energia e muitas vezes experimentam emo&ccedil;&otilde;es positivas. Eles tendem a ser entusiastas, orientados para a a&ccedil;&atilde;o, indiv&iacute;duos que s&atilde;o propensos a dizer "Sim!" ou "Vamos!" &agrave;s oportunidades de excita&ccedil;&atilde;o. Em grupos, eles gostam de falar, afirmar-se e chamar a aten&ccedil;&atilde;o para si.
+Aos introvertidos, falta a exuber&acirc;ncia, energia e os n&iacute;veis de atividade dos extrovertidos. Introvertidos tendem a ser silenciosos, discretos, ponderados e desengajados do mundo social. A sua falta de participa&ccedil;&atilde;o social n&atilde;o deve ser interpretada como timidez ou depress&atilde;o; o introvertido simplesmente precisa de menos estimula&ccedil;&atilde;o do que um extrovertido e prefere ficar sozinho. A independ&ecirc;ncia e reserva do introvertido &eacute; por vezes confundida com hostilidade ou arrog&acirc;ncia. Na verdade, um introvertido que pontua alto na dimens&atilde;o Socializa&ccedil;&atilde;o n&atilde;o procurar&aacute; outras pessoas, mas ser&aacute; bastante agrad&aacute;vel quando abordado.
+		<br>
+        <b>Facetas da Extrovers&atilde;o:</b><br>
+        <b>Amigabilidade</b> - Pessoas amig&aacute;veis gostam genuinamente de outras pessoas e demonstram abertamente sentimentos positivos em rela&ccedil;&atilde;o aos outros.<br>
+        <b>Gregarismo</b> - Pessoas greg&aacute;rias v&ecirc;em a companhia de outros como agradavelmente estimulante e gratificante. Elas gostam da excita&ccedil;&atilde;o de multid&otilde;es.<br>
+        <b>Assertividade</b> - Pessoas com escores altos em assertividade gostam de falar, tomar conta e dirigir as atividades dos outros. Elas tendem a ser l&iacute;deres em grupos.<br>
+        <b>N&iacute;vel de atividade</b> - Indiv&iacute;duos ativos levam vidas aceleradas e ocupadas. Elas se movem rapidamente, de forma en&eacute;rgica e vigorosa, e est&atilde;o envolvidas em muitas atividades.<br>
+        <b>Procura por excita&ccedil;&atilde;o</b> - Pessoas com escores altos nesta escala ficam facilmente entediados se n&atilde;o tiverem altos n&iacute;veis de estimula&ccedil;&atilde;o. Elas adoram luzes, movimento e alvoro&ccedil;o.<br>
+        <b>Bom humor</b> - Esta escala mensura o humor e sentimentos positivos, e n&atilde;o as emo&ccedil;&otilde;es negativas (que s&atilde;o uma parte do dom&iacute;nio do Neuroticismo).
+	</label>
+    </p>
+</div><!-- /content -->
+
+<div data-role="footer" id="rodape-extroversão" >
+	<div data-role="navbar" id="navbar-rodape" >
+    	<ul>
+        	<li><a href="#grafico-NEO" id="nav_exit" data-transition="">
+            	<img src="images/Img/icon_sair.png" id="sair-extroversão"/>
+                </a></li>
+     		<li><a href="#inicio" id="nav_home" data-transition="" >
+            	<img src="images/Img/icon_home.png" id="home-extroversão"/>
+                </a></li>
+    	</ul>    
+	</div><!-- /navbar -->
+</div><!-- /footer -->
+</div><!-- /Final pagina extroversão -->
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<div data-role="page" id="socializacao" ><!-- /Inicio da pagina-->
+<div data-role="header" id="header-socializacao" data-backbtn="false">
+	<a href="#grafico-NEO" data-role="button" data-icon="back" style="margin-top:5px" data-transition="" id="button-voltar-socializacao">
+    	<label id="label-button-voltar-socializacao-neo">Voltar</label>
+    </a>
+	<p id="titulo" align="center">
+    	<label id="titulo-ver-socializacao-neo">Socializa&ccedil;&atilde;o NEO</label>
+    </p>
+</div><!-- /header-->
+<div data-role="content" id="conteudo-socializacao" class="fundo">
+	<p align="justify">
+    <label id="label-conteudo-socializacao">
+    	<b>Socializa&ccedil;&atilde;o</b> - A Socializa&ccedil;&atilde;o reflete diferen&ccedil;as individuais na preocupa&ccedil;&atilde;o com a coopera&ccedil;&atilde;o e harmonia social. Indiv&iacute;duos soci&aacute;veis valorizam a conviv&ecirc;ncia com os outros. Eles s&atilde;o, portanto, atenciosos, simp&aacute;ticos, generosos, prestativos e dispostos a comprometer os seus interesses com os dos outros. Pessoas soci&aacute;veis tamb&eacute;m t&ecirc;m uma vis&atilde;o otimista da natureza humana. Elas acreditam que as pessoas s&atilde;o, basicamente, honestas, decentes e dignas de confian&ccedil;a.
+Indiv&iacute;duos n&atilde;o-soci&aacute;veis colocam o interesse pr&oacute;prio acima da conviv&ecirc;ncia com os outros. Eles s&atilde;o geralmente despreocupados com o bem-estar dos outros e, portanto, &eacute; improv&aacute;vel que se ofere&ccedil;am para outras pessoas. &Agrave;s vezes, seu ceticismo sobre as motiva&ccedil;&otilde;es dos outros faz com que sejam suspeitos, hostis, e n&atilde;o-cooperativos.
+A Socializa&ccedil;&atilde;o &eacute; obviamente vantajosa para atingir e manter popularidade. Pessoas soci&aacute;veis s&atilde;o mais queridas que as n&atilde;o-soci&aacute;veis. Por outro lado, a Socializa&ccedil;&atilde;o n&atilde;o &eacute; &uacute;til em situa&ccedil;&otilde;es que exigem decis&otilde;es dif&iacute;ceis ou absolutamente objetivas. Pessoas n&atilde;o-soci&aacute;veis podem tornar-se excelentes cientistas, cr&iacute;ticos ou soldados.
+		<br>
+        <b>Facetas da Socializa&ccedil;&atilde;o:</b><br>
+        <b>Confian&ccedil;a</b> - Uma pessoa com alta confian&ccedil;a pressup&otilde;e que a maioria das pessoas &eacute; justa, honesta e tem boas inten&ccedil;&otilde;es. Pessoas com baixa confian&ccedil;a v&ecirc;em o outro como ego&iacute;sta, desonesto, e potencialmente perigoso. Seu n&iacute;vel de confian&ccedil;a &eacute; baixo.<br>
+		<b>Moralidade</b> - Pessoas com escores altos nesta escala n&atilde;o v&ecirc;em necessidade de fingir ou manipular quando lidam com os outros e s&atilde;o, portanto, c&acirc;ndidos, francos e sinceros.<br>
+		<b>Altru&iacute;smo</b> - Pessoas altru&iacute;stas sentem que ajudar outras pessoas &eacute; genuinamente gratificante. Conseq&uuml;entemente, elas geralmente est&atilde;o dispostas a ajudar aqueles que est&atilde;o em necessidade.<br>
+		<b>Coopera&ccedil;&atilde;o</b> - Indiv&iacute;duos com escores altos nesta escala n&atilde;o gostam de confrontos. Eles est&atilde;o perfeitamente dispostos a se comprometer ou a negar as suas pr&oacute;prias necessidades para se dar bem com os outros.<br>
+		<b>Mod&eacute;stia</b> - Pessoas com escores altos nesta escala n&atilde;o gostam de afirmar que s&atilde;o melhores do que os outros. Em alguns casos, esta atitude pode resultar de baixa auto-confian&ccedil;a e auto-estima.<br>
+		<b>Compaix&atilde;o</b> - Pessoas com escores altos nesta s&atilde;o ternas e compassivas. Elas sentem a dor dos outros indiretamente e facilmente sentem pena.
+	</label>
+    </p>
+</div><!-- /content -->
+
+<div data-role="footer" id="rodape-socializacao">
+	<div data-role="navbar" id="navbar-rodape" >
+    	<ul>
+        	<li><a href="#grafico-NEO" id="nav_exit" data-transition="" >
+            	<img src="images/Img/icon_sair.png" id="sair-socializacao"/>
+                </a></li>
+     		<li><a href="#inicio" id="nav_home" data-transition="">
+            	<img src="images/Img/icon_home.png" id="home-socializacao"/>
+                </a></li>
+    	</ul>    
+	</div><!-- /navbar -->
+</div><!-- /footer -->
+</div><!-- /Final pagina socialização -->
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<div data-role="page" id="realizacao" ><!-- /Inicio da pagina-->
+<div data-role="header" id="header-realizacao" data-backbtn="false">
+	<a href="#grafico-NEO" data-role="button" data-icon="back" style="margin-top:5px" data-transition="" id="button-voltar-realizacao">
+    	<label id="label-button-voltar-realizacao-neo">Voltar</label>
+	</a>
+	<p id="titulo" align="center">
+    	<label id="titulo-ver-realizacao-neo">Realiza&ccedil;&atilde;o NEO</label>
+    </p>
+</div><!-- /header-->
+<div data-role="content" id="conteudo-realizacao" class="fundo">
+	<p align="justify">
+    <label id="label-conteudo-realizacao">
+    	<b>Realiza&ccedil;&atilde;o</b> - A Realiza&ccedil;&atilde;o trata da maneira pela qual n&oacute;s controlamos, regulamos e direcionamos os nossos impulsos. Os impulsos n&atilde;o s&atilde;o inerentemente maus; &agrave;s vezes restri&ccedil;&otilde;es de tempo requerem uma decis&atilde;o precipitada e agir em nosso primeiro impulso pode ser uma resposta eficaz. Al&eacute;m disso, nas horas de distra&ccedil;&atilde;o ao inv&eacute;s de trabalho, atuar de forma espont&acirc;nea e impulsiva pode ser divertido. Indiv&iacute;duos impulsivos podem ser vistos pelos outros como pitorescos, divertidos e palha&ccedil;os.
+N&atilde;o obstante, agir por impulso pode levar a problemas em uma s&eacute;rie de maneiras. Alguns impulsos s&atilde;o anti-sociais. Atos anti-sociais descontrolados n&atilde;o s&oacute; prejudicam outros membros da sociedade, como tamb&eacute;m podem resultar em puni&ccedil;&atilde;o para o autor de tais atos impulsivos. Outro problema com os atos impulsivos &eacute; que muitas vezes eles produzem recompensas imediatas, mas conseq&uuml;&ecirc;ncias indesej&aacute;veis em longo prazo. Exemplos incluem excesso de Socializa&ccedil;&atilde;o que leva a ser demitido de um emprego, lan&ccedil;ar um insulto que provoca o t&eacute;rmino de um relacionamento importante, ou utilizar drogas indutoras de prazer que, eventualmente, destroem a sa&uacute;de.O comportamento impulsivo, mesmo quando n&atilde;o seriamente destrutivo, diminui a efic&aacute;cia de uma pessoa de maneiras significativas. Agir impulsivamente n&atilde;o permite contemplar cursos alternativos de a&ccedil;&atilde;o, alguns dos quais teriam sido mais s&aacute;bios do que a escolha impulsiva. A impulsividade tamb&eacute;m desvia as pessoas durante projetos que requerem seq&uuml;&ecirc;ncias de etapas ou est&aacute;gios organizados. As realiza&ccedil;&otilde;es de uma pessoa impulsiva s&atilde;o, portanto, pequenas, dispersas e inconsistentes.
+Os benef&iacute;cios de alta Realiza&ccedil;&atilde;o s&atilde;o &oacute;bvios. Indiv&iacute;duos realizadores evitam problemas e alcan&ccedil;am altos n&iacute;veis de sucesso atrav&eacute;s de planejamento e persist&ecirc;ncia propositais. Eles tamb&eacute;m s&atilde;o positivamente considerados por outros como inteligentes e confi&aacute;veis. Do lado negativo, eles podem ser perfeccionistas compulsivo e workaholics. Al&eacute;m disso, indiv&iacute;duos extremamente realizadores podem ser considerados enfadonhos e entediantes. Pessoas n&atilde;o-realizadoras podem ser criticadas por sua n&atilde;o-confiabilidade, falta de ambi&ccedil;&atilde;o, e por n&atilde;o ficar dentro das linhas, mas v&atilde;o experimentar muitos prazeres breves e nunca ser&atilde;o chamados de enfadonhos.
+		<br>
+        <b>Facetas da Realiza&ccedil;&atilde;o:</b><br>
+        <b>Auto-efic&aacute;cia</b> - A auto-efic&aacute;cia descreve a confian&ccedil;a na pr&oacute;pria capacidade de realizar coisas. Pessoas com escores altos acreditam que t&ecirc;m a intelig&ecirc;ncia (senso comum), energia e autocontrole necess&aacute;rios para alcan&ccedil;ar o sucesso.<br>
+		<b>Ordem</b> - Pessoas com escores altos em ordem s&atilde;o bem organizadas. Elas gostam de viver segundo rotinas e hor&aacute;rios. Elas mant&ecirc;m listas e fazem planos.<br>
+		<b>Senso de dever</b> - Esta escala reflete a for&ccedil;a do senso de dever e obriga&ccedil;&atilde;o de uma pessoa. Aqueles que atingem escores altos nesta escala t&ecirc;m um forte senso de obriga&ccedil;&atilde;o moral.<br>
+		<b>Empenho</b> - Indiv&iacute;duos com escores altos nesta escala trabalham duro para atingir a excel&ecirc;ncia. Seus esfor&ccedil;os para serem reconhecidos como bem sucedidos os mant&ecirc;m na linha em dire&ccedil;&atilde;o a objetivos elevados. Eles geralmente t&ecirc;m um forte senso de dire&ccedil;&atilde;o na vida, mas escores extremamente altos podem ser exageradamente focados e obcecados com seu trabalho.<br>
+		<b>Autodisciplina</b> - A autodisciplina, que muitos chamam de for&ccedil;a de vontade, refere-se &agrave; capacidade de persistir em tarefas dif&iacute;ceis ou desagrad&aacute;veis at&eacute; que sejam conclu&iacute;das.<br>
+		<b>Prud&ecirc;ncia</b> - A prud&ecirc;ncia descreve a disposi&ccedil;&atilde;o para pensar nas possibilidades antes de agir. Pessoas com escores altos na escala de prud&ecirc;ncia levam um tempo na tomada de decis&otilde;es.
+	</label>
+    </p>
+</div><!-- /content -->
+
+<div data-role="footer" id="rodape-realizacao">
+	<div data-role="navbar" id="navbar-rodape" >
+    	<ul>
+        	<li><a href="#grafico-NEO" id="nav_exit" data-transition="">
+            	<img src="images/Img/icon_sair.png" id="sair-realizacao"/>
+                </a></li>
+     		<li><a href="#inicio" id="nav_home" data-transition="" >
+            	<img src="images/Img/icon_home.png" id="home-realizacao"/>
+                </a></li>
+    	</ul>    
+	</div><!-- /navbar -->
+</div><!-- /footer -->
+</div><!-- /Final pagina Realização -->
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<div data-role="page" id="neuroticismo" ><!-- /Inicio da pagina-->
+<div data-role="header" id="header-neuroticismo" data-backbtn="false">
+	<a href="#grafico-NEO" data-role="button" data-icon="back" style="margin-top:5px" data-transition="" id="button-voltar-neuroticismo">
+    	<label id="label-button-voltar-neuroticismo-neo">Voltar</label>
+	</a>
+	<p id="titulo" align="center">
+    	<label id="titulo-ver-neuroticismo-neo">Neuroticismo NEO</label>
+    </p>
+</div><!-- /header-->
+<div data-role="content" id="conteudo-neuroticismo" class="fundo">
+	<p align="justify">
+    <label id="label-conteudo-neuroticismo">
+    	<b>Neuroticismo</b> - Freud originalmente utilizava o termo neurose para descrever uma condi&ccedil;&atilde;o marcada por uma ang&uacute;stia mental, sofrimento emocional e uma incapacidade de lidar eficazmente com as exig&ecirc;ncias normais da vida. Ele sugeriu que todos mostram alguns sinais de neurose, mas que nos diferenciamos em nosso grau de sofrimento e em nossos sintomas espec&iacute;ficos de ang&uacute;stia. Hoje, o Neuroticismo refere-se &agrave; tend&ecirc;ncia a experimentar sentimentos negativos. Aqueles com escores altos em Neuroticismo podem experimentar principalmente um sentimento negativo espec&iacute;fico, como ansiedade, raiva ou depress&atilde;o, mas s&atilde;o suscet&iacute;veis a experimentar v&aacute;rias dessas emo&ccedil;&otilde;es. Pessoas com escores altos em Neuroticismo s&atilde;o emocionalmente reativas. Elas respondem emocionalmente a eventos que n&atilde;o afetariam a maioria das pessoas, e suas rea&ccedil;&otilde;es tendem a ser mais intensas que o normal. Elas s&atilde;o mais propensas a interpretar situa&ccedil;&otilde;es comuns como amea&ccedil;as, e frustra&ccedil;&otilde;es menores como irremediavelmente dif&iacute;ceis. Suas rea&ccedil;&otilde;es emocionais negativas tendem a persistir por um per&iacute;odo excepcionalmente longo de tempo, o que significa que est&atilde;o frequentemente de mau humor. Esses problemas com regula&ccedil;&atilde;o emocional podem diminuir a capacidade de um neur&oacute;tico de pensar claramente, tomar decis&otilde;es e lidar eficientemente com o stress.
+No outro extremo da escala, os indiv&iacute;duos com baixos escores em Neuroticismo ficam menos facilmente chateados e s&atilde;o menos reativos emocionalmente. Eles tendem a ser calmos, emocionalmente est&aacute;veis e livre de sentimentos negativos persistentes. Estar mais livres de sentimentos negativos n&atilde;o significa que pessoas com baixos escores experimentem muitos sentimentos positivos; a freq&uuml;&ecirc;ncia de emo&ccedil;&otilde;es positivas &eacute; um componente do dom&iacute;nio Extrovers&atilde;o.
+		<br>
+        <b>Facetas do Neuroticismo:</b><br>
+        <b>Ansiedade</b> - O sistema de "luta ou fuga" do c&eacute;rebro de indiv&iacute;duos ansiosos &eacute; muito facilmente e geralmente comprometido. Portanto, pessoas com escores altos em ansiedade muitas vezes sentem que algo perigoso est&aacute; para acontecer.<br>
+		<b>Raiva</b> - Pessoas com escores altos em raiva sentem raiva quando as coisas n&atilde;o v&atilde;o do seu jeito. Elas s&atilde;o sens&iacute;veis sobre serem tratadas de forma justa e ficam ressentidas e amarguradas quando sentem que est&atilde;o sendo enganadas.<br>
+		<b>Depress&atilde;o</b> - Esta escala mede a tend&ecirc;ncia a se sentir triste, deprimido e desencorajado. Pessoas com escores altos se sentem com falta de energia e t&ecirc;m dificuldade de iniciar atividades.<br>
+		<b>Auto-percep&ccedil;&atilde;o</b> - Indiv&iacute;duos auto-perceptivos s&atilde;o sens&iacute;veis sobre o que os outros pensam deles. Sua preocupa&ccedil;&atilde;o com a rejei&ccedil;&atilde;o e o rid&iacute;culo faz com que eles se sintam t&iacute;midos e desconfort&aacute;veis ao redor de outros. Eles sentem-se facilmente constrangidos e muitas vezes envergonhados. Seus medos de que os outros v&atilde;o critic&aacute;-los ou tirar sarro deles s&atilde;o exagerados e irreais, mas a sua estranheza e desconforto podem tornar esses medos uma profecia auto-realiz&aacute;vel.<br>
+		<b>Falta de modera&ccedil;&atilde;o</b> - Indiv&iacute;duos n&atilde;o-moderados sentem fortes desejos e &acirc;nsias aos quais eles t&ecirc;m dificuldade em resistir. Tendem a ser orientados para os prazeres e recompensas de curto prazo, ao inv&eacute;s de consequ&ecirc;ncias em longo prazo.<br>
+		<b>Vulnerabilidade</b> - Pessoas com escores altos em vulnerabilidade experimentam p&acirc;nico, confus&atilde;o e desespero quando sob press&atilde;o ou estresse.
+	</label>
+    </p>
+</div><!-- /content -->
+
+<div data-role="footer" id="rodape-neuroticismo">
+	<div data-role="navbar" id="navbar-rodape" >
+    	<ul>
+        	<li><a href="#grafico-NEO" id="nav_exit" data-transition="" >
+            	<img src="images/Img/icon_sair.png" id="sair-neuroticismo"/>
+                </a></li>
+     		<li><a href="#inicio" id="nav_home" data-transition="" >
+            	<img src="images/Img/icon_home.png" id="home-neuroticismo"/>
+                </a></li>
+    	</ul>    
+	</div><!-- /navbar -->
+</div><!-- /footer -->
+</div><!-- /Final pagina Neuroticismo -->
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<div data-role="page" id="abertura" ><!-- /Inicio da pagina-->
+<div data-role="header" id="header-abertura" data-backbtn="false">
+	<a href="#grafico-NEO" data-role="button" data-icon="back" style="margin-top:5px" data-transition="" id="button-voltar-abertura">
+    	<label id="label-button-voltar-abertura-neo">Voltar</label>
+    </a>
+	<p id="titulo" align="center">
+    	<label id="titulo-ver-abertura-neo">Abertura NEO</label>
+    </p>
+</div><!-- /header-->
+<div data-role="content" id="conteudo-abertura" class="fundo">
+	<p align="justify">
+    <label id="label-conteudo-abertura">
+    	<b>Abertura</b> - Abertura descreve uma dimens&atilde;o de estilo cognitivo que distingue entre indiv&iacute;duos imaginativos e criativos e aqueles p&eacute;-no-ch&atilde;o, convencionais. Pessoas abertas s&atilde;o intelectualmente curiosas, apreciam a arte e s&atilde;o sens&iacute;veis &agrave; beleza. Eles tendem a ser, comparados &agrave;s pessoas fechadas, mais conscientes de seus sentimentos. Tendem a pensar e agir de forma individualista e n&atilde;o-conformista. Intelectuais normalmente pontuam alto em Abertura; conseq&uuml;entemente, esse fator tamb&eacute;m tem sido chamado de Cultura ou Intelecto. N&atilde;o obstante, o Intelecto &eacute; provavelmente melhor considerado como um aspecto da Abertura. Escores em Abertura s&atilde;o apenas modestamente relacionados com os anos de escolaridade e os escores em testes padr&otilde;es de intelig&ecirc;ncia.
+Outra caracter&iacute;stica do estilo cognitivo aberto &eacute; uma facilidade para pensar em s&iacute;mbolos e abstra&ccedil;&otilde;es distantes da experi&ecirc;ncia concreta. Dependendo das habilidades intelectuais espec&iacute;ficas do indiv&iacute;duo, essa cogni&ccedil;&atilde;o simb&oacute;lica pode assumir a forma de pensamento matem&aacute;tico, l&oacute;gico ou geom&eacute;trico, uso art&iacute;stico e metaf&oacute;rico da linguagem, composi&ccedil;&atilde;o ou performance musical, ou uma das muitas artes visuais e de performance. Pessoas com baixos escores em Abertura tendem a ter interesses limitados e comuns. Elas preferem o simples, direto e &oacute;bvio ao sutil, complexo e amb&iacute;guo. Podem enxergam as artes e ci&ecirc;ncias com desconfian&ccedil;a, considerando estes esfor&ccedil;os confusos e de nenhum uso pr&aacute;tico. Pessoas fechadas preferem a familiaridade &agrave; novidade, s&atilde;o conservadoras e resistentes &agrave; mudan&ccedil;a.
+A Abertura &eacute; muitas vezes apresentada como mais saud&aacute;vel ou mais madura por psic&oacute;logos, que s&atilde;o muitas vezes eles mesmos abertos &agrave; experi&ecirc;ncia. No entanto, os estilos aberto e fechado de pensamento s&atilde;o &uacute;teis em ambientes diferentes. O estilo intelectual da pessoa aberta pode servir bem a um professor, mas pesquisas t&ecirc;m demonstrado que o pensamento fechado est&aacute; relacionado a um desempenho superior nos trabalhos de policial, vendas e uma variedade de ocupa&ccedil;&otilde;es de servi&ccedil;o.
+		<br>
+        <b>Facetas da Abertura:</b><br>
+        <b>Imagina&ccedil;&atilde;o</b> - Para os indiv&iacute;duos imaginativos, o mundo real &eacute; muitas vezes demasiado simples e comum. Pessoas com escores altos nesta escala usam a fantasia como forma de criar um mundo mais rico, mais interessante.<br>
+		<b>Interesses art&iacute;sticos</b> - Tornam-se facilmente envolvidas e absorvidas em eventos art&iacute;sticos e naturais. Elas n&atilde;o s&atilde;o, necessariamente, treinadas artisticamente ou talentosas, embora muitas sejam. As caracter&iacute;sticas que definem esta escala s&atilde;o o interesse e a aprecia&ccedil;&atilde;o da beleza natural e artificial.<br>
+		<b>Emotividade</b> - Pessoas com alta Emotividade t&ecirc;m um bom acesso aos e consci&ecirc;ncia dos seus pr&oacute;prios sentimentos. Pessoas com baixos escores s&atilde;o menos conscientes dos seus sentimentos e tendem a n&atilde;o expressar suas emo&ccedil;&otilde;es abertamente.<br>
+		<b>Senso aventureiro</b> - Pessoas com escores altos em senso aventureiro s&atilde;o ansiosas para experimentar atividades novas, viajar por terras estrangeiras e provar coisas diferentes. Eles acham a familiaridade e a rotina chatas, e ir&atilde;o fazer um caminho para casa s&oacute; porque ele &eacute; diferente.<br>
+		<b>Intelecto</b> - O intelecto e os interesses art&iacute;sticos s&atilde;o os dois aspectos mais importantes e centrais da Abertura. Pessoas com escores altos em Intelecto gostam de brincar com id&eacute;ias. Elas t&ecirc;m a mente aberta a ideias novas e inusitadas, e gostam de debater quest&otilde;es intelectuais. Elas gostam de charadas, enigmas e quebra-cabe&ccedil;as.<br>
+		<b>Liberalismo</b> - O liberalismo psicol&oacute;gico refere-se &agrave; vontade de desafiar a autoridade, a conven&ccedil;&atilde;o e os valores tradicionais. Em sua forma mais extrema, o liberalismo psicol&oacute;gico pode at&eacute; representar hostilidade para com as regras, simpatia por infratores e amor &agrave; ambiguidade, ao caos e &agrave; desordem. Conservadores psicol&oacute;gicos preferem a seguran&ccedil;a e a estabilidade trazidas pela conformidade com a tradi&ccedil;&atilde;o. O liberalismo e o conservadorismo psicol&oacute;gicos n&atilde;o s&atilde;o id&ecirc;nticos &agrave; filia&ccedil;&atilde;o partid&aacute;ria, mas certamente predisp&otilde;em as pessoas a determinados partidos pol&iacute;ticos.
+	</label>
+    </p>
+</div><!-- /content -->
+
+<div data-role="footer" id="rodape-abertura">
+	<div data-role="navbar" id="navbar-rodape">
+    	<ul>
+        	<li><a href="#grafico-NEO" id="nav_exit" data-transition="" >
+            	<img src="images/Img/icon_sair.png" id="sair-abertura"/>
+                </a></li>
+     		<li><a href="#inicio" id="nav_home" data-transition="" >
+            	<img src="images/Img/icon_home.png" id="home-abertura"/>
+                </a></li>
+    	</ul>    
+	</div><!-- /navbar -->
+</div><!-- /footer -->
+</div><!-- /Final pagina Abertura -->
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<div data-role="page" id="extroversao-tipi" ><!-- /Inicio da pagina-->
+<div data-role="header" id="header-extroversao-tipi" data-backbtn="false">
+	<a href="#grafico-TIPI" data-role="button" data-icon="back" style="margin-top:5px" data-transition="" id="button-voltar-extroversao-tipi">
+    	<label id="label-button-voltar-extroversao-tipi">Voltar</label>
+    </a>
+	<p id="titulo" align="center">
+    	<label id="titulo-extroversão-tipi">Extrovers&atilde;o TIPI</label>
+    </p>
+</div><!-- /header-->
+    
+<div data-role="content" id="conteudo-extroversão-tipi" class="fundo">
+	<p align="justify">
+    	<label id="label-conteudo-extroversao-tipi">
+        	A Extrovers&atilde;o &eacute; marcada por um forte engajamento com o mundo externo. Extrovertidos gostam de estar com as pessoas, s&atilde;o cheios de energia e muitas vezes experimentam emo&ccedil;&otilde;es positivas. Eles tendem a ser entusiastas, orientados para a a&ccedil;&atilde;o, indiv&iacute;duos que s&atilde;o propensos a dizer &ldquo;Sim!&rdquo; ou &ldquo;Vamos!&rdquo; &agrave;s oportunidades de excita&ccedil;&atilde;o. Em grupos, eles gostam de falar, afirmar-se e chamar a aten&ccedil;&atilde;o para si.
+Aos introvertidos, falta a exuber&acirc;ncia, energia e os n&iacute;veis de atividade dos extrovertidos. Introvertidos tendem a ser silenciosos, discretos, ponderados e desengajados do mundo social. A sua falta de participa&ccedil;&atilde;o social n&atilde;o deve ser interpretada como timidez ou depress&atilde;o; o introvertido simplesmente precisa de menos estimula&ccedil;&atilde;o do que um extrovertido e prefere ficar sozinho. A independ&ecirc;ncia e reserva do introvertido &eacute; por vezes confundida com hostilidade ou arrog&acirc;ncia. Na verdade, um introvertido que pontua alto na dimens&atilde;o Socializa&ccedil;&atilde;o n&atilde;o procurar&aacute; outras pessoas, mas ser&aacute; bastante agrad&aacute;vel quando abordado.
+        </label>
+    </p>
+</div><!-- /content-->
+
+	<!-- ********************************************** -->    
+<div data-role="footer" id="rodape-extroversao-tipi">
+	<div data-role="navbar" id="navbar-rodape">
+    	<ul>
+        	<li><a href="#grafico-TIPI" id="nav_exit" data-transition="">
+            	<img src="images/Img/icon_sair.png" id="sair-extroversao-tipi"/>
+                </a></li>
+     		<li><a href="#inicio" id="nav_home" data-transition="">
+            	<img src="images/Img/icon_home.png" id="home-extroversao-tipi"/>
+                </a></li>
+    	</ul>    
+	</div><!-- /navbar -->
+</div><!-- /footer-->
+	<!-- *********************************************** -->
+    
+</div><!-- /page Extroversão-TIPI - Final da pagina-->
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<div data-role="page" id="socializacao-tipi" ><!-- /Inicio da pagina-->
+<div data-role="header" id="header-socializacao-tipi" data-backbtn="false">
+	<a href="#grafico-TIPI" data-role="button" data-icon="back" style="margin-top:5px" data-transition="" id="button-voltar-socializacao-tipi">
+    	<label id="label-button-voltar-socializacao-tipi">Voltar</label>
+    </a>
+	<p id="titulo" align="center">
+    	<label id="titulo-socializacao-tipi">Socializa&ccedil;&atilde;o TIPI</label>
+    </p>
+</div><!-- /header-->
+    
+<div data-role="content" id="conteudo-socializacao-tipi" class="fundo">
+	<p align="justify">
+    	<label id="label-conteudo-socializacao-tipi">
+        	A Extrovers&atilde;o &eacute; marcada por um forte engajamento com o mundo externo. Extrovertidos gostam de estar com as pessoas, s&atilde;o cheios de energia e muitas vezes experimentam emo&ccedil;&otilde;es positivas. Eles tendem a ser entusiastas, orientados para a a&ccedil;&atilde;o, indiv&iacute;duos que s&atilde;o propensos a dizer &ldquo;Sim!&rdquo; ou &ldquo;Vamos!&rdquo; &agrave;s oportunidades de excita&ccedil;&atilde;o. Em grupos, eles gostam de falar, afirmar-se e chamar a aten&ccedil;&atilde;o para si.
+Aos introvertidos, falta a exuber&acirc;ncia, energia e os n&iacute;veis de atividade dos extrovertidos. Introvertidos tendem a ser silenciosos, discretos, ponderados e desengajados do mundo social. A sua falta de participa&ccedil;&atilde;o social n&atilde;o deve ser interpretada como timidez ou depress&atilde;o; o introvertido simplesmente precisa de menos estimula&ccedil;&atilde;o do que um extrovertido e prefere ficar sozinho. A independ&ecirc;ncia e reserva do introvertido &eacute; por vezes confundida com hostilidade ou arrog&acirc;ncia. Na verdade, um introvertido que pontua alto na dimens&atilde;o Socializa&ccedil;&atilde;o n&atilde;o procurar&aacute; outras pessoas, mas ser&aacute; bastante agrad&aacute;vel quando abordado.
+        </label>
+    </p>
+</div><!-- /content-->
+
+	<!-- ********************************************** -->    
+<div data-role="footer" id="rodape-socializacao-tipi">
+	<div data-role="navbar" id="navbar-rodape">
+    	<ul>
+        	<li><a href="#grafico-TIPI" id="nav_exit" data-transition="">
+            	<img src="images/Img/icon_sair.png" id="sair-socializacao-tipi"/>
+                </a></li>
+     		<li><a href="#inicio" id="nav_home" data-transition="">
+            	<img src="images/Img/icon_home.png" id="home-socializacao-tipi"/>
+                </a></li>
+    	</ul>    
+	</div><!-- /navbar -->
+</div><!-- /footer-->
+	<!-- *********************************************** -->
+    
+</div><!-- /page Socialização-TIPI - Final da pagina-->
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<div data-role="page" id="realizacao-tipi" ><!-- /Inicio da pagina-->
+<div data-role="header" id="header-realizacao-tipi" data-backbtn="false">
+	<a href="#grafico-TIPI" data-role="button" data-icon="back" style="margin-top:5px" data-transition="" id="button-voltar-realizacao-tipi">
+    	<label id="label-button-voltar-realizacao-tipi">Voltar</label>
+    </a>
+	<p id="titulo" align="center">
+    	<label id="titulo-realizacao-tipi">Realiza&ccedil;&atilde;o TIPI</label>
+    </p>
+</div><!-- /header-->
+    
+<div data-role="content" id="conteudo-realizacao-tipi" class="fundo">
+	<p align="justify">
+    	<label id="label-conteudo-realizacao-tipi">
+        	A Realiza&ccedil;&atilde;o trata da maneira pela qual n&oacute;s controlamos, regulamos e direcionamos os nossos impulsos. Os impulsos n&atilde;o s&atilde;o inerentemente maus; &agrave;s vezes restri&ccedil;&otilde;es de tempo requerem uma decis&atilde;o precipitada e agir em nosso primeiro impulso pode ser uma resposta eficaz. Al&eacute;m disso, nas horas de distra&ccedil;&atilde;o ao inv&eacute;s de trabalho, atuar de forma espont&acirc;nea e impulsiva pode ser divertido. Indiv&iacute;duos impulsivos podem ser vistos pelos outros como pitorescos, divertidos e palha&ccedil;os.
+N&atilde;o obstante, agir por impulso pode levar a problemas em uma s&eacute;rie de maneiras. Alguns impulsos s&atilde;o anti-sociais. Atos anti-sociais descontrolados n&atilde;o s&oacute; prejudicam outros membros da sociedade, como tamb&eacute;m podem resultar em puni&ccedil;&atilde;o para o autor de tais atos impulsivos. Outro problema com os atos impulsivos &eacute; que muitas vezes eles produzem recompensas imediatas, mas conseq&uuml;&ecirc;ncias indesej&aacute;veis em longo prazo. Exemplos incluem excesso de Socializa&ccedil;&atilde;o que leva a ser demitido de um emprego, lan&ccedil;ar um insulto que provoca o t&eacute;rmino de um relacionamento importante, ou utilizar drogas indutoras de prazer que, eventualmente, destroem a sa&uacute;de.O comportamento impulsivo, mesmo quando n&atilde;o seriamente destrutivo, diminui a efic&aacute;cia de uma pessoa de maneiras significativas. Agir impulsivamente n&atilde;o permite contemplar cursos alternativos de a&ccedil;&atilde;o, alguns dos quais teriam sido mais s&aacute;bios do que a escolha impulsiva. A impulsividade tamb&eacute;m desvia as pessoas durante projetos que requerem seq&uuml;&ecirc;ncias de etapas ou est&aacute;gios organizados. As realiza&ccedil;&otilde;es de uma pessoa impulsiva s&atilde;o, portanto, pequenas, dispersas e inconsistentes.
+Uma caracter&iacute;stica da intelig&ecirc;ncia, que potencialmente separa os seres humanos de formas de vida anteriores, &eacute; a capacidade de pensar sobre conseq&uuml;&ecirc;ncias futuras antes de agir por impulso. A atividade inteligente envolve contempla&ccedil;&atilde;o de objetivos de longo alcance, organiza&ccedil;&atilde;o e planejamento de rotas para esses objetivos, e persist&ecirc;ncia nos objetivos apesar dos impulsos de curta dura&ccedil;&atilde;o em contr&aacute;rio. A id&eacute;ia de que a intelig&ecirc;ncia envolve o controle dos impulsos &eacute; bem captada pelo termo prud&ecirc;ncia, um r&oacute;tulo alternativo para o dom&iacute;nio de Realiza&ccedil;&atilde;o. Prudente significa tanto s&aacute;bio quando cauteloso. Pessoas com escores altos na escala de Realiza&ccedil;&atilde;o s&atilde;o, de fato, percebidas pelos outros como inteligentes.
+Os benef&iacute;cios de alta Realiza&ccedil;&atilde;o s&atilde;o &oacute;bvios. Indiv&iacute;duos realizadores evitam problemas e alcan&ccedil;am altos n&iacute;veis de sucesso atrav&eacute;s de planejamento e persist&ecirc;ncia propositais. Eles tamb&eacute;m s&atilde;o positivamente considerados por outros como inteligentes e confi&aacute;veis. Do lado negativo, eles podem ser perfeccionistas compulsivo e workaholics. Al&eacute;m disso, indiv&iacute;duos extremamente realizadores podem ser considerados enfadonhos e entediantes. Pessoas n&atilde;o-realizadoras podem ser criticadas por sua n&atilde;o-confiabilidade, falta de ambi&ccedil;&atilde;o, e por n&atilde;o ficar dentro das linhas, mas v&atilde;o experimentar muitos prazeres breves e nunca ser&atilde;o chamados de enfadonhos.
+        </label>
+    </p>
+</div><!-- /content-->
+
+	<!-- ********************************************** -->    
+<div data-role="footer" id="rodape-realizacao-tipi">
+	<div data-role="navbar" id="navbar-rodape">
+    	<ul>
+        	<li><a href="#grafico-TIPI" id="nav_exit" data-transition="">
+            	<img src="images/Img/icon_sair.png" id="sair-realizacao-tipi"/>
+                </a></li>
+     		<li><a href="#inicio" id="nav_home" data-transition="">
+            	<img src="images/Img/icon_home.png" id="home-realizacao-tipi"/>
+                </a></li>
+    	</ul>    
+	</div><!-- /navbar -->
+</div><!-- /footer-->
+	<!-- *********************************************** -->
+    
+</div><!-- /page Realização-TIPI - Final da pagina-->
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<div data-role="page" id="estabilidade-emocional-tipi" ><!-- /Inicio da pagina-->
+<div data-role="header" id="header-estabilidade-emocional-tipi" data-backbtn="false">
+	<a href="#grafico-TIPI" data-role="button" data-icon="back" style="margin-top:5px" data-transition="" id="button-voltar-estabilidade-emocional-tipi">
+    	<label id="label-button-voltar-estabilidade-emocional-tipi">Voltar</label>
+    </a>
+	<p id="titulo" >
+    	<label id="titulo-estabilidade-emocional-tipi" style="margin-left:90px">Estabilidade Emocional</label>
+    </p>
+</div><!-- /header-->
+    
+<div data-role="content" id="conteudo-estabilidade-emocional-tipi" class="fundo">
+	<p align="justify">
+    	<label id="label-conteudo-estabilidade-emocional-tipi">
+        A Estabilidade Emocional &eacute; o grande dom&iacute;nio da personalidade que se encontra no extremo oposto ao tra&ccedil;o de Neuroticismo. Freud originalmente utilizava o termo neurose para descrever uma condi&ccedil;&atilde;o marcada por uma ang&uacute;stia mental, sofrimento emocional e uma incapacidade de lidar eficazmente com as exig&ecirc;ncias normais da vida. Ele sugeriu que todos mostram alguns sinais de neurose, mas que nos diferenciamos em nosso grau de sofrimento e em nossos sintomas espec&iacute;ficos de ang&uacute;stia. Hoje, o Neuroticismo refere-se &agrave; tend&ecirc;ncia a experimentar sentimentos negativos.
+Os indiv&iacute;duos com altos escores em Estabilidade Emocional ficam menos facilmente chateados e s&atilde;o menos reativos emocionalmente. Eles tendem a ser calmos, emocionalmente est&aacute;veis e livre de sentimentos negativos persistentes. Estar mais livres de sentimentos negativos n&atilde;o significa que pessoas com altos escores experimentem muitos sentimentos positivos; a freq&uuml;&ecirc;ncia de emo&ccedil;&otilde;es positivas &eacute; um componente do dom&iacute;nio Extrovers&atilde;o.
+Aqueles com escores baixos em Estabilidade Emocional podem experimentar principalmente um sentimento negativo espec&iacute;fico, como ansiedade, raiva ou depress&atilde;o, mas s&atilde;o suscet&iacute;veis a experimentar v&aacute;rias dessas emo&ccedil;&otilde;es. Pessoas com escores baixos nesse dom&iacute;nio s&atilde;o emocionalmente reativas. Elas respondem emocionalmente a eventos que n&atilde;o afetariam a maioria das pessoas, e suas rea&ccedil;&otilde;es tendem a ser mais intensas que o normal. Elas s&atilde;o mais propensas a interpretar situa&ccedil;&otilde;es comuns como amea&ccedil;as, e frustra&ccedil;&otilde;es menores como irremediavelmente dif&iacute;ceis. Suas rea&ccedil;&otilde;es emocionais negativas tendem a persistir por um per&iacute;odo excepcionalmente longo de tempo, o que significa que est&atilde;o frequentemente de mau humor. Esses problemas com regula&ccedil;&atilde;o emocional podem diminuir a capacidade de um neur&oacute;tico de pensar claramente, tomar decis&otilde;es e lidar eficientemente com o estresse.
+        </label>
+    </p>
+</div><!-- /content-->
+
+	<!-- ********************************************** -->    
+<div data-role="footer" id="rodape-estabilidade-emocional-tipi">
+	<div data-role="navbar" id="navbar-rodape">
+    	<ul>
+        	<li><a href="#grafico-TIPI" id="nav_exit" data-transition="">
+            	<img src="images/Img/icon_sair.png" id="sair-estabilidade-emocional-tipi"/>
+                </a></li>
+     		<li><a href="#inicio" id="nav_home" data-transition="">
+            	<img src="images/Img/icon_home.png" id="home-estabilidade-emocional-tipi"/>
+                </a></li>
+    	</ul>    
+	</div><!-- /navbar -->
+</div><!-- /footer-->
+	<!-- *********************************************** -->
+    
+</div><!-- /page Estabilidade Emocional-TIPI - Final da pagina-->
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<div data-role="page" id="abertura-tipi" ><!-- /Inicio da pagina-->
+<div data-role="header" id="header-abertura-tipi" data-backbtn="false">
+	<a href="#grafico-TIPI" data-role="button" data-icon="back" style="margin-top:5px" data-transition="" id="button-voltar-abertura-tipi">
+    	<label id="label-button-voltar-abertura-tipi">Voltar</label>
+    </a>
+	<p id="titulo" align="center">
+    	<label id="titulo-abertura-tipi">Abertura TIPI</label>
+    </p>
+</div><!-- /header-->
+    
+<div data-role="content" id="conteudo-abertura-tipi" class="fundo">
+	<p align="justify">
+    	<label id="label-conteudo-abertura-tipi">
+        	Abertura descreve uma dimens&atilde;o de estilo cognitivo que distingue entre indiv&iacute;duos imaginativos e criativos e aqueles p&eacute;-no-ch&atilde;o, convencionais. Pessoas abertas s&atilde;o intelectualmente curiosas, apreciam a arte e s&atilde;o sens&iacute;veis &agrave; beleza. Eles tendem a ser, comparados &agrave;s pessoas fechadas, mais conscientes de seus sentimentos. Tendem a pensar e agir de forma individualista e n&atilde;o-conformista. Intelectuais normalmente pontuam alto em Abertura; conseq&uuml;entemente, esse fator tamb&eacute;m tem sido chamado de Cultura ou Intelecto. N&atilde;o obstante, o Intelecto &eacute; provavelmente melhor considerado como um aspecto da Abertura. Escores em Abertura s&atilde;o apenas modestamente relacionados com os anos de escolaridade e os escores em testes padr&otilde;es de intelig&ecirc;ncia.
+Outra caracter&iacute;stica do estilo cognitivo aberto &eacute; uma facilidade para pensar em s&iacute;mbolos e abstra&ccedil;&otilde;es distantes da experi&ecirc;ncia concreta. Dependendo das habilidades intelectuais espec&iacute;ficas do indiv&iacute;duo, essa cogni&ccedil;&atilde;o simb&oacute;lica pode assumir a forma de pensamento matem&aacute;tico, l&oacute;gico ou geom&eacute;trico, uso art&iacute;stico e metaf&oacute;rico da linguagem, composi&ccedil;&atilde;o ou performance musical, ou uma das muitas artes visuais e de performance. Pessoas com baixos escores em Abertura tendem a ter interesses limitados e comuns. Elas preferem o simples, direto e &oacute;bvio ao sutil, complexo e amb&iacute;guo. Podem enxergam as artes e ci&ecirc;ncias com desconfian&ccedil;a, considerando estes esfor&ccedil;os confusos e de nenhum uso pr&aacute;tico. Pessoas fechadas preferem a familiaridade &agrave; novidade, s&atilde;o conservadoras e resistentes &agrave; mudan&ccedil;a.
+A Abertura &eacute; muitas vezes apresentada como mais saud&aacute;vel ou mais madura por psic&oacute;logos, que s&atilde;o muitas vezes eles mesmos abertos &agrave; experi&ecirc;ncia. No entanto, os estilos aberto e fechado de pensamento s&atilde;o &uacute;teis em ambientes diferentes. O estilo intelectual da pessoa aberta pode servir bem a um professor, mas pesquisas t&ecirc;m demonstrado que o pensamento fechado est&aacute; relacionado a um desempenho superior nos trabalhos de policial, vendas e uma variedade de ocupa&ccedil;&otilde;es de servi&ccedil;o.
+        </label>
+    </p>
+</div><!-- /content-->
+
+	<!-- ********************************************** -->    
+<div data-role="footer" id="rodape-abertura-tipi">
+	<div data-role="navbar" id="navbar-rodape">
+    	<ul>
+        	<li><a href="#grafico-TIPI" id="nav_exit" data-transition="">
+            	<img src="images/Img/icon_sair.png" id="sair-abertura-tipi"/>
+                </li>
+     		<li><a href="#inicio" id="nav_home" data-transition="">
+            	<img src="images/Img/icon_home.png" id="home-abertura-tipi"/>
+                </a></li>
+    	</ul>    
+	</div><!-- /navbar -->
+</div><!-- /footer-->
+	<!-- *********************************************** -->
+    
+</div><!-- /page Abertura-TIPI - Final da pagina-->
+
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<!-- ****************** Grafico TIPI ********************************** -->
+<script type="text/javascript"> <!-- Grafico em Portugues -->
+	var myData = new Array(["Extroversão",20], ["Estabilidade Emocional",10], ["Socialização",30], ["Realização",10], ["Abertura",5]);
+	var myChart = new JSChart('grafico_cinco_fatores-TIPI', 'pie');
+	var myColors = new Array('#C93', '#F90', '#333', '#999', '#900');/*Define as cores de cada parte do Grafico de Pizza*/
+	myChart.setDataArray(myData);/*Seta o Array de dados no myChart, criando o grafico*/
+	myChart.colorizePie(myColors);/*Seta as cores no grafico*/
+	//myChart.setBackgroundColor("#efe");/*usado para mudar a cor do plano de fundo do grafico*/
+	//myChart.setAxisNameX('Nome do Alunos');/*Usado para colocar uma descrição em baixo do grafico (Grafico de linha)*/
+	//myChart.setAxisNameY('Valor do Grafico');/*Usado para colocar uma descrição no lado do grafico (Grafico de liinha)*/
+	//myChart.setSize(600,520);/*Usado para determina o tamanho do grafico Cumprimento x Altura*/
+	myChart.setPiePosition(162,170);//determina a posição do grafico
+	myChart.setPieRadius(67);//Determina o tamanho do raio da pizza
+	myChart.setPieUnitsFontSize(9);//Determina o tamanho da fonte exterior ao grafico
+	myChart.setPieUnitsColor('#000');//Cor da fonte exterior ao grafico
+	myChart.setPieValuesOffset(-20);//Posição do valor dentro grafico
+	myChart.setPieUnitsOffset(1);//Posição do valor dentro grafico
+	myChart.setTitle('Distribuição dos 5 grandes fatores');/*Titulo para o grafico*/
+	myChart.setTitleColor('#5555AA');/*especifica a cor do titulo*/
+	myChart.setTitleFontSize(15);/*especifica o tamanho da font do titulo*/
+	myChart.set3D(false);/*Define se o grafico eh em 3D ou não*/
+	myChart.resize(320,300);/*Determina o tamanho em pixel melhor que o setSize().*/
+	myChart.setFontFamily("Arial");
+	myChart.draw();
+</script> <!-- ******** Fim Grafico TIPI PORTUGUES **************** -->
+
+<script type="text/javascript"> <!-- Grafico em Ingles -->
+	var myData = new Array(["Extroversion",20], ["Emotional stability",10], ["Socialization",30], ["realization",10], ["Opening",5]);
+	var myChart = new JSChart('grafico_cinco_fatores-TIPI-us', 'pie');
+	var myColors = new Array('#C93', '#F90', '#333', '#999', '#900');/*Define as cores de cada parte do Grafico de Pizza*/
+	myChart.setDataArray(myData);/*Seta o Array de dados no myChart, criando o grafico*/
+	myChart.colorizePie(myColors);/*Seta as cores no grafico*/
+	//myChart.setBackgroundColor("#efe");/*usado para mudar a cor do plano de fundo do grafico*/
+	//myChart.setAxisNameX('Nome do Alunos');/*Usado para colocar uma descrição em baixo do grafico (Grafico de linha)*/
+	//myChart.setAxisNameY('Valor do Grafico');/*Usado para colocar uma descrição no lado do grafico (Grafico de liinha)*/
+	//myChart.setSize(600,520);/*Usado para determina o tamanho do grafico Cumprimento x Altura*/
+	myChart.setPiePosition(150,170);//determina a posição do grafico
+	myChart.setPieRadius(66);//Determina o tamanho do raio da pizza
+	myChart.setPieUnitsFontSize(9);//Determina o tamanho da fonte exterior ao grafico
+	myChart.setPieUnitsColor('#000');//Cor da fonte exterior ao grafico
+	myChart.setPieValuesOffset(-20);//Posição do valor dentro grafico
+	myChart.setPieUnitsOffset(1);//Posição do valor dentro grafico
+	myChart.setTitle('Distribution of the 5 big factors');/*Titulo para o grafico*/
+	myChart.setTitleColor('#5555AA');/*especifica a cor do titulo*/
+	myChart.setTitleFontSize(15);/*especifica o tamanho da font do titulo*/
+	myChart.set3D(false);/*Define se o grafico eh em 3D ou não*/
+	myChart.resize(320,300);/*Determina o tamanho em pixel melhor que o setSize().*/
+	myChart.setFontFamily("Arial");
+	myChart.draw();
+</script> <!-- ******** Fim Grafico TIPI INGLES **************** -->
+<!-- ****************** Grafico TIPI FIM ********************************** -->
+
+<!-- *************** Grafico NEO-IPIP ******************* -->
+<script type="text/javascript"><!-- Grafico 1 - Portugues -->
+	var myData = new Array(["Extroversão",20], ["Socialização",10], ["Realização",30], ["Neuroticismo",10], ["Abertura",5]);
+	var myChart = new JSChart('grafico_cinco_fatores', 'pie');
+	var myColors = new Array('#C93', '#F90', '#333', '#999', '#900');/*Define as cores de cada parte do Grafico de Pizza*/
+	myChart.setDataArray(myData);/*Seta o Array de dados no myChart, criando o grafico*/
+	myChart.colorizePie(myColors);/*Seta as cores no grafico*/
+	//myChart.setBackgroundColor("#efe");/*usado para mudar a cor do plano de fundo do grafico*/
+	//myChart.setAxisNameX('Nome do Alunos');/*Usado para colocar uma descrição em baixo do grafico (Grafico de linha)*/
+	//myChart.setAxisNameY('Valor do Grafico');/*Usado para colocar uma descrição no lado do grafico (Grafico de liinha)*/
+	//myChart.setSize(600,520);/*Usado para determina o tamanho do grafico Cumprimento x Altura*/
+	myChart.setPiePosition(140,170);//determina a posição do grafico
+	myChart.setPieRadius(75);//Determina o tamanho do raio da pizza
+	myChart.setPieUnitsFontSize(10);//Determina o tamanho da fonte exterior ao grafico
+	myChart.setPieUnitsColor('#000');//Cor da fonte exterior ao grafico
+	//myChart.setPieValuesOffset(-20);//Posição do valor dentro grafico
+	myChart.setTitle('Distribuição dos 5 grandes fatores');/*Titulo para o grafico*/
+	myChart.setTitleColor('#5555AA');/*especifica a cor do titulo*/
+	myChart.setTitleFontSize(15);/*especifica o tamanho da font do titulo*/
+	myChart.set3D(false);/*Define se o grafico eh em 3D ou não*/
+	myChart.resize(310,300);/*Determina o tamanho em pixel melhor que o setSize().*/
+	myChart.setFontFamily("Arial");
+	myChart.draw();
+</script><!-- Final Grafico 1 - Portugues -->
+<script type="text/javascript"><!-- Começo Grafico 1 - Ingles -->
+	var myData = new Array(["Extroversion",20], ["Socialization",10], ["Realization",30], ["Neuroticism",10], ["Opening",5]);
+	var myChart = new JSChart('grafico_cinco_fatores-us', 'pie');
+	var myColors = new Array('#C93', '#F90', '#333', '#999', '#900');/*Define as cores de cada parte do Grafico de Pizza*/
+	myChart.setDataArray(myData);/*Seta o Array de dados no myChart, criando o grafico*/
+	myChart.colorizePie(myColors);/*Seta as cores no grafico*/
+	//myChart.setBackgroundColor("#efe");/*usado para mudar a cor do plano de fundo do grafico*/
+	//myChart.setAxisNameX('Nome do Alunos');/*Usado para colocar uma descrição em baixo do grafico (Grafico de linha)*/
+	//myChart.setAxisNameY('Valor do Grafico');/*Usado para colocar uma descrição no lado do grafico (Grafico de liinha)*/
+	//myChart.setSize(600,520);/*Usado para determina o tamanho do grafico Cumprimento x Altura*/
+	myChart.setPiePosition(140,170);//determina a posição do grafico
+	myChart.setPieRadius(75);//Determina o tamanho do raio da pizza
+	myChart.setPieUnitsFontSize(10);//Determina o tamanho da fonte exterior ao grafico
+	myChart.setPieUnitsColor('#000');//Cor da fonte exterior ao grafico
+	//myChart.setPieValuesOffset(-20);//Posição do valor dentro grafico
+	myChart.setTitle('Distribution of the 5 big factors');/*Titulo para o grafico*/
+	myChart.setTitleColor('#5555AA');/*especifica a cor do titulo*/
+	myChart.setTitleFontSize(15);/*especifica o tamanho da font do titulo*/
+	myChart.set3D(false);/*Define se o grafico eh em 3D ou não*/
+	myChart.resize(310,300);/*Determina o tamanho em pixel melhor que o setSize().*/
+	myChart.setFontFamily("Arial");
+	myChart.draw();
+</script><!-- Final Grafico 1 - Portugues /-->
+
+<script type="text/javascript"><!-- Comeco Grafico 2 - Portugues -->
+	var myData = new Array(["Amigabilidade",20], ["Nível de Atividade",10], ["Bom humor",30], ["Gregarismo",10], ["Procurar por excitação",25], ["Assertividade", 15]);
+	var myChart = new JSChart('grafico_extroversao', 'pie');
+	var myColors = new Array('#C93', '#F90', '#333', '#999', '#900', "#909");/*Define as cores de cada parte do Grafico de Pizza*/
+	myChart.setDataArray(myData);
+	myChart.colorizePie(myColors);/*Seta as cores no grafico*/
+	//myChart.setBackgroundColor();/*usado para mudar a cor do plano de fundo do grafico*/
+	//myChart.setAxisNameX('Nome do Alunos');/*Usado para colocar uma descrição em baixo do grafico*/
+	//myChart.setAxisNameY('Valor do Grafico');/*Usado para colocar uma descrição no lado do grafico*/
+	//myChart.setSize(600,520);/*Usado para determina o tamanho do grafico Cumprimento x Altura*/
+	myChart.setPiePosition(140,170);//determina a posição do grafico
+	myChart.setPieRadius(75);//Determina o tamanho do raio da pizza
+	myChart.setPieUnitsFontSize(9);//Determina o tamanho da fonte exterior ao grafico
+	myChart.setPieUnitsColor('#000');//Cor da fonte exterior ao grafico
+	//myChart.setPieValuesOffset(-20);//Posição do valor dentro grafico
+	myChart.setTitle('Distribuição da Extroversão');/*Titulo para o grafico*/
+	myChart.setTitleColor('#5555AA');/*especifica a cor do titulo*/
+	myChart.setTitleFontSize(15);/*especifica o tamanho da font do titulo*/
+	myChart.resize(310,300);/*Determina o tamanho em pixel melhor que o setSize().*/
+	myChart.set3D(false);/*Define se o grafico eh em 3D ou não*/
+	myChart.setFontFamily("Arial");
+	myChart.draw();
+</script><!-- Final Grafico 2 - Portugues -->
+<script type="text/javascript"><!-- Comeco Grafico 2 - Ingles -->
+	var myData = new Array(["friendliness",20], ["Activity level",10], ["Good mood",30], ["Gregariousness",10], ["Search for excitation",25], ["Assertiveness", 15]);
+	var myChart = new JSChart('grafico_extroversao-us', 'pie');
+	var myColors = new Array('#C93', '#F90', '#333', '#999', '#900', "#909");/*Define as cores de cada parte do Grafico de Pizza*/
+	myChart.setDataArray(myData);
+	myChart.colorizePie(myColors);/*Seta as cores no grafico*/
+	//myChart.setBackgroundColor();/*usado para mudar a cor do plano de fundo do grafico*/
+	//myChart.setAxisNameX('Nome do Alunos');/*Usado para colocar uma descrição em baixo do grafico*/
+	//myChart.setAxisNameY('Valor do Grafico');/*Usado para colocar uma descrição no lado do grafico*/
+	//myChart.setSize(600,520);/*Usado para determina o tamanho do grafico Cumprimento x Altura*/
+	myChart.setPiePosition(140,170);//determina a posição do grafico
+	myChart.setPieRadius(75);//Determina o tamanho do raio da pizza
+	myChart.setPieUnitsFontSize(9);//Determina o tamanho da fonte exterior ao grafico
+	myChart.setPieUnitsColor('#000');//Cor da fonte exterior ao grafico
+	//myChart.setPieValuesOffset(-20);//Posição do valor dentro grafico
+	myChart.setTitle('Distribution of Extraversion');/*Titulo para o grafico*/
+	myChart.setTitleColor('#5555AA');/*especifica a cor do titulo*/
+	myChart.setTitleFontSize(15);/*especifica o tamanho da font do titulo*/
+	myChart.resize(310,300);/*Determina o tamanho em pixel melhor que o setSize().*/
+	myChart.set3D(false);/*Define se o grafico eh em 3D ou não*/
+	myChart.setFontFamily("Arial");
+	myChart.draw();
+</script><!-- Final Grafico 2 - Ingles -->
+
+<script type="text/javascript"><!-- Comeco Grafico 3 - Portugues -->
+	var myData = new Array(["Confiança",20], ["Moralidade",10], ["Altruísmo",30], ["Cooperação",10], ["Modéstia",15], ["Simpatia", 15]);
+	var myChart = new JSChart('grafico_socializacao', 'pie');
+	var myColors = new Array('#909', '#999', '#900', '#C93', '#F90', '#333');/*Define as cores de cada parte do Grafico de Pizza*/
+	myChart.setDataArray(myData);
+	myChart.colorizePie(myColors);/*Seta as cores no grafico*/
+	//myChart.setBackgroundColor();/*usado para mudar a cor do plano de fundo do grafico*/
+	//myChart.setAxisNameX('Nome do Alunos');/*Usado para colocar uma descrição em baixo do grafico*/
+	//myChart.setAxisNameY('Valor do Grafico');/*Usado para colocar uma descrição no lado do grafico*/
+	//myChart.setSize(600,520);/*Usado para determina o tamanho do grafico Cumprimento x Altura*/
+	myChart.setPiePosition(140,170);//determina a posição do grafico
+	myChart.setPieRadius(75);//Aumenta o raio da pizza
+	myChart.setPieUnitsFontSize(10);//Determina o tamanho da fonte exterior ao grafico
+	myChart.setPieUnitsColor('#000');//Cor da fonte exterior ao grafico
+	//myChart.setPieValuesOffset(-20);//Posição do valor dentro grafico
+	myChart.setTitle('Distribuição da Socialização');/*Titulo para o grafico*/
+	myChart.setTitleColor('#5555AA');/*especifica a cor do titulo*/
+	myChart.setTitleFontSize(15);/*especifica o tamanho da font do titulo*/
+	myChart.resize(310,300);/*Determina o tamanho em pixel melhor que o setSize().*/
+	myChart.set3D(false);/*Define se o grafico eh em 3D ou não*/
+	myChart.setFontFamily("Arial");
+	myChart.draw();
+</script><!-- Final Grafico 3 - Portugues -->
+<script type="text/javascript"><!-- Comeco Grafico 3 - Ingles -->
+	var myData = new Array(["Confidence",20], ["Morality",10], ["Altruism",30], ["Cooperation",10], ["Modesty",15], ["Sympathy", 15]);
+	var myChart = new JSChart('grafico_socializacao-us', 'pie');
+	var myColors = new Array('#909', '#999', '#900', '#C93', '#F90', '#333');/*Define as cores de cada parte do Grafico de Pizza*/
+	myChart.setDataArray(myData);
+	myChart.colorizePie(myColors);/*Seta as cores no grafico*/
+	//myChart.setBackgroundColor();/*usado para mudar a cor do plano de fundo do grafico*/
+	//myChart.setAxisNameX('Nome do Alunos');/*Usado para colocar uma descrição em baixo do grafico*/
+	//myChart.setAxisNameY('Valor do Grafico');/*Usado para colocar uma descrição no lado do grafico*/
+	//myChart.setSize(600,520);/*Usado para determina o tamanho do grafico Cumprimento x Altura*/
+	myChart.setPiePosition(140,170);//determina a posição do grafico
+	myChart.setPieRadius(75);//Aumenta o raio da pizza
+	myChart.setPieUnitsFontSize(10);//Determina o tamanho da fonte exterior ao grafico
+	myChart.setPieUnitsColor('#000');//Cor da fonte exterior ao grafico
+	//myChart.setPieValuesOffset(-20);//Posição do valor dentro grafico
+	myChart.setTitle('Distribution of Socialization');/*Titulo para o grafico*/
+	myChart.setTitleColor('#5555AA');/*especifica a cor do titulo*/
+	myChart.setTitleFontSize(15);/*especifica o tamanho da font do titulo*/
+	myChart.resize(310,300);/*Determina o tamanho em pixel melhor que o setSize().*/
+	myChart.set3D(false);/*Define se o grafico eh em 3D ou não*/
+	myChart.setFontFamily("Arial");
+	myChart.draw();
+</script><!-- Final Grafico 3 - Ingles -->
+
+<script type="text/javascript"><!-- Comeco Grafico 4 - Portugues -->
+	var myData = new Array(["Auto-Eficácia",20], ["Senso de dever",10], ["Empenho",30], ["Autodisciplina",10], ["Ordem",5], ["Prudência",13]);
+	var myChart = new JSChart('grafico_realizacao', 'pie');
+	var myColors = new Array('#909', '#900', '#999', '#333', '#F90', "#C93");/*Define as cores de cada parte do Grafico de Pizza*/
+	myChart.setDataArray(myData);
+	myChart.colorizePie(myColors);/*Seta as cores no grafico*/
+	//myChart.setBackgroundColor();/*usado para mudar a cor do plano de fundo do grafico*/
+	//myChart.setAxisNameX('Nome do Alunos');/*Usado para colocar uma descrição em baixo do grafico*/
+	//myChart.setAxisNameY('Valor do Grafico');/*Usado para colocar uma descrição no lado do grafico*/
+	//myChart.setSize(600,520);/*Usado para determina o tamanho do grafico Cumprimento x Altura*/
+	myChart.setPiePosition(140,170);//determina a posição do grafico
+	myChart.setPieRadius(75);//Aumenta o raio da pizza
+	myChart.setPieUnitsFontSize(10);//Determina o tamanho da fonte exterior ao grafico
+	myChart.setPieUnitsColor('#000');//Cor da fonte exterior ao grafico
+	//myChart.setPieValuesOffset(-20);//Posição do valor dentro grafico
+	myChart.setTitle('Distribuição da Realização');/*Titulo para o grafico*/
+	myChart.setTitleColor('#5555AA');/*especifica a cor do titulo*/
+	myChart.setTitleFontSize(15);/*especifica o tamanho da font do titulo*/
+	myChart.resize(310,300);/*Determina o tamanho em pixel melhor que o setSize().*/
+	myChart.set3D(false);/*Define se o grafico eh em 3D ou não*/
+	myChart.setFontFamily("Arial");
+	myChart.draw();
+</script><!-- Final Grafico 4 - Portugues -->
+<script type="text/javascript"><!-- Comeco Grafico 4 - Ingles -->
+	var myData = new Array(["Self-efficacy",20], ["Sense of duty",10], ["Effort",30], ["Self-discipline",10], ["Order",5], ["Prudence",13]);
+	var myChart = new JSChart('grafico_realizacao-us', 'pie');
+	var myColors = new Array('#909', '#900', '#999', '#333', '#F90', "#C93");/*Define as cores de cada parte do Grafico de Pizza*/
+	myChart.setDataArray(myData);
+	myChart.colorizePie(myColors);/*Seta as cores no grafico*/
+	//myChart.setBackgroundColor();/*usado para mudar a cor do plano de fundo do grafico*/
+	//myChart.setAxisNameX('Nome do Alunos');/*Usado para colocar uma descrição em baixo do grafico*/
+	//myChart.setAxisNameY('Valor do Grafico');/*Usado para colocar uma descrição no lado do grafico*/
+	//myChart.setSize(600,520);/*Usado para determina o tamanho do grafico Cumprimento x Altura*/
+	myChart.setPiePosition(140,170);//determina a posição do grafico
+	myChart.setPieRadius(75);//Aumenta o raio da pizza
+	myChart.setPieUnitsFontSize(10);//Determina o tamanho da fonte exterior ao grafico
+	myChart.setPieUnitsColor('#000');//Cor da fonte exterior ao grafico
+	//myChart.setPieValuesOffset(-20);//Posição do valor dentro grafico
+	myChart.setTitle('Distribution of Realization');/*Titulo para o grafico*/
+	myChart.setTitleColor('#5555AA');/*especifica a cor do titulo*/
+	myChart.setTitleFontSize(15);/*especifica o tamanho da font do titulo*/
+	myChart.resize(310,300);/*Determina o tamanho em pixel melhor que o setSize().*/
+	myChart.set3D(false);/*Define se o grafico eh em 3D ou não*/
+	myChart.setFontFamily("Arial");
+	myChart.draw();
+</script><!-- Final Grafico 4 - Ingles -->
+
+<script type="text/javascript"><!-- Comeco do Grafico 4 - Portugues -->
+	var myData = new Array(["Ansiedade",20], ["Auto-percepção",10], ["Depressão",30], ["Raiva",10], ["Falta de moderação",15],["Vulnerabilidade", 17]);
+	var myChart = new JSChart('grafico_neuroticismo', 'pie');
+	var myColors = new Array('#C93', '#909', '#900', '#999', '#333', "#F90");/*Define as cores de cada parte do Grafico de Pizza*/
+	myChart.setDataArray(myData);
+	myChart.colorizePie(myColors);/*Seta as cores no grafico*/
+	//myChart.setBackgroundColor();/*usado para mudar a cor do plano de fundo do grafico*/
+	//myChart.setAxisNameX('Nome do Alunos');/*Usado para colocar uma descrição em baixo do grafico*/
+	//myChart.setAxisNameY('Valor do Grafico');/*Usado para colocar uma descrição no lado do grafico*/
+	//myChart.setSize(600,520);/*Usado para determina o tamanho do grafico Cumprimento x Altura*/
+	myChart.setPiePosition(140,170);//determina a posição do grafico
+	myChart.setPieRadius(75);//Aumenta o raio da pizza
+	myChart.setPieUnitsFontSize(10);//Determina o tamanho da fonte exterior ao grafico
+	myChart.setPieUnitsColor('#000');//Cor da fonte exterior ao grafico
+	//myChart.setPieValuesOffset(-20);//Posição do valor dentro grafico
+	myChart.setTitle('Distribuição do Neuroticismo');/*Titulo para o grafico*/
+	myChart.setTitleColor('#5555AA');/*especifica a cor do titulo*/
+	myChart.setTitleFontSize(15);/*especifica o tamanho da font do titulo*/
+	myChart.resize(310,300);/*Determina o tamanho em pixel melhor que o setSize().*/
+	myChart.set3D(false);/*Define se o grafico eh em 3D ou não*/
+	myChart.setFontFamily("Arial");
+	myChart.draw();
+</script><!-- Final do Grafico 4 - Portugues -->
+<script type="text/javascript"><!-- Comeco do Grafico 4 - Portugues -->
+	var myData = new Array(["Anxiety",20], ["Self-perception",10], ["Depression",30], ["Anger",10], ["Lack of moderation",15],["Vulnerability", 17]);
+	var myChart = new JSChart('grafico_neuroticismo-us', 'pie');
+	var myColors = new Array('#C93', '#909', '#900', '#999', '#333', "#F90");/*Define as cores de cada parte do Grafico de Pizza*/
+	myChart.setDataArray(myData);
+	myChart.colorizePie(myColors);/*Seta as cores no grafico*/
+	//myChart.setBackgroundColor();/*usado para mudar a cor do plano de fundo do grafico*/
+	//myChart.setAxisNameX('Nome do Alunos');/*Usado para colocar uma descrição em baixo do grafico*/
+	//myChart.setAxisNameY('Valor do Grafico');/*Usado para colocar uma descrição no lado do grafico*/
+	//myChart.setSize(600,520);/*Usado para determina o tamanho do grafico Cumprimento x Altura*/
+	myChart.setPiePosition(140,170);//determina a posição do grafico
+	myChart.setPieRadius(75);//Aumenta o raio da pizza
+	myChart.setPieUnitsFontSize(10);//Determina o tamanho da fonte exterior ao grafico
+	myChart.setPieUnitsColor('#000');//Cor da fonte exterior ao grafico
+	//myChart.setPieValuesOffset(-20);//Posição do valor dentro grafico
+	myChart.setTitle('Distribution of Neuroticism');/*Titulo para o grafico*/
+	myChart.setTitleColor('#5555AA');/*especifica a cor do titulo*/
+	myChart.setTitleFontSize(15);/*especifica o tamanho da font do titulo*/
+	myChart.resize(310,300);/*Determina o tamanho em pixel melhor que o setSize().*/
+	myChart.set3D(false);/*Define se o grafico eh em 3D ou não*/
+	myChart.setFontFamily("Arial");
+	myChart.draw();
+</script><!-- Final do Grafico 4 - Portugues -->
+
+<script type="text/javascript"><!-- Comeco do Grafico 5 - Portugues -->
+	var myData = new Array(["Imaginação",20], ["Interesses Artísticos",10], ["Intelecto",30], ["Emotividade",10], ["Senso Aventureiro",15], ["Liberalismo",19]);
+	var myChart = new JSChart('grafico_abertura', 'pie');
+	var myColors = new Array('#C93', '#F90', '#333', '#999', '#900', "#909");/*Define as cores de cada parte do Grafico de Pizza*/
+	myChart.setDataArray(myData);
+	myChart.colorizePie(myColors);/*Seta as cores no grafico*/
+	//myChart.setBackgroundColor();/*usado para mudar a cor do plano de fundo do grafico*/
+	//myChart.setAxisNameX('Nome do Alunos');/*Usado para colocar uma descrição em baixo do grafico*/
+	//myChart.setAxisNameY('Valor do Grafico');/*Usado para colocar uma descrição no lado do grafico*/
+	//myChart.setSize(600,520);/*Usado para determina o tamanho do grafico Cumprimento x Altura*/
+	myChart.setPiePosition(140,170);//determina a posição do grafico
+	myChart.setPieRadius(75);//Aumenta o raio da pizza
+	myChart.setPieUnitsFontSize(10);//Determina o tamanho da fonte exterior ao grafico
+	myChart.setPieUnitsColor('#000');//Cor da fonte exterior ao grafico
+	//myChart.setPieValuesOffset(-20);//Posição do valor dentro grafico
+	myChart.setTitle('Distribuição da Abertura');/*Titulo para o grafico*/
+	myChart.setTitleColor('#5555AA');/*especifica a cor do titulo*/
+	myChart.setTitleFontSize(15);/*especifica o tamanho da font do titulo*/
+	myChart.resize(310,300);/*Determina o tamanho em pixel melhor que o setSize().*/
+	myChart.set3D(false);/*Define se o grafico eh em 3D ou não*/
+	myChart.setFontFamily("Arial");
+	myChart.draw();
+</script><!-- Final do Grafico 5 - Portugues -->
+<script type="text/javascript"><!-- Comeco do Grafico 5 - Ingles -->
+	var myData = new Array(["Imagination",20], ["Artistic interests",10], ["Intellect",30], ["Emotionality",10], ["Sense Adventurer",15], ["Liberalism",19]);
+	var myChart = new JSChart('grafico_abertura-us', 'pie');
+	var myColors = new Array('#C93', '#F90', '#333', '#999', '#900', "#909");/*Define as cores de cada parte do Grafico de Pizza*/
+	myChart.setDataArray(myData);
+	myChart.colorizePie(myColors);/*Seta as cores no grafico*/
+	//myChart.setBackgroundColor();/*usado para mudar a cor do plano de fundo do grafico*/
+	//myChart.setAxisNameX('Nome do Alunos');/*Usado para colocar uma descrição em baixo do grafico*/
+	//myChart.setAxisNameY('Valor do Grafico');/*Usado para colocar uma descrição no lado do grafico*/
+	//myChart.setSize(600,520);/*Usado para determina o tamanho do grafico Cumprimento x Altura*/
+	myChart.setPiePosition(140,170);//determina a posição do grafico
+	myChart.setPieRadius(75);//Aumenta o raio da pizza
+	myChart.setPieUnitsFontSize(10);//Determina o tamanho da fonte exterior ao grafico
+	myChart.setPieUnitsColor('#000');//Cor da fonte exterior ao grafico
+	//myChart.setPieValuesOffset(-20);//Posição do valor dentro grafico
+	myChart.setTitle('Distribution of Opening');/*Titulo para o grafico*/
+	myChart.setTitleColor('#5555AA');/*especifica a cor do titulo*/
+	myChart.setTitleFontSize(15);/*especifica o tamanho da font do titulo*/
+	myChart.resize(310,300);/*Determina o tamanho em pixel melhor que o setSize().*/
+	myChart.set3D(false);/*Define se o grafico eh em 3D ou não*/
+	myChart.setFontFamily("Arial");
+	myChart.draw();
+</script><!-- Final do Grafico 5 - Ingles --> 
+<!-- *********** Fim Grafico NEO-IPIP *********************** -->
+>>>>>>> Translation almost done.
 
 </body>
 </html>

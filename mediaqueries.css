@@ -1,0 +1,2915 @@
+@charset "utf-8";
+/* CSS Document */
+@media only screen and (max-width:240px){
+/* COMECO GLOBAL */
+#titulo{
+	font-size:16px; 
+	font-weight:bold;
+}
+#titulo-pergunta{
+	font-size:15px; 
+	font-weight:bold;
+}
+#navbar-header{
+	margin-left:0px; 
+	margin-right:0px; 
+	margin-top:0;
+	max-height:45px; 
+}
+#home{
+	margin-top:-6px;
+}
+#opcoes{ 
+ 	margin-top:-6px;
+}
+#register{
+	margin-top:-6px;
+	margin-left:-3px;
+}
+#brasil{
+	margin-top:-5px;
+}
+#usa{
+	margin-top:-5px;
+}
+
+/* Footer */
+#navbar-rodape{
+	margin-left:0px; 
+	margin-right:0px; 
+	margin-top: 0;
+	max-height:42px; 
+}
+
+#contato{
+	margin-top:-6px;
+}
+
+#sobre{
+	margin-top: -6px;
+}
+#sair{
+	margin-top:-6px;
+}
+#continuar{
+	margin-top:-6px;
+}
+/* FINAL - GLOBAL - */
+/* @@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@ */
+/* COMEÇO - PAGINA INICIO -  */
+#inicio{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+}
+#conteudo-inicio{
+	background-color:#E9E9E9;
+	height: 260px;
+	font-size:14px;
+}
+/* Forms */
+#form-inicio{
+	padding-top:0px;
+}
+#par_senha-inicio{
+	padding-top:0px;
+}
+#text_email-inicio{
+	width:90%;
+	height:14px;
+	font-size:14px;
+}
+#text_senha-inicio{
+	width:90%;
+	height:14px;
+	font-size:14px;
+}
+#par-conteudo-inicio{
+	margin-top:35px;
+}
+#button-login{
+}
+#esqueceu_senha{
+	font-size:12px;
+	padding-top:0px;
+}
+#rodape-inicio{
+	height:90px;
+}
+/* FINAL - PAGINA INICIO - */
+
+
+/* COMEÇO - PAGINA RECUPERAR - */
+/* @@@@@@@@@@@@@@ */
+#recuperar{
+	position:relative;
+	margin:0 auto;
+	width:100%; 
+	height:100%;
+}
+#conteudo-recuperar{
+	background-color:#E9E9E9;
+	height:255px;
+	font-size:14px;
+}
+#header-recuperar{
+}
+#parg-email{
+	margin-top:50px;
+}
+#text-email{
+	height:14px;
+	font-size:14px;
+}
+#parag-button-recuperar{
+	margin-top:35px;
+}
+#footer-recuperar{
+	height:90px;
+}
+#navbar-recuperar{
+	margin-left:2px; 
+	margin-right:2px; 
+	margin-top: 0px;
+	height:42px; 
+}
+/* @@@@@@@@@@@@@@@@ */
+/* FINAL - PAGINA RECUPERAR - */
+
+/* @@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA INSTRUÇÃO-NEO*/
+#instrução-neo{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;	
+}
+#conteudo-instrução-neo{
+	font-size:14px;
+}
+#rodape-instrução-neo{
+	height:55px;
+}
+/* FINAL - PAGINA INSTRUÇÃO-NEO*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA INSTRUÇÃO-TIPI*/
+#instrução-tipi{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;	
+}
+#conteudo-instrução-tipi{
+	font-size:14px;	
+}
+#rodape-instrução-tipi{
+	height:55px;
+}
+/* FINAL - PAGINA INSTRUÇÃO-TIPI*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA CADASTRO */
+#cadastro{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;	
+	font-size:14px;
+}
+/* ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨ */
+#conteudo-cadastro{
+	font-size:14px;
+}
+#form-nome{
+	margin-top:0px;
+}
+#nome-cadastro{
+	font-size:14px;
+}
+#text-nome-cadastro{
+	width:90%;
+	font-size:14px;
+	height:14px;
+}
+#form-email{
+	margin-top:-15px;
+}
+#email-cadastro{
+	font-size:14px;
+}
+#text-email-cadastro{
+	width:90%;
+	font-size:14px;
+	height:14px;
+}
+#form-senha{
+	margin-top:-15px;
+}
+#senha-cadastro{
+	font-size:14px;
+}
+#text-senha-cadastro{
+	width:90%;
+	font-size:14px;
+	height:14px;
+}
+#form-re_senha{
+	margin-top:-15px;
+}
+#re_senha-cadastro{
+	font-size:14px;
+}
+#text-re_senha-cadastro{
+	width:90%;
+	font-size:14px;
+	height:14px;
+}
+#form-sexo{
+	margin-top:-15px;
+}
+#sexo-cadastro{
+	font-size:14px;
+}
+#form-idade{
+	margin-top:-15px;
+}
+#idade-cadastro{
+	font-size:14px;
+}
+#text-idade{
+	width:90%;
+	font-size:14px;
+	height:14px;
+}
+#form-idioma{
+	margin-top:-15px;
+}
+#idioma-cadastro{
+	font-size:14px;
+}
+#par-politica-cadastro{
+	margin-top:-15px;
+}
+#aceita-cadastro{
+	margin-top:0px;
+}
+#aceita-cadastro{
+	font-size:14px;
+}
+#par-button-cadastrar{
+	margin-top:15px;
+}
+#button-cadastrar{
+	width:90%;
+}
+#rodape-contato{
+	height:55px;
+}
+/* ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨ */
+#rodape_cadastro{
+	height:55px;
+}
+/* FINAL - PAGINA CADASTRO */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA CONTATO */
+#pagina-contato{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:14px;
+}
+#conteudo-contato{
+	font-size:14px;
+}
+/* FINAL - PAGINA CONTATO */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA SOBRE */
+#pagina-sobre{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+}
+#conteudo-sobre{
+	height:595px;
+	font-size:14px;
+}
+#footer-sobre{
+	height:55px;
+}
+/* FINAL - PAGINA SOBRE*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA SOBRE IPIP */
+#sobre-IPIP{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+}
+#conteudo-sobre-IPIP{
+	font-size:14px;
+}
+#footer-sobre-IPIP{
+	height:55px;
+}
+/* FINAL - PAGINA SOBRE IPIP*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA SOBRE TIPI */
+#sobre-TIPI{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+}
+#conteudo-sobre-TIPI{
+	font-size:14px;
+}
+#footer-sobre-TIPI{
+	height:55px;
+}
+/* FINAL - PAGINA SOBRE TIPI */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA ESCOLHA-DE-INVENTARIO */
+#escolha-de-inventario{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+}
+#conteudo-escolha{
+	background-color:#E9E9E9;
+	height:250px;
+	font-size:14px;
+}
+#footer-escolha{
+	height:90px;
+}
+/* FINAL - PAGINA ESCOLHA-DE-INVENTARIO */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA OPCOES */
+#pagina-opcoes{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+}
+#conteudo-opcoes{
+	background-color:#E9E9E9;
+	height: 265px;
+	font-size:14px;
+}
+#form-opcoes{
+	padding-top:20px;
+}
+#text-senha-atual{
+	height:14px;
+	font-size:14px;	
+}
+#text-senha-nova{
+	height:14px;
+	font-size:14px;
+}
+#footer-opcoes{
+	height:90px;
+}
+/* FINAL - PAGINA OPCOES */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA QUESTIONARIO-NEO-IPIP*/
+#questionario-NEO-IPIP{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+}
+#conteudo-questionario-neo{
+	font-size:14px;
+	height:280px;
+}
+#button-voltar{
+	font-size:10px;
+}
+#form-questionario-neo{
+	font-size:12px;
+	margin-top:30px;
+}
+#rodape-questionario-neo{
+	height:100px;
+}
+/* FINAL - PAGINA QUESTIONARIO-NEO-IPIP*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA QUESTIONARIO-TIPI*/
+#questionario-TIPI{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+}
+#conteudo-questionario-tipi{
+	font-size:14px;
+	height:280px;
+}
+#button-voltar{
+	font-size:10px;
+}
+#form-questionario-tipi{
+	font-size:12px;
+	margin-top:30px;
+}
+#rodape-questionario-tipi{
+	height:100px;
+}
+/* FINAL - PAGINA QUESTIONARIO-TIPI*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+}
+
+/* ############################################################################## */
+@media screen and (min-width:480px){
+/*COMEÇO - GLOBAL - */
+#titulo{
+	font-size:22px;
+	font-weight:bold;
+}
+#titulo-pergunta{
+	font-size:22px; 
+	font-weight:bold;
+}
+#navbar-header{
+	margin-left:2px; 
+	margin-right:2px; 
+	max-height:55px; 
+}
+#home{
+	margin-top:-2px;
+}
+#opcoes{
+	margin-top:-2px;
+}
+#register{
+	margin-top:-2px;
+}
+#brasil{
+	margin-top:-2px;
+}
+#usa{
+	margin-top:-2px;
+}
+
+#navbar-rodape{
+	margin-left:2px; 
+	margin-right:2px; 
+	margin-top: 2px;
+	max-height:55px; 
+}
+#contato{
+	margin-top:0px;
+}
+#sobre{
+	margin-top:0px;
+}
+#continuar{
+	margin-top:0px;
+}
+#sair{
+	margin-top: 0px;
+}
+/* FINAL - GLOBAL - */
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMEÇO - PAGINA INICIO - */
+#inicio{
+	position:relative;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	font-size:20px;
+}	
+#conteudo-inicio{
+	background-color:#E9E9E9;
+	height:575px;
+	font-size:10px;
+}
+#text_email-inicio{
+	width:90%;
+	height:20px;
+	font-size:20px;
+}	
+#form-inicio{
+	padding-top:110px;
+}
+#par-email-inicio{
+	font-size:20px;
+}
+#text_email-inicio{
+	font-size:20px;
+	height:20px;
+}
+#text_senha-inicio{
+	margin-left:6px;
+	width:90%;
+	height:20px;
+	font-size:20px;
+}
+#par_senha-inicio{
+	padding-top:30px;
+	font-size:20px;
+}
+#par-conteudo-inicio{
+	font-size:20px;
+}
+#button-login{
+	margin-top:100px;
+	width:80%;
+	font-size:20px;
+}
+#esqueceu_senha{
+	font-size:20px;
+	margin-top:30px;
+	width:80%;
+}
+#rodape-inicio{
+	height: 60px;
+}
+/* FINAL - PAGINA INICIO - */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* COMEÇO - PAGINA RECUPERAR - */
+/* @@@@@@@@@@@@@@ */
+#recuperar{
+	position:relative;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	font-size:20px;
+}
+#header-recuperar{
+}
+#conteudo-recuperar{
+	background-color:#E9E9E9;
+	height: 575px;
+	font-size:20px;
+}
+#text-email{
+	width:90%;
+	height:20px;
+	font-size:20px;
+}
+#parg-email{
+	padding-top:100px;
+}
+#parag-button-recuperar{
+	margin-top:60px;
+}
+#button-recuperar{
+	width:80%;
+}
+/* @@@@@@@@@@@@@@@@ */
+/* FINAL - PAGINA RECUPERAR - */
+		
+		
+/* @@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA INSTRUÇÃO-NEO*/
+#instrução-neo{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size: 20px;	
+}
+#conteudo-instrução-neo{
+	height: 577px;
+	font-size:20px;
+}
+#par-instrução-neo{
+	margin-top: 50px;
+	font-size:20px;
+}
+/* FINAL - PAGINA INSTRUÇÃO-NEO*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@ */
+		
+		
+/* @@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA INSTRUÇÃO-TIPI*/
+#instrução-tipi{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size: 20px;	
+}
+#conteudo-instrução-tipi{
+	height: 577px;
+	font-size:20px;
+}
+#par-instrução-tipi{
+	margin-top:50px;
+	font-size:20px;
+}
+/* FINAL - PAGINA INSTRUÇÃO-TIPI*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* FINAL - PAGINA CADASTRO */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+#cadastro{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:20px;
+}
+#conteudo-cadastro{
+	font-size:20px;
+}
+#form-nome{
+	margin-top:20px;
+}
+#nome-cadastro{
+	font-size: 20px;
+}
+#form-email{
+	margin-top:20px;
+}
+#email-cadastro{
+	font-size:20px;
+}
+#form-senha{
+	margin-top:20px;
+}
+#senha-cadastro{
+	font-size:20px;
+}
+#form-re_senha{
+	margin-top:20px;
+}
+#re_senha-cadastro{
+	font-size:20px;
+}
+#form-sexo{
+	margin-top:20px;
+}
+#sexo-cadastro{
+	font-size:20px;
+}
+#form-idade{
+	margin-top:20px;
+}
+#idade-cadastro{
+	font-size:20px;
+}
+#form-idioma{
+	margin-top:20px;
+}
+#idioma-cadastro{
+	font-size:20px;
+}
+#text-nome-cadastro{
+	width:90%;
+}
+#text-email-cadastro{
+	width:90%;
+}
+#text-senha-cadastro{
+	width:90%;
+}
+#text-re_senha-cadastro{
+	width:90%;
+}
+#text-idade{
+	width:25%;
+}
+#par-politica-cadastro{
+	margin-top:20px;
+}
+#par-button-cadastrar{
+	margin-top:20px;
+}
+#aceita-cadastro{
+	font-size:20px;
+}
+#button-cadastrar{
+	width:80%;
+}
+/* FINAL - PAGINA CADASTRO */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA CONTATO */
+#pagina-contato{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:20px;
+}
+#conteudo-contato{
+	font-size:20px;
+}
+/* FINAL - PAGINA CONTATO */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA SOBRE */
+#pagina-sobre{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:20px;
+}
+#conteudo-sobre{
+	height:660px;
+	font-size:20px;
+}
+#par-list-sobre{
+	padding-top:30px;
+}
+/* FINAL - PAGINA SOBRE*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA SOBRE IPIP */
+#sobre-IPIP{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+}
+#conteudo-sobre-IPIP{
+	font-size:20px;
+	height: 575px;
+}
+#par-sobre-ipip{
+	margin-top: 50px;
+}
+#footer-sobre-IPIP{
+	height: 65px;
+}
+/* FINAL - PAGINA SOBRE IPIP*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA SOBRE TIPI */
+#sobre-TIPI{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+}
+#conteudo-sobre-TIPI{
+	font-size:20px;
+	height: 575px;
+}
+#par-sobre-tipi{
+	margin-top: 50px;
+}
+#footer-sobre-TIPI{
+	height: 65px;
+}
+/* FINAL - PAGINA SOBRE TIPI */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA ESCOLHA-DE-INVENTARIO */
+#escolha-de-inventario{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+}
+#conteudo-escolha{
+	font-size:20px;
+	height: 575px;
+}
+#par-escolha{
+	margin-top: 40px;
+}
+#list-neo{
+	font-size:20px;
+	padding-top:15px;
+	padding-bottom:15px;
+}
+#list-tipi{
+	font-size:20px;
+	padding-top:15px;
+	padding-bottom:15px;
+}
+#footer-escolha{
+	height: 65px;
+}
+/* FINAL - PAGINA ESCOLHA-DE-INVENTARIO */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA OPCOES */
+#pagina-opcoes{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:20px;
+}
+#conteudo-opcoes{
+	font-size:20px;
+	height: 575px;
+}
+#form-opcoes{
+	padding-top:100px;
+}
+#par-senha-atual{
+	font-size:20px;
+}
+#text-senha-atual{
+	width:90%;
+	height: 20px;
+	font-size:20px;
+}
+#par-senha-nova{
+	font-size:20px;
+}
+#text-senha-nova{
+	width:90%;
+	font-size:20px;
+	height:20px;
+}
+#par-senha-nova{
+	padding-top: 40px;
+}
+#button-alterar{
+	margin-top:90px;
+	width:80%;
+}
+#footer-opcoes{
+	height:65px;
+}
+/* FINAL - PAGINA OPCOES */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA QUESTIONARIO-NEO-IPIP*/
+#questionario-NEO-IPIP{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+}
+#conteudo-questionario-neo{
+	font-size:20px;
+	height: 630px;
+}
+#titulo-pergunta{
+	margin-top:50px;
+}
+#form-questionario-neo{
+	margin-top:100px;
+}
+#rodape-questionario-neo{
+	height:65px;
+}
+/* FINAL - PAGINA QUESTIONARIO-NEO-IPIP*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA QUESTIONARIO-TIPI*/
+#questionario-TIPI{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+}
+#conteudo-questionario-tipi{
+	height: 630px;
+	font-size:20px;
+}
+#titulo-pergunta{
+	margin-top: 50px;
+}
+#form-questionario-tipi{
+	margin-top: 100px;
+}
+#rodape-questionario-tipi{
+	height:65px;
+}
+/* FINAL - PAGINA QUESTIONARIO-TIPI*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA SOBRE OS 5 FATORES TIPI */
+#grafico-TIPI{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:20px;
+}
+#conteudo-grafico-TIPI{
+	font-size:20px;
+	height:630px;
+}
+#rodape-grafico-TIPI{
+	height:65px;
+}
+/* FINAL - PAGINA SOBRE OS 5 FATORES TIPI */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+}
+
+/* #################################################################### */
+@media screen and (min-width:768px){
+/*	COMEÇO - GLOBAL - */
+#titulo{
+	font-size: 28px;
+	font-weight:bold;
+}
+#titulo-pergunta{
+	font-size:28px; 
+	font-weight:bold;
+}
+#navbar-header{
+	margin-left:2px; 
+	margin-right:2px; 
+	max-height:65px; 
+}
+#home{
+	margin-top:-1px;
+}
+#opcoes{
+	margin-top:-1px;
+}
+#register{
+	margin-top:-1px;
+}
+#brasil{
+	margin-top:-1px;
+}
+#usa{
+	margin-top:-1px;
+}
+#navbar-rodape{
+	margin-left:2px; 
+	margin-right:2px; 
+	margin-top: 2px;
+	max-height:65px; 
+}
+#contato{
+	margin-top:0px;
+}
+#sobre{
+	margin-top:0px;
+}
+#continuar{
+	margin-top:0px;
+}
+#sair{
+	margin-top:0px;
+}
+/*	FINAL - GLOBAL - */
+	
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMEÇO - PAGINA INICIO - */
+#inicio{
+	position:relative;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	font-size:24px;
+}
+	
+#conteudo-inicio{
+	background-color:#E9E9E9;
+	height:730px;
+	font-size:24px;
+}
+#form-inicio{
+	margin-top:60px;
+	font-size:24px;
+}
+#par-email-inicio{
+	font-size:24px;
+}
+#text_email-inicio{
+	width:90%;
+	height:24px;
+	font-size:24px;
+}
+#text_senha-inicio{
+	width:90%;
+	height:24px;
+	font-size:24px;
+}
+#par_senha-inicio{
+	padding-top:30px;
+	font-size:24px;
+}
+#par-conteudo-inicio{
+	font-size:20px;
+}
+#button-login{
+	margin-top:90px;
+	width:80%;
+	font-size:24px;
+}
+#esqueceu_senha{
+	font-size:24px;
+}
+
+#rodape-inicio{
+	height:110px;
+}
+/* FINAL - PAGINA INICIO - */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA RECUPERAR*/
+#recuperar{
+	position:relative;
+	margin: 0 auto;
+	width:100%;
+	height:100%;
+}
+	
+#conteudo-recuperar{
+	background-color:#E9E9E9;
+	height:730px;
+	font-size:24px;
+}
+#text-email{
+	width:75%;
+	height:24px;
+	font-size:24px;
+}
+
+#parg-email{
+	padding-top:150px;
+}
+
+#parag-button-recuperar{
+	margin-top:60px;
+}
+#footer-recuperar{
+	height:110px;
+}
+/*FINAL - PAGINA RECUPERAR */
+/* @@@@@@@@@@@@@@@@@@@@@@@ */			
+		
+		
+/* @@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA INSTRUÇÃO-NEO*/
+#instrução-neo{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:24px;	
+}
+#conteudo-instrução-neo{
+	height:730px;
+	font-size:24px;
+}
+#par-instrução-neo{
+	margin-top:80px;
+	font-size:24px;
+}
+#rodape-instrução-neo{
+	height:110px;
+}
+/* FINAL - PAGINA INSTRUÇÃO-NEO*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@ */			
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA INSTRUÇÃO-TIPI*/
+#instrução-tipi{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:24px;	
+}
+#conteudo-instrução-tipi{
+	height:730px;
+	font-size:24px;
+}
+#par-instrução-tipi{
+	margin-top:80px;
+	font-size:24px;
+}
+#rodape-instrução-tipi{
+	height:110px;
+}
+/* FINAL - PAGINA INSTRUÇÃO-TIPI*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@ */			
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA CADASTRO */
+#cadastro{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:24px;
+}
+#conteudo-cadastro{
+	background-color:#E9E9E9;
+	height:1050px;
+	font-size:24px;
+}
+#form-nome{
+	margin-top:20px;
+}
+#nome-cadastro{
+	font-size:24px;
+}
+#text-nome-cadastro{
+	width:90%;
+	height:24px;
+	font-size:24px;
+}
+#form-email{
+	margin-top:20px;
+}
+#email-cadastro{
+	font-size:24px;
+}
+#text-email-cadastro{
+	width:90%;
+	height:24px;
+	font-size:24px;
+}
+#form-senha{
+	margin-top:20px;
+}
+#senha-cadastro{
+	font-size:24px;
+}
+#text-senha-cadastro{
+	width:90%;
+	height:24px;
+	font-size:24px;
+}
+#form-re_senha{
+	margin-top:20px;
+}
+#re_senha-cadastro{
+	font-size:24px;
+}
+#text-re_senha-cadastro{
+	width:90%;
+	height:24px;
+	font-size:24px;
+}
+#form-sexo{
+	margin-top:20px;
+}
+#sexo-cadastro{
+	font-size:24px;
+}
+#form-idade{
+	margin-top:20px;
+}
+#idade-cadastro{
+	font-size:24px;
+}
+#text-idade{
+	width:20%;
+	height:24px;
+	font-size:24px;
+}
+#idioma-cadastro{
+	font-size:24px;
+}
+#par-politica-cadastro{
+	margin-top:20px;
+	font-size:24px;
+}
+#aceita-cadastro{
+	font-size:24px;
+}
+#par-button-cadastrar{
+	margin-top:20px;
+}
+#button-cadastrar{
+	width:80%;
+}
+#rodape_cadastro{
+	height:90px;
+}
+/* FINAL - PAGINA CADASTRO */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA CONTATO */
+#pagina-contato{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:24px;
+}
+#conteudo-contato{
+	height:1010px;
+	font-size:24px;
+}
+#rodape-contato{
+	height:110px;
+}
+/* FINAL - PAGINA CONTATO */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA SOBRE */
+#pagina-sobre{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:24px;
+}
+#conteudo-sobre{
+	height:740px;
+	font-size:24px;
+}
+#par-list-sobre{
+	margin-top:50px;
+}
+#footer-sobre{
+	height:110px;
+}
+/* FINAL - PAGINA SOBRE*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA SOBRE IPIP */
+#sobre-IPIP{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:24px;
+}
+#conteudo-sobre-IPIP{
+	height:740px;
+	font-size:24px;
+}
+#par-sobre-ipip{
+	margin-top:80px;
+}
+#footer-sobre-IPIP{
+	height:110px;
+}
+/* FINAL - PAGINA SOBRE IPIP*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA SOBRE TIPI */
+#sobre-TIPI{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:24px;
+}
+#conteudo-sobre-TIPI{
+	height:740px;
+	font-size:24px;
+}
+#par-sobre-tipi{
+	margin-top:80px;
+}
+#footer-sobre-TIPI{
+	height:110px;
+}
+/* FINAL - PAGINA SOBRE TIPI*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA ESCOLHA-DE-INVENTARIO */
+#escolha-de-inventario{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:24px;
+}
+#conteudo-escolha{
+	height:740px;
+	font-size:24px;
+}
+#par-escolha{
+	margin-top:80px;
+}
+#list-neo{
+	font-size:24px;
+}
+#list-tipi{
+	font-size:24px;
+}
+#footer-escolha{
+	height:110px;
+}
+/* FINAL - PAGINA ESCOLHA-DE-INVENTARIO */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA OPCOES */
+#pagina-opcoes{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:24px;
+}
+#conteudo-opcoes{
+	height:740px;
+	font-size:24px;
+}
+#form-opcoes{
+	margin-top:80px;
+	font-size:24px;
+}
+#par-senha-atual{
+	font-size:24px;
+}
+#text-senha-atual{
+	width:90%;
+	height:24px;
+	font-size:24px;
+}
+#par-senha-nova{
+	font-size:24px;
+	padding-top:40px;
+}
+#text-senha-nova{
+	width:90%;
+	height:24px;
+	font-size:24px;
+}
+#button-alterar{
+	margin-top:60px;
+	width:80%;
+}
+#footer-opcoes{
+	height:110px;
+}
+/* FINAL - PAGINA OPCOES */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA QUESTIONARIO-NEO-IPIP*/
+#questionario-NEO-IPIP{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:24px;
+}
+#conteudo-questionario-neo{
+	height:790px;
+	font-size:24px;
+}
+#titulo-pergunta{
+	margin-top:50px;
+}
+#form-questionario-neo{
+	margin-top:100px;
+	text-align:center;
+}
+#rodape-questionario-neo{
+	height:110px;
+}
+/* FINAL - PAGINA QUESTIONARIO-NEO-IPIP*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA QUESTIONARIO-TIPI*/
+#questionario-TIPI{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:24px;
+}
+#conteudo-questionario-tipi{
+	font-size:24px;
+	height: 790px;
+}
+#titulo-pergunta{
+	margin-top:50px;
+}
+#form-questionario-tipi{
+	margin-top:100px;
+}
+#rodape-questionario-tipi{
+	height:110px;
+}
+/* FINAL - PAGINA QUESTIONARIO-TIPI*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+}
+
+/* ################################################################## */
+@media screen and (min-width:800px){
+/* COMECO - GLOBAL - */
+#titulo{
+	font-size:28px;
+	font-weight:bold;
+}
+#titulo-pergunta{
+	font-size:28px; 
+	font-weight:bold;
+}
+#navbar-header{
+	margin-left: 2px; 
+	margin-right:2px; 
+	max-height:65px; 
+}
+#home{
+	margin-top:-1px;
+}
+#opcoes{
+	margin-top: -1px;
+}
+#register{
+	margin-top:-1px;
+}
+#brasil{
+	margin-top:-1px;
+}
+#usa{
+	margin-top:-1px;
+}
+
+#navbar-rodape{
+	margin-left:2px; 
+	margin-right:2px; 
+	margin-top: 2px;
+	max-height:65px; 
+}
+#contato{
+	margin-top:0px;
+}
+#sobre{
+	margin-top:0px;
+}
+#continuar{
+	margin-top: 0px;
+}
+#sair{
+	margin-top: 0px;
+}
+/* FINAL - GOBAL - */	
+	
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMEÇO - PAGINA INICIO - */
+#inicio{
+	position:relative;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	font-size:24px;
+}	
+#conteudo-inicio{
+	background-color:#E9E9E9;
+	height:520px;
+	font-size:24px;
+}
+#text_email-inicio{
+	width:95%;
+	height:24px;
+	font-size:24px;
+}
+#form-inicio{
+	padding-top:0px;
+}
+#text_senha-inicio{
+	width:95%;
+	height:24px;
+	font-size:24px;
+}
+#par_senha-inicio{
+	padding-top:30px;
+}
+#button-login{
+	margin-top:60px;
+	width:85%;
+}
+#esqueceu_senha{
+	margin-top:30px;
+	width:85%;
+}
+#rodape-inicio{
+	height:110px;
+}
+/* FINAL - PAGINA INICIO - */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA RECUPERAR*/
+#recuperar{
+	position:relative;
+	margin: 0 auto;
+	width:100%;
+	height:100%;
+	font-size:24px;
+}
+#conteudo-recuperar{
+	background-color:#E9E9E9;
+	height: 470px;
+	font-size:24px;
+}
+#text-email{
+	width:95%;
+	height:24px;
+	font-size:24px;
+}
+#parg-email{
+	padding-top:100px;
+}
+#parag-button-recuperar{
+	margin-top:60px;
+}
+#button-recuperar{
+	width:85%;
+}
+#footer-recuperar{
+	height:110px;
+}
+/* @@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA INSTRUÇÃO-NEO*/
+#instrução-neo{
+	position:relative;
+	margin:0 auto;
+	width:100%; 
+	height:100%;
+	font-size:24px;	
+}
+#conteudo-instrução-neo{
+	height: 470px;
+	font-size:24px;
+}
+#rodape-instrução-neo{
+	height:110px;
+}
+/* FINAL - PAGINA INSTRUÇÃO-NEO*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@ */			
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA INSTRUÇÃO-TIPI*/
+#instrução-tipi{
+	position:relative;
+	margin:0 auto;
+	width:100%; 
+	height:100%;
+	font-size:24px;	
+}
+#conteudo-instrução-tipi{
+	height: 470px;
+	font-size:24px;
+}
+#rodape-instrução-tipi{
+	height:110px;
+}
+/* FINAL - PAGINA INSTRUÇÃO-TIPI*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@ */			
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA CADASTRO */
+#cadastro{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:24px;
+}
+#conteudo-cadastro{
+	background-color:#E9E9E9;
+	height:1020px;
+}
+#nome-cadastro{
+	font-size:24px;
+}
+#text-nome-cadastro{
+	width:95%;
+	height:24px;
+	font-size:24px;
+}
+#email-cadastro{
+	font-size:24px;
+}
+#text-email-cadastro{
+	width:95%;
+	height:24px;
+	font-size:24px;
+}
+#senha-cadastro{
+	font-size:24px;
+}
+#text-senha-cadastro{
+	width:95%;
+	height:24px;
+	font-size:24px;
+}
+#re_senha-cadastro{
+	font-size:24px;
+}
+#text-re_senha-cadastro{
+	width:95%;
+	height:24px;
+	font-size:24px;
+}
+#sexo-cadastro{
+	font-size:24px;
+}
+#idade-cadastro{
+	font-size:24px;
+}
+#text-idade{
+	width:15%;
+	height:24px;
+	font-size:24px;
+}
+#idioma-cadastro{
+	font-size:24px;
+}
+#par-politica-cadastro{
+	font-size:24px;
+}
+#aceita-cadastro{
+	font-size:24px;
+}
+#button-cadastrar{
+	width:85%;
+}
+#rodape_cadastro{
+	height:110px;
+}
+/* FINAL - PAGINA CADASTRO */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA CONTATO */
+#pagina-contato{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:24px;
+}
+#conteudo-contato{
+	font-size:24px;
+	height: 1010px;
+}
+#rodape-contato{
+	height:110px;
+}
+/* FINAL - PAGINA CONTATO */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA SOBRE */
+#pagina-sobre{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:24px;
+}
+#conteudo-sobre{
+	height:610px;
+	font-size:24px;
+}
+#par-list-sobre{
+	margin-top:8px;
+}
+#footer-sobre{
+	height:110px;
+}
+/* FINAL - PAGINA SOBRE*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA SOBRE IPIP */
+#sobre-IPIP{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:24px;
+}
+#conteudo-sobre-IPIP{
+	height:495px;
+	font-size:24px;
+}
+#footer-sobre-IPIP{
+	height:110px;
+}
+/* FINAL - PAGINA SOBRE IPIP*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA SOBRE TIPI */
+#sobre-TIPI{
+	position:relative;
+	margin:0 auto;
+	width:100%; 
+	height:100%;
+	font-size:24px;
+}
+#conteudo-sobre-TIPI{
+	height:495px;
+	font-size:24px;
+}
+#footer-sobre-TIPI{
+	height:110px;
+}
+/* FINAL - PAGINA SOBRE TIPI*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA ESCOLHA-DE-INVENTARIO */
+#escolha-de-inventario{
+	position:relative;
+	margin:0 auto;
+	width:100%; 
+	height:100%;
+	font-size:24px;
+}
+#conteudo-escolha{
+	height:495px;
+	font-size:24px;
+}
+#par-escolha{
+	margin-top:50px;
+}
+#list-neo{
+	font-size:24px;
+}
+#list-tipi{
+	font-size:24px;
+}
+#footer-escolha{
+	height:110px;
+}
+/* FINAL - PAGINA ESCOLHA-DE-INVENTARIO */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA OPCOES */
+#pagina-opcoes{
+	position:relative;
+	margin:0 auto;
+	width:100%; 
+	height:100%;
+	font-size:24px;
+}
+#conteudo-opcoes{
+	height:495px;
+	font-size:24px;
+}
+#form-opcoes{
+	padding-top:0px;
+	font-size:24px;
+}
+#text-senha-atual{
+	width:95%;
+	height:24px;
+	font-size:24px;
+}
+#senha-nova{
+	height:24px;
+}
+#text-senha-nova{
+	width:95%;
+	height:24px;
+	font-size:24px;
+}
+#par-senha-nova{
+	padding-top:40px;
+}
+#button-alterar{
+	margin-top:60px;
+	width:85%;
+}
+#footer-opcoes{
+	height:110px;
+}
+/* FINAL - PAGINA OPCOES */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA QUESTIONARIO-NEO-IPIP*/
+#questionario-NEO-IPIP{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:24px;
+}
+#conteudo-questionario-neo{
+	height:550px;
+	font-size:24px;
+}
+#titulo-pergunta{
+	margin-top:24px;
+}
+#form-questionario-neo{
+	margin-top:80px;
+	text-align:center;
+}
+#disc-total{
+	width:90%;
+}
+#disc-parci{
+	width:90%;
+}
+#nem-disc-nem-cord{
+	width:90%;
+}
+#conc-parcial{
+	width:90%;
+}
+#conc-total{
+	width:90%;
+}
+#rodape-questionario-neo{
+	height:110px;
+}
+/* FINAL - PAGINA QUESTIONARIO-NEO-IPIP*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA QUESTIONARIO-TIPI*/
+#questionario-TIPI{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:24px;
+}
+#conteudo-questionario-tipi{
+	height:550px;
+	font-size:24px;
+}
+#titulo-pergunta{
+	margin-top:24px;
+}
+#form-questionario-tipi{
+	margin-top:80px;
+	text-align:center;
+}
+#rodape-questionario-tipi{
+	height:110px;
+}
+/* FINAL - PAGINA QUESTIONARIO-TIPI*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+}
+
+
+/* ########################################################## */
+@media screen and (min-width:800px) and (max-height:480px){
+/* COMECO - GLOBAL - */
+#titulo{
+	font-size:22px;
+	font-weight:bold;
+}
+#titulo-pergunta{
+	font-size:22px; 
+	font-weight:bold;
+}
+#navbar-header{
+	margin-left:2px; 
+	margin-right:2px; 
+	max-height:65px; 
+}
+#home{
+	margin-top:-1px;
+}
+#opcoes{
+	margin-top: -1px;
+}
+#register{
+	margin-top:-1px;
+}
+#brasil{
+	margin-top:-1px;
+}
+#usa{
+	margin-top:-1px;
+}
+
+#navbar-rodape{
+	margin-left:2px; 
+	margin-right:2px; 
+	margin-top:2px;
+	max-height:65px; 
+}
+#contato{
+	margin-top:0px;
+}
+
+#sobre{
+	margin-top:0px;
+}
+#continuar{
+	margin-top:0px;
+}
+#sair{
+	margin-top:0px;
+}
+/* FINAL - GLOBAL - */
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMEÇO - PAGINA INICIO - */
+#inicio{
+	position:relative;
+	margin: 0 auto;
+	width: 100%;
+	height:100%;
+	font-size:20px;
+}
+#conteudo-inicio{
+	background-color:#E9E9E9;
+	height:350px;
+	font-size:20px;
+}
+#text_email-inicio{
+	width:90%;
+	height:20px;
+	font-size:20px;
+}
+#form-inicio{
+	margin-top:-3px;
+	font-size:20px;
+}
+#par-email-inicio{
+	font-size:20px;
+}
+#text_senha-inicio{
+	width:90%;
+	height:20px;
+	font-size:20px;
+}
+#par_senha-inicio{
+	margin-top:-15px;
+	font-size:20px;
+}
+#button-login{
+	margin-top:5px;
+	width:80%;
+	font-size:20px;
+}
+#esqueceu_senha{
+	font-size:20px;
+	margin-top:20px;
+	width:80%;
+}
+#rodape-inicio{
+	height: 55px;
+}
+/* FINAL - PAGINA INICIO - */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA RECUPERAR*/
+#recuperar{
+	position:relative;
+	margin: 0 auto;
+	width:100%;
+	height:100%;
+	font-size:20px;
+}
+#conteudo-recuperar{
+	background-color:#E9E9E9;
+	height:255px;
+	font-size:20px;
+}
+#label-email{
+	font-size:20px;
+}
+#text-email{
+	width:90%;
+	height:20px;
+	font-size:20px;
+}
+#parg-email{
+	padding-top:5px;
+}
+#parag-button-recuperar{
+	margin-top:50px;
+	width:80%;
+	margin-left:8%;
+}
+#footer-recuperar{
+	height:55px;
+}
+/* FINAL - PAGINA RECUPERAR*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA INSTRUÇÃO-NEO*/
+#instrução-neo{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:20px;	
+}
+#conteudo-instrução-neo{
+	height:280px;
+	font-size:20px;
+}
+#par-instrução-neo{
+	font-size:20px;
+}
+#par-instrução-neo{
+	margin-top:5px;
+}
+#rodape-instrução-neo{
+	height:55px;
+}
+/* FINAL - PAGINA INSTRUÇÃO-NEO*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA INSTRUÇÃO-TIPI*/
+#instrução-tipi{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:20px;	
+}
+#conteudo-instrução-tipi{
+	height:280px;
+	font-size:20px;
+}
+#par-instrução-tipi{
+	font-size:20px;
+}
+#par-instrução-tipi{
+	margin-top:0px;
+}
+#rodape-instrução-tipi{
+	height:55px;
+}
+/* FINAL - PAGINA INSTRUÇÃO-TIPI*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA CADASTRO */
+#cadastro{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:20px;
+}
+#conteudo-cadastro{
+	background-color:#E9E9E9;
+	height:870px;
+	font-size:20px;
+}
+#nome-cadastro{
+	font-size:20px;
+}
+#text-nome-cadastro{
+	width:90%;
+	height:20px;
+	font-size:20px;
+}
+#email-cadastro{
+	font-size:20px;
+}
+#text-email-cadastro{
+	width:90%;
+	height:20px;
+	font-size:20px;
+}
+#senha-cadastro{
+	font-size:20px;
+}
+#text-senha-cadastro{
+	width:90%;
+	height:20px;
+	font-size:20px;
+}
+#re_senha-cadastro{
+	font-size:20px;
+}
+#text-re_senha-cadastro{
+	width:90%;
+	height:20px;
+	font-size:20px;
+}
+#sexo-cadastro{
+	font-size:20px;
+}
+#idade-cadastro{
+	font-size:20px;
+}
+#text-idade{
+	width:20%;
+	height:20px;
+	font-size:20px;
+}
+#idioma-cadastro{
+	font-size:20px;
+}
+#par-politica-cadastro{
+	font-size:20px;
+}
+#aceita-cadastro{
+	font-size:20px;
+}
+#button-cadastrar{
+	width:80%;
+}
+#rodape_cadastro{
+	height:55px;
+}
+/* FINAL - PAGINA CADASTRO */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA CONTATO */
+#pagina-contato{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:20px;
+}
+#conteudo-contato{
+	font-size:20px;
+	height:830px;
+}
+#rodape-contato{
+	height:55px;
+}
+/* FINAL - PAGINA CONTATO */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA SOBRE */
+#pagina-sobre{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:20px;
+}
+#conteudo-sobre{
+	height:535px;
+	font-size:20px;
+}
+#par-list-sobre{
+	margin-top:5px;
+}
+#footer-sobre{
+	height:55px;
+}
+/* FINAL - PAGINA SOBRE*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA SOBRE IPIP */
+#sobre-IPIP{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+}
+#conteudo-sobre-IPIP{
+	height:265px;
+	font-size:20px;
+}
+#par-sobre-ipip{
+	margin-top:0px;
+}
+#footer-sobre-IPIP{
+	height:55px;
+}
+/* FINAL - PAGINA SOBRE IPIP*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA SOBRE TIPI */
+#sobre-TIPI{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+}
+#conteudo-sobre-TIPI{
+	height:265px;
+	font-size:20px;
+}
+#par-sobre-tipi{
+	margin-top:0px;
+}
+#footer-sobre-TIPI{
+	height:55px;
+}
+/* FINAL - PAGINA SOBRE TIPI*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA ESCOLHA-DE-INVENTARIO */
+#escolha-de-inventario{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:20px;
+}
+#conteudo-escolha{
+	height:265px;
+	font-size:20px;
+}
+#par-escolha{
+	margin-top:-2px;
+	margin-bottom:-2px;
+}
+#list-neo{
+	font-size:20px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+#list-tipi{
+	font-size:20px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+#footer-escolha{
+	height:55px;
+}
+/* FINAL - PAGINA ESCOLHA-DE-INVENTARIO */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA OPCOES */
+#pagina-opcoes{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:20px;
+}
+#conteudo-opcoes{
+	height:275px;
+	font-size:20px;
+}
+#form-opcoes{
+	margin-top:-2px;
+	font-size:20px;
+}
+#par-senha-atual{
+	font-size:20px;
+	font-size:20px;
+}
+#text-senha-atual{
+	width:90%;
+	height:20px;
+	font-size:20px;
+}
+#senha-nova{
+	height:20px;
+}
+#text-senha-nova{
+	width:90%;
+	height:20px;
+	font-size:20px;
+}
+#par-senha-nova{
+	padding-top:0px;
+	font-size:20px;
+}
+#button-alterar{
+	margin-top: 0px;
+	width:80%;
+	font-size:20px;
+}
+#footer-opcoes{
+	height:55px;
+}
+/* FINAL - PAGINA OPCOES */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA QUESTIONARIO-NEO-IPIP*/
+#questionario-NEO-IPIP{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:20px;
+}
+#conteudo-questionario-neo{
+	height:360px;
+	font-size:20px;
+}
+#titulo-pergunta{
+	margin-top:0px;
+}
+#form-questionario-neo{
+	margin-top:0px;
+	width:80%;
+	margin-left:10%;
+}
+#rodape-questionario-neo{
+	height:55px;
+}
+/* FINAL - PAGINA QUESTIONARIO-NEO-IPIP*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA QUESTIONARIO-TIPI*/
+#questionario-TIPI{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:20px;
+}
+#conteudo-questionario-tipi{
+	height:360px;
+	font-size:20px;
+}
+#titulo-pergunta{
+	margin-top:0px;
+}
+#form-questionario-tipi{
+	margin-top:0px;
+	width:80%;
+	margin-left:10%;
+}
+#rodape-questionario-tipi{
+	height:55px;
+}
+/* FINAL - PAGINA QUESTIONARIO-TIPI*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+}
+
+
+/* ################################################################ */
+@media screen and (min-width:480px) and (max-height:322px){
+/* COMECO - GLOBAL - */
+#titulo{
+	font-size:18px;
+	font-weight:bold;
+}
+#titulo-pergunta{
+	font-size:18px; 
+	font-weight:bold;
+}
+#navbar-header{
+	margin-left:2px; 
+	margin-right:2px;
+	margin-top:0; 
+	max-height:45px; 
+}
+#home{
+	margin-top:-5px;
+}
+#opcoes{
+	margin-top:-5px;
+}
+#register{
+	margin-top:-5px;
+}
+#brasil{
+	margin-top:-4px;
+}
+#usa{
+	margin-top:-4px;
+}
+#navbar-rodape{
+	margin-left:2px; 
+	margin-right:2px; 
+	margin-top:0px;
+	max-height:45px; 
+}
+#contato{
+	margin-top:-5px;
+}
+#sobre{
+	margin-top:-5px;
+}
+#continuar{
+	margin-top:-5px;
+}
+#sair{
+	margin-top:-5px;
+}
+/* FINAL - GLOBAL - */
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMEÇO - PAGINA INICIO - */
+#inicio{
+	position:relative;
+	margin:0 auto;
+	width:100%;
+	height:100%;
+	font-size:16px;
+}
+#conteudo-inicio{
+	background-color:#E9E9E9;
+	height:295px;
+	font-size:16px;
+}
+#text_email-inicio{
+	width:90%;
+	height:16px;
+	font-size:16px;
+}	
+#form-inicio{
+	margin-top:-110px;
+	font-size:16px;
+}
+#par-email-inicio{
+	font-size:16px;
+}
+#text_senha-inicio{
+	width:90%;
+	height:16px;
+	font-size:16px;
+}
+#par_senha-inicio{
+	margin-top:-10px;
+	font-size:16px;
+}
+#button-login{
+	margin-top:0px;
+	width:80%;
+	font-size:16px;
+}
+#esqueceu_senha{
+	font-size:16px;
+	margin-top:20px;
+	width:80%;
+}
+#rodape-inicio{
+	height:50px;
+}
+/* FINAL - PAGINA INICIO - */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA RECUPERAR*/
+#recuperar{
+	position:relative;
+	margin: 0 auto;
+	width:100%;
+	height:100%;
+	font-size:16px;
+}	
+#conteudo-recuperar{
+	background-color:#E9E9E9;
+	height:155px;
+	font-size:16px;
+}
+#form-recuperar{
+	margin-top:-50px;
+}
+#text-email{
+	width:90%;
+	height:16px;
+	font-size:16px;
+}
+#parg-email{
+	padding-top:5px;
+}
+#parag-button-recuperar{
+	margin-top:30px;
+}
+#button-recuperar{
+	width:70%;
+}
+#footer-recuperar{
+	height:50px;
+}
+/* FINAL - PAGINA RECUPERAR*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA INSTRUÇÃO-NEO*/
+#instrução-neo{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:16px;	
+}
+#conteudo-instrução-neo{
+	height:295px;
+	font-size:16px;
+}
+#par-instrução-neo{
+	margin-top:5px;
+	font-size:16px;
+}
+#rodape-instrução-neo{
+	height:50px;
+}
+/* FINAL - PAGINA INSTRUÇÃO-NEO*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA INSTRUÇÃO-TIPI*/
+#instrução-tipi{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:16px;	
+}
+#conteudo-instrução-tipi{
+	height:295px;
+	font-size:16px;
+}
+#par-instrução-tipi{
+	margin-top:5px;
+	font-size:16px;
+}
+#rodape-instrução-tipi{
+	height:50px;
+}
+/* FINAL - PAGINA INSTRUÇÃO-TIPI*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA CADASTRO */
+#cadastro{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:16px;
+}
+#conteudo-cadastro{
+	background-color:#E9E9E9;
+	height:750px;
+	font-size:16px;
+}
+#nome-cadastro{
+	font-size:16px;
+}
+#text-nome-cadastro{
+	width:90%;
+	height:16px;
+	font-size:16px;
+}
+#email-cadastro{
+	font-size:16px;
+}
+#text-email-cadastro{
+	width:90%;
+	height:16px;
+	font-size:16px;
+}
+#senha-cadastro{
+	font-size:16px;
+}
+#text-senha-cadastro{
+	width:90%;
+	height:16px;
+	font-size:16px;
+}
+#re_senha-cadastro{
+	font-size:16px;
+}
+#text-re_senha-cadastro{
+	width:90%;
+	height:16px;
+	font-size:16px;
+}
+#sexo-cadastro{
+	font-size:16px;
+}
+#idade-cadastro{
+	font-size:16px;
+}
+#text-idade{
+	width:20%;
+	height:16px;
+	font-size:16px;
+}
+#idioma-cadastro{
+	font-size:16px;
+}
+#par-politica-cadastro{
+	font-size:16px;
+}
+#aceita-cadastro{
+	font-size:16px;
+}
+#rodape_cadastro{
+	height:50px;
+}
+/* FINAL - PAGINA CADASTRO */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA CONTATO */
+#pagina-contato{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:16px;
+}
+#conteudo-contato{
+	font-size:16px;
+	height:653px;
+}
+#rodape-contato{
+	height:50px;
+}
+/* FINAL - PAGINA CONTATO */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA SOBRE */
+#pagina-sobre{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:16px;
+}
+#conteudo-sobre{
+	height:500px;
+	font-size:16px;
+}
+#par-list-sobre{
+	margin-top:5px;
+}
+#footer-sobre{
+	height:50px;
+}
+/* FINAL - PAGINA SOBRE*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA SOBRE IPIP */
+#sobre-IPIP{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:16px;
+}
+#conteudo-sobre-IPIP{
+	height:265px;
+	font-size:16px;
+}
+#par-sobre-ipip{
+	margin-top:0px;
+}
+#footer-sobre-IPIP{
+	height:50px;
+}
+/* FINAL - PAGINA SOBRE IPIP*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA SOBRE TIPI */
+#sobre-TIPI{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:16px;
+}
+#conteudo-sobre-TIPI{
+	height:265px;
+	font-size:16px;
+}
+#par-sobre-tipi{
+	margin-top:0px;
+}
+#footer-sobre-TIPI{
+	height:50px;
+}
+/* FINAL - PAGINA SOBRE TIPI*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA ESCOLHA-DE-INVENTARIO */
+#escolha-de-inventario{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:16px;
+}
+#conteudo-escolha{
+	height:230px;
+	font-size:16px;
+}
+#par-escolha{
+	margin-top:-2px;
+	margin-bottom:-2px;
+}
+#list-neo{
+	font-size:16px;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+#list-tipi{
+	font-size:16px;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+#footer-escolha{
+	height:50px;
+}
+/* FINAL - PAGINA ESCOLHA-DE-INVENTARIO */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA OPCOES */
+#pagina-opcoes{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:16px;
+}
+#conteudo-opcoes{
+	height:280px;
+	font-size:16px;
+}
+#form-opcoes{
+	margin-top:-80px;
+	font-size:16px;
+}
+#par-senha-atual{
+	font-size:16px;
+}
+#text-senha-atual{
+	width:90%;
+	height:16px;
+	font-size:16px;
+}
+#par-senha-nova{
+	font-size:16px;
+}
+#text-senha-nova{
+	width:90%;
+	height:16px;
+	font-size:16px;
+}
+#par-senha-nova{
+	margin-top:-10px;
+}
+#button-alterar{
+	margin-top:0px;
+	width:80%;
+}
+#footer-opcoes{
+	height:50px;
+}
+/* FINAL - PAGINA OPCOES */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA QUESTIONARIO-NEO-IPIP*/
+#questionario-NEO-IPIP{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:16px;
+}
+#conteudo-questionario-neo{
+	height:300px;
+	font-size:16px;
+}
+#titulo-pergunta{
+	margin-top:0px;
+}
+#form-questionario-neo{
+	margin-top:0px;
+	width:80%;
+	margin-left:10%;
+}
+#rodape-questionario-neo{
+	height:50px;
+}
+/* FINAL - PAGINA QUESTIONARIO-NEO-IPIP*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* COMECO - PAGINA QUESTIONARIO-TIPI*/
+#questionario-TIPI{
+	position:relative;
+	margin: 0 auto;
+	width:100%; 
+	height:100%;
+	font-size:16px;
+}
+#conteudo-questionario-tipi{
+	height:300px;
+	font-size:16px;
+}
+#titulo-pergunta{
+	margin-top:0px;
+}
+#form-questionario-tipi{
+	margin-top:0px;
+	width:80%;
+	margin-left:10%;
+}
+#rodape-questionario-tipi{
+	height:50px;
+}
+/* FINAL - PAGINA QUESTIONARIO-TIPI*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+}
