@@ -67,7 +67,43 @@ body{
 }
 
 
-#change_language{
+#change_language1{
+	font-size:14px; 
+	float: right;
+	width: 20%;
+	right:0;
+	position:absolute;
+	text-align:center;
+	margin-right:5px;
+}
+#change_language2{
+	font-size:14px; 
+	float: right;
+	width: 20%;
+	right:0;
+	position:absolute;
+	text-align:center;
+	margin-right:5px;
+}
+#change_language3{
+	font-size:14px; 
+	float: right;
+	width: 20%;
+	right:0;
+	position:absolute;
+	text-align:center;
+	margin-right:5px;
+}
+#change_language4{
+	font-size:14px; 
+	float: right;
+	width: 20%;
+	right:0;
+	position:absolute;
+	text-align:center;
+	margin-right:5px;
+}
+#change_language5{
 	font-size:14px; 
 	float: right;
 	width: 20%;
@@ -95,7 +131,8 @@ body{
 	height:35px;
 }
 #home-us{
-	margin-top:-8px;
+	margin-top:-6px;
+	height:35px;
 }
 #home-recuperar{
 	margin-top:-5px;
@@ -273,7 +310,8 @@ body{
 	height:35px;
 }
 #register-us{
-	margin-top:-5px;
+	margin-top:-6px;
+	height:35px;
 }
 #register-recuperar{
 	margin-top:-5px;
@@ -331,18 +369,30 @@ body{
 }
 /* Footer */
 #navbar-rodape{
-	margin-left:2px; 
-	margin-right:2px; 
-	margin-top:0px;
+	margin-left:-2px; 
+	margin-right:0px; 
+	/*margin-top:0px;*/
 	margin-bottom:0px;
-	max-height:42px;
+	height:45px;
+	clear:both;
+	bottom:0;
 	
+	/*max-height:42px;
+	
+	*/
 }
+ .ui-navbar li .ui-btn:last-child
+ {
+            margin-right: -4px;
+ }
+
 #contato{
 	margin-top:-6px;
+	height:35px;
 }
 #contato-us{
 	margin-top:-6px;
+	height:35px;
 }
 #contato-recuperar{
 	margin-top:-6px;
@@ -382,9 +432,11 @@ body{
 }
 #sobre{
 	margin-top:-6px;
+	height:35px;
 }
 #sobre-us{
 	margin-top:-6px;
+	height:35px;
 }
 #sobre-recuperar{
 	margin-top:-6px;
@@ -448,6 +500,7 @@ body{
 }
 #sair{
 	margin-top:-6px;
+	height:35px;
 }
 #sair-instrucao-NEO{
 	margin-top:-6px;
@@ -571,6 +624,7 @@ body{
 }
 #continuar{
 	margin-top:-6px;
+	height:35px;
 }
 #continuar-instrucao-NEO{
 	margin-top:-6px;
@@ -593,7 +647,7 @@ body{
 #inicio{
 	position:inherit;
 	margin: 0 auto;
-	width:100%; 
+	width:99%; 
 	
 }
 #conteudo-inicio{
@@ -632,6 +686,7 @@ body{
 }
 #rodape-inicio{
 	height:45px;
+	
 }
 /* FINAL - PAGINA INICIO - */
 

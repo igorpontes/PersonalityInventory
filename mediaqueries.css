@@ -38,6 +38,7 @@
 	margin-left:0px; 
 	margin-right:0px; 
 	margin-top: 0;
+	margin-bottom:0;
 	max-height:42px; 
 }
 
@@ -98,7 +99,7 @@
 	padding-top:0px;
 }
 #rodape-inicio{
-	height:90px;
+	height:50px;
 }
 /* FINAL - PAGINA INICIO - */
 

@@ -122,13 +122,14 @@ var en_dict = {
 	'label-button-ver-abertura-neo':'See Opening',
 	
 	'change_language':"<p align=\"center\"><img align=\"middle\" src=\"images/flag_brazil.png\" width=\"32\" height=\"32\" id=\"brasil\" onClick=\"inicializeLanguage('pt')\" style=\"vertical-align:middle\"><label style=\"vertical-align:middle\"> PT</label></img></p>",
-	'nav_home':'<img src="images/Img/Ingles/icon_home-us.png" id="home-us"/>',
-	'nav_register':'<img src="images/Img/Ingles/icon_register.png" id="register-us" />',
-	'nav_contact':'<img src="images/Img/Ingles/icon_contato-us.png" id="contato-us" />',
-	'nav_about':'<img src="images/Img/Ingles/icon_sobre-us.png" id="sobre-us" />',
-	'nav_options':'<img src="images/Img/Ingles/icon_opcoes-us.png" id="opcoes-instrucao-NEO-us"/>',
-	'nav_exit':'<img src="images/Img/Ingles/icon_sair-us.png" id="sair-instrucao-NEO-us" />',
-	'nav_continue':'<img src="images/Img/Ingles/icon_continuar-us.png" id="continuar-instrucao-NEO-us" />'//,
+	
+	'nav_home':'<img src="images/Img/Ingles/icon_home-us.png" id="home"/>',
+	'nav_register':'<img src="images/Img/Ingles/icon_register.png" id="register"/>',
+	'nav_contact':'<img src="images/Img/Ingles/icon_contato-us.png" id="contato"/>',
+	'nav_about':'<img src="images/Img/Ingles/icon_sobre-us.png" id="sobre"/>',
+	'nav_options':'<img src="images/Img/Ingles/icon_opcoes-us.png" id="opcoes"/>',
+	'nav_exit':'<img src="images/Img/Ingles/icon_sair-us.png" id="sair"/>',
+	'nav_continue':'<img src="images/Img/Ingles/icon_continuar-us.png" id="continuar"/>'//,
 	//'':'',
 	//'':'',
 }
@@ -427,7 +428,12 @@ function inicializeLanguage(language) {
 	document.getElementById("label-button-ver-neuroticismo-neo").innerHTML = $.i18n._('label-button-ver-neuroticismo-neo');
 	document.getElementById("grafico_abertura").innerHTML = $.i18n._('grafico_abertura');
 	document.getElementById("label-button-ver-abertura-neo").innerHTML = $.i18n._('label-button-ver-abertura-neo');
-	document.getElementById("change_language").innerHTML = $.i18n._('change_language');
+	document.getElementById("change_language1").innerHTML = $.i18n._('change_language');
+	document.getElementById("change_language2").innerHTML = $.i18n._('change_language');
+	document.getElementById("change_language3").innerHTML = $.i18n._('change_language');
+	document.getElementById("change_language4").innerHTML = $.i18n._('change_language');
+	document.getElementById("change_language5").innerHTML = $.i18n._('change_language');
+
 	document.getElementById("nav_home").innerHTML = $.i18n._('nav_home');
 	document.getElementById("nav_register").innerHTML = $.i18n._('nav_register');
 	document.getElementById("nav_contact").innerHTML = $.i18n._('nav_contact');
@@ -435,6 +441,8 @@ function inicializeLanguage(language) {
 	document.getElementById("nav_options").innerHTML = $.i18n._('nav_options');
 	document.getElementById("nav_exit").innerHTML = $.i18n._('nav_exit');
 	document.getElementById("nav_continue").innerHTML = $.i18n._('nav_continue');
+	
+	
 	//document.getElementById("").innerHTML = $.i18n._('');
 
 	
