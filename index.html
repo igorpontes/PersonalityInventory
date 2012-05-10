@@ -11,340 +11,67 @@
 
 <script type="text/javascript" charset="utf-8" src="database.js"></script>
 <script src="jquery.mobile-1.1.0.min.js" type="text/javascript"></script>
+<!--<script src="jscharts.js" type="text/javascript" />-->
 <script type="text/javascript" charset="utf-8">
 
-$(document).ready(function(e) {
-	
-	//$(".btn").click(authorize);
-	//$("#botao_us").click(inicializeLanguage("en"));
-	//$("#botao_pt").click(inicializeLanguage("pt"));
-	
-	
-});
-
-var questoes =  new Array (300);
-
-    questoes[1] =  "Me preocupo com as coisas.";
-    questoes[2] =  "Faço amigos facilmente.";
-    questoes[3] =  "Tenho uma imaginação vívida.";
-    questoes[4] =  "Confio nos outros.";
-    questoes[5] =  "Completo tarefas com sucesso.";
-    questoes[6] =  "Fico com raiva facilmente.";
-    questoes[7] =  "Adoro festas com muitas pessoas.";
-    questoes[8] =  "Acredito na importância da arte.";
-    questoes[9] =  "Nunca sonegaria impostos.";
-    questoes[10] =  "Gosto de ordem.";
-    questoes[11] =  "Frequentemente me sinto triste.";
-    questoes[12] =  "Assumo o comando das situações.";
-    questoes[13] =  "Vivo minhas emoções intensamente.";
-    questoes[14] =  "Faço as pessoas se sentirem queridas.";
-    questoes[15] =  "Tento obedecer às regras.";
-    questoes[16] =  "Sou intimidado(a) facilmente.";
-    questoes[17] =  "Estou sempre ocupado(a).";
-    questoes[18] =  "Prefiro variedade à rotina.";
-    questoes[19] =  "Sou fácil de satisfazer.";
-    questoes[20] =  "Vou direto ao objetivo.";
-    questoes[21] =  "Frequentemente como demasiadamente.";
-    questoes[22] =  "Adoro adrenalina.";
-    questoes[23] =  "Gosto de solucionar problemas complexos.";
-    questoes[24] =  "Detesto ser o centro das atenções.";
-    questoes[25] =  "Faço minhas tarefas o mais rápido possível.";
-    questoes[26] =  "Entro em pânico com facilidade.";
-    questoes[27] =  "Irradio alegria.";
-    questoes[28] =  "Tendo a votar em políticos de esquerda.";
-    questoes[29] =  "Tenho compaixão pelos desabrigados.";
-    questoes[30] =  "Evito cometer erros.";
-    questoes[31] =  "Tenho medo do pior.";
-    questoes[32] =  "Me aproximo das pessoas com facilidade.";
-    questoes[33] =  "Curto altos vôos na minha imaginação.";
-    questoes[34] =  "Acredito que os outros têm boas intenções.";
-    questoes[35] =  "Sobressaio nas coisas que faço.";
-    questoes[36] =  "Me irrito facilmente.";
-    questoes[37] =  "Converso com diversas pessoas em festas.";
-    questoes[38] =  "Gosto de música.";
-    questoes[39] =  "Sigo as regras.";
-    questoes[40] =  "Gosto de arrumar as coisas.";
-    questoes[41] =  "Não gosto de mim mesmo(a).";
-    questoes[42] =  "Tento liderar os outros.";
-    questoes[43] =  "Sinto as emoções dos outros.";
-    questoes[44] =  "Antecipo as necessidades dos outros.";
-    questoes[45] =  "Mantenho as minhas promessas.";
-    questoes[46] =  "Tenho medo de fazer a coisa errada.";
-    questoes[47] =  "Estou sempre ativo(a).";
-    questoes[48] =  "Gosto de conhecer lugares novos.";
-    questoes[49] =  "Não suporto confrontos.";
-    questoes[50] =  "Trabalho duro.";
-    questoes[51] =  "Não sei porque faço algumas das coisas que faço.";
-    questoes[52] =  "Busco aventura.";
-    questoes[53] =  "Adoro ler coisas que me desafiam.";
-    questoes[54] =  "Não gosto de falar sobre mim mesmo(a).";
-    questoes[55] =  "Estou sempre preparado(a).";
-    questoes[56] =  "Muitas vezes me sinto sobrecarregado(a).";
-    questoes[57] =  "Divirto-me bastante.";
-    questoes[58] =  "Acredito que não existe verdade absoluta.";
-    questoes[59] =  "Sinto compaixão por aqueles menos abastados que eu.";
-    questoes[60] =  "Escolho minhas palavras com cuidado.";
-    questoes[61] =  "Tenho medo de muitas coisas.";
-    questoes[62] =  "Me sinto à vontade perto de pessoas.";
-    questoes[63] =  "Amo sonhar acordado(a).";
-    questoes[64] =  "Confio no que as pessoas falam.";
-    questoes[65] =  "Lido com minhas tarefas tranquilamente.";
-    questoes[66] =  "Aborreço-me facilmente.";
-    questoes[67] =  "Gosto de fazer parte de um grupo.";
-    questoes[68] =  "Vejo beleza em coisas que outros podem não notar.";
-    questoes[69] =  "Uso de bajulação para avançar.";
-    questoes[70] =  "Quero que tudo esteja perfeito.";
-    questoes[71] =  "Frequentemente me sinto um lixo.";
-    questoes[72] =  "Convenço pessoas a agirem.";
-    questoes[73] =  "Sou apaixonado(a) por causas.";
-    questoes[74] =  "Adoro ajudar o próximo.";
-    questoes[75] =  "Pago minhas contas em dia.";
-    questoes[76] =  "Tenho dificuldade de me aproximar das pessoas.";
-    questoes[77] =  "Faço diversas coisas no meu tempo livre.";
-    questoes[78] =  "Me interesso por muitas coisas.";
-    questoes[79] =  "Odeio parecer muito controlador ou exigente.";
-    questoes[80] =  "Transformo planos em ações.";
-    questoes[81] =  "Faço coisas de que me arrependo posteriormente.";
-    questoes[82] =  "Adoro ação.";
-    questoes[83] =  "Tenho um vocabulário rico.";
-    questoes[84] =  "Me considero uma pessoa comum.";
-    questoes[85] =  "Inicio meus trabalhos o mais rápido possível.";
-    questoes[86] =  "Sinto que sou incapaz de lidar com as situações.";
-    questoes[87] =  "Expresso alegria como uma criança.";
-    questoes[88] =  "Acredito que criminosos deveriam receber ajuda ao invés de punição.";
-    questoes[89] =  "Valorizo mais cooperação do que competição.";
-    questoes[90] =  "Sigo no caminho que escolho.";
-    questoes[91] =  "Me estresso facilmente.";
-    questoes[92] =  "Ajo confortavelmente perto de outras pessoas.";
-    questoes[93] =  "Gosto de me perder nos meus pensamentos.";
-    questoes[94] =  "Acredito que as pessoas são essencialmente boas.";
-    questoes[95] =  "Sei da minha capacidade.";
-    questoes[96] =  "Estou frequentemente de mau humor.";
-    questoes[97] =  "Envolvo outras pessoas no que estou fazendo.";
-    questoes[98] =  "Amo flores.";
-    questoes[99] =  "Uso outras pessoas para conseguir os meus objetivos.";
-    questoes[100] =  "Gosto de ordem e harmonia.";
-    questoes[101] =  "Tenho uma opinião ruim sobre mim mesmo(a).";
-    questoes[102] =  "Procuro influenciar outros.";
-    questoes[103] =  "Gosto de analisar a mim mesmo(a) e à minha vida.";
-    questoes[104] =  "Me preocupo com os outros.";
-    questoes[105] =  "Falo a verdade.";
-    questoes[106] =  "Tenho medo de chamar atenção.";
-    questoes[107] =  "Consigo fazer muitas coisas ao mesmo tempo.";
-    questoes[108] =  "Gosto de iniciar coisas novas.";
-    questoes[109] =  "Tenho uma língua afiada.";
-    questoes[110] =  "Mergulho de coração nas minhas tarefas.";
-    questoes[111] =  "Gosto de farras.";
-    questoes[112] =  "Gosto de fazer parte de multidões barulhentas.";
-    questoes[113] =  "Consigo lidar com muitas informações.";
-    questoes[114] =  "Raramente conto vantagem.";
-    questoes[115] =  "Começo logo a trabalhar.";
-    questoes[116] =  "Não consigo me decidir.";
-    questoes[117] =  "Estou sempre de bem com a vida.";
-    questoes[118] =  "Acredito numa única religião verdadeira.";
-    questoes[119] =  "Sofro com as perdas dos outros.";
-    questoes[120] =  "Faço coisas sem pensar.";
-    questoes[121] =  "Sou consumido pelos meus problemas.";
-    questoes[122] =  "Faço as pessoas se alegrarem.";
-    questoes[123] =  "Entrego-me às minhas fantasias.";
-    questoes[124] =  "Acredito na bondade do ser humano.";
-    questoes[125] =  "Tenho boas ideias para solucionar problemas.";
-    questoes[126] =  "Perco a calma.";
-    questoes[127] =  "Adoro festas surpresas.";
-    questoes[128] =  "Aprecio a beleza da natureza.";
-    questoes[129] =  "Sei burlar as regras.";
-    questoes[130] =  "Faço coisas de acordo com um plano.";
-    questoes[131] =  "Tenho constantes variações de humor.";
-    questoes[132] =  "Assumo o controle das situações.";
-    questoes[133] =  "Tento me entender.";
-    questoes[134] =  "Tenho sempre uma palavra de conforto pra alguém.";
-    questoes[135] =  "Escuto a minha consciência.";
-    questoes[136] =  "Me sinto à vontade somente com os meus amigos.";
-    questoes[137] =  "Reajo rapidamente.";
-    questoes[138] =  "Prefiro lidar com coisas que eu já conheço.";
-    questoes[139] =  "Contradigo os outros.";
-    questoes[140] =  "Faço mais do que esperam de mim.";
-    questoes[141] =  "Adoro comer.";
-    questoes[142] =  "Gosto de correr riscos.";
-    questoes[143] =  "Gosto de pensar.";
-    questoes[144] =  "Acredito que sou melhor que os outros.";
-    questoes[145] =  "Ponho os meus planos em prática.";
-    questoes[146] =  "Emoções tomam conta de mim.";
-    questoes[147] =  "Amo a vida.";
-    questoes[148] =  "Tendo a votar em candidatos de direita.";
-    questoes[149] =  "Não me importo com os problemas dos outros.";
-    questoes[150] =  "Tomo decisões precipitadas.";
-    questoes[151] =  "Não sou facilmente incomodado(a).";
-    questoes[152] =  "Sou uma pessoa difícil de se conhecer.";
-    questoes[153] =  "Gasto tempo para refletir sobre as coisas.";
-    questoes[154] =  "Acredito que tudo vai ficar bem.";
-    questoes[155] =  "Eu sei como conseguir as coisas.";
-    questoes[156] =  "Raramente fico irritado(a).";
-    questoes[157] =  "Prefiro ficar sozinho(a).";
-    questoes[158] =  "Não gosto de arte.";
-    questoes[159] =  "Trapaceio para chegar onde quero.";
-    questoes[160] =  "Frequentemente me esqueço de colocar as coisas de volta onde encontrei.";
-    questoes[161] =  "Me desespero.";
-    questoes[162] =  "Espero que outros tomem a liderança.";
-    questoes[163] =  "Raramente me emociono.";
-    questoes[164] =  "Olho os outros com desprezo.";
-    questoes[165] =  "Quebro as regras.";
-    questoes[166] =  "Tropeço nas minhas palavras.";
-    questoes[167] =  "Gosto de levar uma vida tranquila.";
-    questoes[168] =  "Não gosto de mudanças.";
-    questoes[169] =  "Adoro uma boa briga.";
-    questoes[170] =  "Eu sou exigente comigo mesmo(a) e com os outros.";
-    questoes[171] =  "Raramente excedo-me.";
-    questoes[172] =  "Ajo loucamente, com ousadia.";
-    questoes[173] =  "Não me interesso por coisas abstratas.";
-    questoes[174] =  "Tenho uma opinião positiva ao meu respeito.";
-    questoes[175] =  "Não gosto de trabalhar.";
-    questoes[176] =  "Mantenho a calma quando estou sobre pressão.";
-    questoes[177] =  "Olho pelo lado bom da vida.";
-    questoes[178] =  "Acho que os artistas recebem muito apoio financeiro do governo desnecessariamente.";
-    questoes[179] =  "Não gosto de pessoas bondosas.";
-    questoes[180] =  "Eu ajo por impulso.";
-    questoes[181] =  "Na maior parte do tempo sou calmo(a).";
-    questoes[182] =  "Não me sinto à vontade perto de outras pessoas.";
-    questoes[183] =  "Raramente sonho acordado(a).";
-    questoes[184] =  "Desconfio dos outros.";
-    questoes[185] =  "Costumo fazer maus julgamentos das situações.";
-    questoes[186] =  "Raramente fico zangado(a).";
-    questoes[187] =  "Prefiro que me deixem só.";
-    questoes[188] =  "Não gosto de poesia.";
-    questoes[189] =  "Pressiono as pessoas.";
-    questoes[190] =  "Deixo o meu quarto bagunçado.";
-    questoes[191] =  "Sinto que a minha vida está sem rumo.";
-    questoes[192] =  "Me coloco em segundo plano.";
-    questoes[193] =  "Não me deixo afetar pelas minhas emoções.";
-    questoes[194] =  "Sou indiferente aos sentimentos dos outros.";
-    questoes[195] =  "Quebro as minhas promessas.";
-    questoes[196] =  "Não me envergonho facilmente.";
-    questoes[197] =  "Gosto de fazer as coisas com calma.";
-    questoes[198] =  "Não gosto de mudanças.";
-    questoes[199] =  "Grito com os outros.";
-    questoes[200] =  "Exijo qualidade.";
-    questoes[201] =  "Resisto às tentações com facilidade.";
-    questoes[202] =  "Estou aberto(a) a novas experiências.";
-    questoes[203] =  "Evito discussões filosóficas.";
-    questoes[204] =  "Tenho um ótimo conceito sobre mim mesmo(a).";
-    questoes[205] =  "Desperdiço o meu tempo.";
-    questoes[206] =  "Sei lidar com problemas complexos.";
-    questoes[207] =  "Dou gargalhadas.";
-    questoes[208] =  "Acredito que as leis deveriam ser rigorosamente aplicadas.";
-    questoes[209] =  "Acredito em olho por olho, dente por dente.";
-    questoes[210] =  "Costumo me precipitar.";
-    questoes[211] =  "Não me transtorno facilmente com os problemas.";
-    questoes[212] =  "Evito contato com outros.";
-    questoes[213] =  "Não tenho uma boa imaginação.";
-    questoes[214] =  "Suspeito das intenções dos outros.";
-    questoes[215] =  "Não tenho uma boa compreensão das coisas.";
-    questoes[216] =  "Não me incomodo facilmente.";
-    questoes[217] =  "Não gosto de multidão.";
-    questoes[218] =  "Não curto visitar museus de arte.";
-    questoes[219] =  "Finjo me importar com os outros.";
-    questoes[220] =  "Costumo deixar os meus pertences em todo lugar.";
-    questoes[221] =  "Raramente me sinto pra baixo.";
-    questoes[222] =  "Tenho pouco a dizer.";
-    questoes[223] =  "Raramente percebo as minhas reações emocionais.";
-    questoes[224] =  "Costumo fazer as pessoas se sentirem desconfortáveis.";
-    questoes[225] =  "Convenço as pessoas a fazerem as minhas obrigações.";
-    questoes[226] =  "Consigo lidar bem com novas situações.";
-    questoes[227] =  "Gosto de um estilo de vida tranquilo.";
-    questoes[228] =  "Gosto de rotina.";
-    questoes[229] =  "Insulto os outros.";
-    questoes[230] =  "Não tenho motivação para o sucesso.";
-    questoes[231] =  "Consigo controlar as minhas vontades.";
-    questoes[232] =  "Procuro perigo.";
-    questoes[233] =  "Tenho dificuldade em entender ideias abstratas.";
-    questoes[234] =  "Sei as respostas para muitas perguntas.";
-    questoes[235] =  "Necessito de um empurrão para começar algo.";
-    questoes[236] =  "Sei como superar situações difíceis.";
-    questoes[237] =  "Divirto os meus amigos.";
-    questoes[238] =  "Acredito que tratamos os criminosos com muitas regalias.";
-    questoes[239] =  "Tento não pensar nos necessitados.";
-    questoes[240] =  "Faço coisas malucas.";
-    questoes[241] =  "Não me preocupo com coisas que já aconteceram.";
-    questoes[242] =  "Não me interesso sinceramente pelos outros.";
-    questoes[243] =  "Raramente me perco nos meus pensamentos.";
-    questoes[244] =  "Sou cauteloso(a) com relação aos outros.";
-    questoes[245] =  "Tenho pouco a contribuir.";
-    questoes[246] =  "Não perco a cabeça.";
-    questoes[247] =  "Evito multidões.";
-    questoes[248] =  "Não gosto de ir a shows.";
-    questoes[249] =  "Tiro vantagem dos outros.";
-    questoes[250] =  "Não me incomodo com pessoas bagunceiras.";
-    questoes[251] =  "Estou satisfeito(a) comigo mesmo(a).";
-    questoes[252] =  "Não gosto de chamar atenção.";
-    questoes[253] =  "Raramente passo por altos e baixos emocionais.";
-    questoes[254] =  "Viro as costas para os outros.";
-    questoes[255] =  "Faço o oposto daquilo que me foi pedido.";
-    questoes[256] =  "Não me incomodo com situações embaraçosas.";
-    questoes[257] =  "Deixo as coisas acontecerem no seu ritmo natural.";
-    questoes[258] =  "Não gosto de experimentar comidas novas.";
-    questoes[259] =  "Me vingo dos outros.";
-    questoes[260] =  "Faço apenas o necessário.";
-    questoes[261] =  "Nunca gasto mais do que eu posso.";
-    questoes[262] =  "Nunca voaria de asa delta ou faria bungee jumping.";
-    questoes[263] =  "Não me interesso por discussões teóricas.";
-    questoes[264] =  "Me gabo sobre as minhas qualidades.";
-    questoes[265] =  "Tenho dificuldade em iniciar tarefas.";
-    questoes[266] =  "Prontamente supero qualquer contratempo.";
-    questoes[267] =  "Não me divirto facilmente.";
-    questoes[268] =  "Deveríamos ser mais duros com o crime.";
-    questoes[269] =  "Acredito que as pessoas deveriam cuidar de si mesmas.";
-    questoes[270] =  "Ajo sem pensar.";
-    questoes[271] =  "Me adapto facilmente a novas situações.";
-    questoes[272] =  "Mantenho os outros à distância.";
-    questoes[273] =  "Tenho dificuldade em imaginar coisas.";
-    questoes[274] =  "Acredito que as pessoas são essencialmente más.";
-    questoes[275] =  "Não vejo as consequências das coisas.";
-    questoes[276] =  "Raramente reclamo.";
-    questoes[277] =  "Busco tranquilidade.";
-    questoes[278] =  "Não gosto de assistir a performances de dança.";
-    questoes[279] =  "Atrapalho os planos dos outros.";
-    questoes[280] =  "Não me incomodo com a desordem.";
-    questoes[280] =  "Não me incomodo com a disordem.";
-    questoes[281] =  "Estou muito satisfeito(a) comigo mesmo(a).";
-    questoes[282] =  "Não expresso a minha opinião.";
-    questoes[283] =  "Não entendo por que as pessoas se emocionam.";
-    questoes[284] =  "Nunca reservo um tempo para os outros.";
-    questoes[285] =  "Distorço os fatos.";
-    questoes[286] =  "Estou apto(a) a defender meus princípios.";
-    questoes[287] =  "Tenho um poder de reação lento.";
-    questoes[288] =  "Estou preso(a) a tradições.";
-    questoes[289] =  "Guardo rancor.";
-    questoes[290] =  "Dedico pouco tempo e esforço ao meu trabalho.";
-    questoes[291] =  "Nunca esbanjo.";
-    questoes[292] =  "Não gosto de música alta.";
-    questoes[293] =  "Evito ler coisas difíceis.";
-    questoes[294] =  "Me coloco no centro das atenções.";
-    questoes[295] =  "Adio as minhas decisões.";
-    questoes[296] =  "Mantenho a calma mesmo em situações tensas.";
-    questoes[297] =  "Raramente faço brincadeiras.";
-    questoes[298] =  "Prefiro de ficar em pé durante o Hino Nacional.";
-    questoes[299] =  "Não suporto pessoas fracas.";
-    questoes[300] =  "Frequentemente faço planos de última hora."
-
+var lang;
+var questoes_IPIP = new Array(301);
+var questoes_TIPI = new Array(11);
+var db;
 var pergunta = 1; 
 var resposta = 0; 
+var perguntaTIPI = 1; 
+var respostaTIPI = 0; 
 
-//document.getElementById("titulo-pergunta-tipi").innerHTML = questoes[pergunta];
 
+questoes_IPIP = arrayQuestions("pt");
+questoes_TIPI = arrayQuestionsTIPI("pt");
+
+function mudaLingua(){
+	if(this.lang == "pt"){
+		this.lang = "en";
+		setLanguage("en");
+		inicializeLanguage('en');
+		questoes_IPIP = arrayQuestions("en");
+		document.getElementById("titulo-pergunta").innerHTML = questoes_IPIP[pergunta];
+		questoes_TIPI = arrayQuestionsTIPI("en");
+		document.getElementById("titulo-pergunta-tipi").innerHTML = questoes_TIPI[perguntaTIPI];
+	}else{
+		this.lang = "pt";
+		setLanguage("pt");
+		inicializeLanguage('pt');
+		questoes_IPIP = arrayQuestions("pt");
+		document.getElementById("titulo-pergunta").innerHTML = questoes_IPIP[pergunta];
+		questoes_TIPI = arrayQuestionsTIPI("pt");
+		document.getElementById("titulo-pergunta-tipi").innerHTML = questoes_TIPI[perguntaTIPI];
+	}
+	
+}
+
+$(document).ready(function(e) {
+	this.lang = "pt";
+	setLanguage("pt");
+	document.getElementById("titulo-pergunta").innerHTML = questoes_IPIP[pergunta];
+	document.getElementById("titulo-pergunta-tipi").innerHTML = questoes_TIPI[perguntaTIPI];
+	
+//$("#titulo-pergunta-tipi").text(this.questoesTIPI[this.perguntaTIPI]);	
+
+});
+
+
+
+//NEO-IPIP
 function armazenarResposta(resp){
 	this.pergunta = this.pergunta + 1;
 	this.resposta = resp;
-     document.getElementById("titulo-pergunta-tipi").innerHTML = questoes[pergunta];
-	
+    document.getElementById("titulo-pergunta").innerHTML = questoes_IPIP[this.pergunta];
 	db = window.openDatabase("personality", "1.0", "Personality DB", 1000000);
-    db.transaction(gravarResposta, updateResposta_error, gravarRespostaSucess);	
-
-	 
+    db.transaction(gravarResposta, updateResposta_error, gravarRespostaSucess);	 
 }
 
 
 function gravarResposta(tx){
-    var sqlcadastrar = "UPDATE tipi set q" + this.pergunta + " = " + this.resposta;
+    var sqlcadastrar = "UPDATE ipip set q" + this.pergunta + " = " + this.resposta;
     tx.executeSql(sqlcadastrar);
 }
 
@@ -353,6 +80,30 @@ function gravarRespostaSucess() {
 }
 
 function updateResposta_error() {
+	alert("Erro ao cadastrar resposta!");
+}
+
+//TIPI
+
+function armazenarRespostaTIPI(resp){
+	this.perguntaTIPI = this.perguntaTIPI + 1;
+	this.respostaTIPI = resp;
+    document.getElementById("titulo-pergunta-tipi").innerHTML = questoes_TIPI[this.perguntaTIPI];
+	
+	db = window.openDatabase("personality", "1.0", "Personality DB", 1000000);
+    db.transaction(gravarRespostaTIPI, updateResposta_errorTIPI, gravarRespostaSucessTIPI);	 
+}
+
+function gravarRespostaTIPI(tx){
+    var sqlcadastrarTIPI = "UPDATE tipi set q" + this.perguntaTIPI + " = " + this.respostaTIPI;
+    tx.executeSql(sqlcadastrarTIPI);
+}
+
+function gravarRespostaSucessTIPI() {
+	//alert("Resposta cadastrado com sucesso!");
+}
+
+function updateResposta_errorTIPI() {
 	alert("Erro ao cadastrar resposta!");
 }
 
@@ -384,8 +135,8 @@ function updateResposta_error() {
         	<label id="titulo1">Personality Inventory</label>
         </p>
     </div>
-    <div id="change_language1" align="center" >
-    	<p align="center"><img align="middle" src="images/flag_uk.png" width="32" height="32" id="uk" onClick="inicializeLanguage('en')" style="vertical-align:middle"><label style="vertical-align:middle"> EN</label></img></p>
+    <div id="change_language" align="center" >
+    	<p align="center"><img align="middle" src="images/flag_uk.png" width="32" height="32" id="uk" onClick="mudaLingua()" style="vertical-align:middle"><label style="vertical-align:middle"> EN</label></img></p>
     </div>
  </div><!-- /header -->
 <!-- ************************************************************* -->
@@ -402,7 +153,7 @@ function updateResposta_error() {
             </p>
             <center>
             <p id="par-conteudo-inicio">
-            	<a href="#escolha-de-inventario" id="button_login" data-role="button"><label id="button-login"><b>Login</b></label></a>
+            	<a href="#escolha-de-inventario" id="button_login" data-role="button"><label id="button-login"><b>Entrar</b></label></a>
             	<a href="#recuperar" id="esqueceu_senha" data-role="button">
                     <label id="esqueceu-senha"><b>Esqueceu a Senha?</b></label>
                 </a>
@@ -443,7 +194,7 @@ function updateResposta_error() {
         </p>
     </div>
     <div id="change_language2" align="center" >
-    	<p align="center"><img align="middle" src="images/flag_uk.png" width="32" height="32" id="uk" onClick="inicializeLanguage('en')" style="vertical-align:middle"><label style="vertical-align:middle"> EN</label></img></p>
+    	<p align="center"><img align="middle" src="images/flag_uk.png" width="32" height="32" id="uk" onClick="mudaLingua()" style="vertical-align:middle"><label style="vertical-align:middle"> EN</label></img></p>
     </div>
  </div>
 <!-- /header -->
@@ -590,7 +341,7 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
         </p>
     </div>
     <div id="change_language3" align="center" >
-    	<p align="center"><img align="middle" src="images/flag_uk.png" width="32" height="32" id="uk" onClick="inicializeLanguage('en')" style="vertical-align:middle"><label style="vertical-align:middle"> EN</label></img></p>
+    	<p align="center"><img align="middle" src="images/flag_uk.png" width="32" height="32" id="uk" onClick="mudaLingua()" style="vertical-align:middle"><label style="vertical-align:middle"> EN</label></img></p>
     </div>
  </div>
     	
@@ -689,7 +440,7 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
         </p>
     </div>
     <div id="change_language4" align="center" >
-    	<p align="center"><img align="middle" src="images/flag_uk.png" width="32" height="32" id="uk" onClick="inicializeLanguage('en')" style="vertical-align:middle"><label style="vertical-align:middle"> EN</label></img></p>
+    	<p align="center"><img align="middle" src="images/flag_uk.png" width="32" height="32" id="uk" onClick="mudaLingua()" style="vertical-align:middle"><label style="vertical-align:middle"> EN</label></img></p>
     </div>
  </div>
     	
@@ -762,7 +513,7 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
         </p>
     </div>
     <div id="change_language5" align="center" >
-    	<p align="center"><img align="middle" src="images/flag_uk.png" width="32" height="32" id="uk" onClick="inicializeLanguage('en')" style="vertical-align:middle"><label style="vertical-align:middle"> EN</label></img></p>
+    	<p align="center"><img align="middle" src="images/flag_uk.png" width="32" height="32" id="uk" onClick="mudaLingua()" style="vertical-align:middle"><label style="vertical-align:middle"> EN</label></img></p>
     </div>
  </div>
     	
@@ -1048,34 +799,21 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 	</a>
 	<p id="titulo" align="center">NEO-IPIP</p>
 </div><!-- /header-->
-    
+  
 <div data-role="content" id="conteudo-questionario-neo" class="fundo">
-	<p id="titulo-pergunta" align="center">Me preocupo com as coisas</p>
-    <form method="post" id="form-questionario-neo">
+	<p id="titulo-pergunta" align="center"></p>
+	<form id="form-questionario-neo" method="post">
+		<input type="hidden" name="resposta" value="0">
+		<input type="hidden" name="pergunta" value="0">
     	<center>
-        <!--<p id="par-button-cadastrar" align="center">-->
-        	<a href="#" data-role="button" id="disc-total-neo" >
-            <label id="label-disc-total-neo"><b>Discordo totalmente</b></label>
-            </a>
-        
-        	<a href="#" data-role="button" id="disc-parci-neo" >
-            <label id="label-disc-parci-neo"><b>Discordo parcialmente</b></label>
-            </a>
-        
-        	<a href="#" data-role="button" id="nem-disc-nem-cord-neo" >
-            <label id="label-nem-disc-nem-cord-neo"><b>Nem discordo nem concordo</b></label>
-            </a>
-            
-            <a href="#" data-role="button" id="conc-parcial-neo" >
-            <label id="label-conc-parcial-neo"><b>Concordo parcialmente</b></label>
-            </a>
-            
-            <a href="#" data-role="button" id="conc-total-neo" >
-            <label id="label-conc-total-neo"><b>Concordo totalmente</b></label>
-            </a>
-        <!--</p>-->
+			<input type="button" value="Discordo totalmente" id="disc-total" onclick="armazenarResposta(1)">
+			<input type="button" value="Discordo parcialmente" id="disc-parci" onclick="armazenarResposta(2)">
+			<input type="button" value="Nem discordo nem concordo" id="nem-disc-nem-cord" onclick="armazenarResposta(3)">
+			<input type="button" value="Concordo parcialmente" id="conc-parcial" onclick="armazenarResposta(4)">
+			<input type="button" value="Concordo totalmente" id="conc-total" onclick="armazenarResposta(5)">
         </center>
     </form>
+
 </div><!-- /content-->
 
 	<!-- **************************************************************** -->    
@@ -1104,24 +842,21 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 	</a>
 	<p id="titulo" align="center">TIPI</p>
 </div><!-- /header-->
-    
+   
 <div data-role="content" id="conteudo-questionario-tipi" class="fundo">
 	<p align="center" id="titulo-pergunta-tipi"></p>   
     <form id="form-questionario-tipi" method="post">
-		<input type="hidden" name="resposta" value="0">
-		<input type="hidden" name="pergunta" value="0">
+		<input type="hidden" name="respostaTIPI" value="0">
+		<input type="hidden" name="perguntaTIPI" value="0">
     	<center>
-			<input type="button" value="Discordo totalmente" id="disc-total" onclick="armazenarResposta(1)">
-			<input type="button" value="Discordo parcialmente" id="disc-parci" onclick="armazenarResposta(2)">
-			<input type="button" value="Nem discordo nem concordo" id="nem-disc-nem-cord" onclick="armazenarResposta(3)">
-			<input type="button" value="Concordo parcialmente" id="conc-parcial" onclick="armazenarResposta(4)">
-			<input type="button" value="Concordo totalmente" id="conc-total" onclick="armazenarResposta(5)">
+			<input type="button" value="Discordo totalmente" id="disc-total" onclick="armazenarRespostaTIPI(1)"></input>
+			<input type="button" value="Discordo parcialmente" id="disc-parci" onclick="armazenarRespostaTIPI(2)">
+			<input type="button" value="Nem discordo nem concordo" id="nem-disc-nem-cord" onclick="armazenarRespostaTIPI(3)">
+			<input type="button" value="Concordo parcialmente" id="conc-parcial" onclick="armazenarRespostaTIPI(4)">
+			<input type="button" value="Concordo totalmente" id="conc-total" onclick="armazenarRespostaTIPI(5)">
         </center>
     </form>
-<script>
- document.getElementById("titulo-pergunta-tipi").innerHTML =  
-  questoes[pergunta];
-</script>
+
 
 </div><!-- /content-->
 

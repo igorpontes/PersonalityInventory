@@ -67,7 +67,7 @@ body{
 }
 
 
-#change_language1{
+#change_language{
 	font-size:14px; 
 	float: right;
 	width: 20%;
@@ -371,21 +371,13 @@ body{
 #navbar-rodape{
 	margin-left:-2px; 
 	margin-right:0px; 
-	/*margin-top:0px;*/
+	margin-top:0px;
 	margin-bottom:0px;
 	height:45px;
-	clear:both;
-	bottom:0;
-	
 	/*max-height:42px;
 	
 	*/
 }
- .ui-navbar li .ui-btn:last-child
- {
-            margin-right: -4px;
- }
-
 #contato{
 	margin-top:-6px;
 	height:35px;
@@ -647,7 +639,7 @@ body{
 #inicio{
 	position:inherit;
 	margin: 0 auto;
-	width:99%; 
+	width:100%; 
 	
 }
 #conteudo-inicio{
@@ -686,7 +678,6 @@ body{
 }
 #rodape-inicio{
 	height:45px;
-	
 }
 /* FINAL - PAGINA INICIO - */
 
