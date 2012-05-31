@@ -29,6 +29,8 @@ body{
 	padding-bottom: 5px;
 }
 */
+
+
 /* @@@@@@@@@@@@@@@@@@@@@ */
 /* COMEÇO - GLOBAL - */
 .estilo:link{
@@ -373,7 +375,7 @@ body{
 	margin-right:0px; 
 	margin-top:0px;
 	margin-bottom:0px;
-	height:45px;
+	height:50px;
 	/*max-height:42px;
 	
 	*/
@@ -630,6 +632,26 @@ body{
 #continuar-instrucao-TIPI-us{
 	margin-top:-6px;
 }
+
+.nav-icons .ui-btn .ui-btn-inner { padding-top: 35px !important;  font-weight:0; font-size:10px;}
+.nav-icons .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: none !important; border-radius: none !important; }
+#nav_home .ui-icon { background:  url(images/icons/icon_home.png) 50% 50% no-repeat; background-size: 28px 28px; }
+#nav_register .ui-icon { background:  url(images/icons/icon_users.png) 50% 50% no-repeat; background-size: 28px 28px;  }
+#nav_contact .ui-icon { background:  url(images/icons/icon_call.png) 50% 50% no-repeat;  background-size: 30px 30px; }
+#nav_about .ui-icon { background:  url(images/icons/icon_information.png) 50% 50% no-repeat;  background-size: 28px 28px; }
+#nav_options .ui-icon { background:  url(images/icons/icon_settings.png) 50% 50% no-repeat;  background-size: 28px 28px; }
+#nav_exit .ui-icon { background:  url(images/icons/icon_delete.png) 50% 50% no-repeat;  background-size: 28px 28px; }
+#nav_continue .ui-icon { background:  url(images/icons/icon_arrow_right.png) 50% 50% no-repeat;  background-size: 28px 28px; }
+
+#nav_home2 .ui-icon { background:  url(images/icons/icon_home.png) 50% 50% no-repeat; background-size: 28px 28px; }
+#nav_register2 .ui-icon { background:  url(images/icons/icon_users.png) 50% 50% no-repeat; background-size: 28px 28px;  }
+#nav_contact2 .ui-icon { background:  url(images/icons/icon_call.png) 50% 50% no-repeat;  background-size: 30px 30px; }
+#nav_about2 .ui-icon { background:  url(images/icons/icon_information.png) 50% 50% no-repeat;  background-size: 28px 28px; }
+#nav_options2 .ui-icon { background:  url(images/icons/icon_settings.png) 50% 50% no-repeat;  background-size: 28px 28px; }
+
+
+
+
 /* FINAL - GLOBAL - */
 /* @@@@@@@@@@@@@@@@@@@@ */
 
@@ -677,7 +699,7 @@ body{
 	margin-top:20px;
 }
 #rodape-inicio{
-	height:45px;
+	height:50px;
 }
 /* FINAL - PAGINA INICIO - */
 

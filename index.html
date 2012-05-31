@@ -163,21 +163,29 @@ function updateResposta_errorTIPI() {
 </div><!-- /content-->
                 
     <!-- ************************************************************** --> 
-<div data-role="footer" id="rodape-inicio" data-position="fixed" data-id="rodape" >
-	<div data-role="navbar" align="center" id="navbar-rodape">
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape1">
 		<ul>
         	<li id="lista1">
-                	<a href="#" id="nav_home" class="ui-btn-active ui-state-persist"><img src="images/Img/icon_home.png" id="home"/>
-                     </a></li>
+                	<a href="#" id="nav_home" data-icon="custom" class="ui-btn-active ui-state-persist">Início</a></li>
      			<li id="lista2">
-                    <a href="#cadastro" id="nav_register" data-transition=""><img src="images/Img/icon_cadastro.png" id="register"/>
-                    </a></li>
+                    <a href="#cadastro" id="nav_register" data-icon="custom" >Cadastro</a></li>
      			<li>
-                	<a href="#pagina-contato" id="nav_contact" data-transition="" ><img src="images/Img/icon_contato.png" id="contato" />
-                	</a></li>
+                	<a href="#pagina-contato" id="nav_contact" data-icon="custom" >Contato</a></li>
             	<li>
-            		<a href="#pagina-sobre" id="nav_about" data-transition=""><img src="images/Img/icon_sobre.png" id="sobre" />
-                	</a></li>
+            		<a href="#pagina-sobre" id="nav_about" data-icon="custom" >Sobre</a></li>
+		</ul>
+	</div>
+    <div data-role="navbar" align="center"  class="nav-icons" id="navbar-rodape_en1" style="display:none">
+		<ul>
+        	<li id="lista1">
+                	<a href="#" id="nav_home" data-icon="custom" class="ui-btn-active ui-state-persist">Home</a></li>
+     			<li id="lista2">
+                    <a href="#cadastro" id="nav_register" data-icon="custom" >Register</a></li>
+     			<li>
+                	<a href="#pagina-contato" id="nav_contact" data-icon="custom">Contact</a></li>
+            	<li>
+            		<a href="#pagina-sobre" id="nav_about" data-icon="custom" >About</a></li>
 		</ul>
 	</div>
 </div>
@@ -215,21 +223,29 @@ function updateResposta_errorTIPI() {
 </div><!-- /content-->
            
     <!-- ************************************************ -->
-<div data-role="footer" id="rodape-inicio" data-position="fixed" data-id="rodape" >
-	<div data-role="navbar" align="center" id="navbar-rodape">
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape5">
 		<ul>
         	<li id="lista1">
-                	<a href="#inicio" id="nav_home"><img src="images/Img/icon_home.png" id="home"/>
-                    </a></li>
+                	<a href="#inicio" id="nav_home" data-icon="custom">Início</a></li>
      			<li id="lista2">
-                    <a href="#cadastro" id="nav_register" data-transition=""><img src="images/Img/icon_cadastro.png" id="register"/>
-                    </a></li>
+                    <a href="#cadastro" id="nav_register" data-icon="custom" >Cadastro</a></li>
      			<li>
-                	<a href="#pagina-contato" id="nav_contact" data-transition="" ><img src="images/Img/icon_contato.png" id="contato" />
-                	</a></li>
+                	<a href="#pagina-contato" id="nav_contact" data-icon="custom" >Contato</a></li>
             	<li>
-            		<a href="#pagina-sobre" id="nav_about" data-transition=""><img src="images/Img/icon_sobre.png" id="sobre" />
-                	</a></li>
+            		<a href="#pagina-sobre" id="nav_about" data-icon="custom" >Sobre</a></li>
+		</ul>
+	</div>
+	<div data-role="navbar" align="center"  class="nav-icons" id="navbar-rodape_en5" style="display:none">
+		<ul>
+        	<li id="lista1">
+                	<a href="#inicio" id="nav_home" data-icon="custom">Home</a></li>
+     			<li id="lista2">
+                    <a href="#cadastro" id="nav_register" data-icon="custom" >Register</a></li>
+     			<li>
+                	<a href="#pagina-contato" id="nav_contact" data-icon="custom">Contact</a></li>
+            	<li>
+            		<a href="#pagina-sobre" id="nav_about" data-icon="custom" >About</a></li>
 		</ul>
 	</div>
 </div><!-- /footer -->
@@ -246,15 +262,7 @@ function updateResposta_errorTIPI() {
 	<p id="titulo" align="center">
         <label id="titulo-instrucao-NEO">Instru&ccedil;&otilde;es NEO-IPIP</label>
     </p>
-	<div data-role="navbar" id="navbar-header">
-		<ul>
-        	<li><a href="#inicio" id="nav_home" data-transition="">
-                <img src="images/Img/icon_home.png" id="home-instrucao-NEO"/></a></li>
-            <li><a href="#pagina-opcoes" id="nav_options"  data-transition="">
-            	<img src="images/Img/icon_opcoes.png" id="opcoes-instrucao-NEO"/>
-                </a></li>
-        </ul>
-	</div><!-- /navbar-->
+	
 </div><!-- /header-->
     <!-- ************************************************************* -->
 		
@@ -268,18 +276,36 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 </div><!-- /content-->
           
     <!-- ******************************************************** -->
-<div data-role="footer" id="rodape-instrução-neo">
-	<div data-role="navbar" id="navbar-rodape">
-    	<ul>
-            <li><a href="#inicio" id="nav_exit" data-transition="">
-            	<img src="images/Img/icon_sair.png" id="sair-instrucao-NEO"/>
-            	</a>
-            <li><a href="#questionario-NEO-IPIP" id="nav_continue" data-transition="">
-            	<img src="images/Img/icon_continuar.png" id="continuar-instrucao-NEO"/>
-            	</a>
-    	</ul>
-    </div><!-- /navbar -->
-</div><!-- /footer->
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape6">
+		<ul>
+        		<li>
+            		<a href="#inicio" id="nav_home" data-icon="custom" >Início</a></li>
+     			<li>
+                	<a href="#pagina-opcoes" id="nav_options" data-icon="custom" data-transition="" >Opções</a></li>
+                <li>
+                	<a href="#inicio" id="nav_exit" data-icon="custom">Sair</a></li>
+     			<li>
+                    <a href="#questionario-NEO-IPIP" id="nav_continue" data-icon="custom" >Continuar</a></li>
+            	
+		</ul>
+	</div>
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape_en6"  style="display:none">
+		<ul>
+        		<li>
+            		<a href="#inicio" id="nav_home" data-icon="custom" >Home</a></li>
+     			<li>
+                	<a href="#pagina-opcoes" id="nav_options" data-icon="custom" >Options</a></li>
+                <li>
+                	<a href="#inicio" id="nav_exit" data-icon="custom">Exit</a></li>
+     			<li>
+                    <a href="#questionario-NEO-IPIP" id="nav_continue" data-icon="custom" >Continue</a></li>
+            	
+		</ul>
+	</div>
+	
+</div>
+<!-- /footer->
     <!-- ******************************************************** -->   
         
 </div><!-- /page instrução - Final da pagina instrução-neo -->
@@ -292,16 +318,7 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 	<p id="titulo" align="center">
     	<label id="titulo-instrucao-TIPI">Instru&ccedil;&otilde;es TIPI</label>
     </p>
-	<div data-role="navbar" id="navbar-header">
-		<ul>
-        	<li><a href="#inicio" id="nav_home" data-transition="">
-             	<img src="images/Img/icon_home.png" id="home-instrucao-TIPI"/>
-                </a></li>
-            <li><a href="#pagina-opcoes" id="nav_options" data-transition="">
-	            <img src="images/Img/icon_opcoes.png" id="opcoes-instrucao-TIPI"/>
-                </a></a></li>
-        </ul>
- 	</div><!-- /navbar-->
+	<!-- /navbar-->
  </div><!-- /header-->
     <!-- ******************************************************* -->
 	
@@ -315,18 +332,35 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 </div><!-- /content-->
       
 	<!-- ********************************************************** -->
-<div data-role="footer" id="rodape-instrução-tipi">
-    <div data-role="navbar" id="navbar-rodape">
-    	<ul>
-    		<li><a href="#inicio" id="nav_exit" data-transition="">
-	            <img src="images/Img/icon_sair.png" id="sair-instrucao-TIPI"/>
-            	</a></a>
-            <li><a href="#questionario-TIPI" id="nav_continue" data-transition="">
-	            <img src="images/Img/icon_continuar.png" id="continuar-instrucao-TIPI"/>
-            	</a></a>
-        </ul>
-    </div><!-- /navbar -->
-</div><!-- /footer->
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape7">
+		<ul>
+        		<li>
+            		<a href="#inicio" id="nav_home" data-icon="custom" >Início</a></li>
+     			<li>
+                	<a href="#pagina-opcoes" id="nav_options" data-icon="custom" data-transition="" >Opções</a></li>
+                <li>
+                	<a href="#inicio" id="nav_exit" data-icon="custom">Sair</a></li>
+     			<li>
+                    <a href="#questionario-TIPI" id="nav_continue" data-icon="custom" >Continuar</a></li>
+            	
+		</ul>
+	</div>
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape_en7"  style="display:none">
+		<ul>
+        		<li>
+            		<a href="#inicio" id="nav_home" data-icon="custom" >Home</a></li>
+     			<li>
+                	<a href="#pagina-opcoes" id="nav_options" data-icon="custom" >Options</a></li>
+                <li>
+                	<a href="#inicio" id="nav_exit" data-icon="custom">Exit</a></li>
+     			<li>
+                    <a href="#questionario-TIPI" id="nav_continue" data-icon="custom" >Continue</a></li>
+            	
+		</ul>
+	</div>
+</div>
+<!-- /footer->
 	<!-- ********************************************************** -->
 </div><!-- /page instrução - Final da pagina-->
 
@@ -407,21 +441,29 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 </div><!-- /content-->
    
    <!-- ************************************************* --> 
-<div data-role="footer" id="rodape-inicio" data-position="fixed" data-id="rodape" data-fullscreen="false" >
-	<div data-role="navbar" align="center" id="navbar-rodape">
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape2">
 		<ul>
         	<li id="lista1">
-                	<a href="#inicio"><img src="images/Img/icon_home.png" id="home"/>
-                    </a></li>
+                	<a href="#inicio" id="nav_home2" data-icon="custom">Início</a></li>
      			<li id="lista2">
-                    <a href="#cadastro" id="nav_register" class="ui-btn-active ui-state-persist"><img src="images/Img/icon_cadastro.png" id="register"/>
-                    </a></li>
+                    <a href="#cadastro" id="nav_register2" data-icon="custom" class="ui-btn-active ui-state-persist">Cadastro</a></li>
      			<li>
-                	<a href="#pagina-contato" id="nav_contact" data-transition="" ><img src="images/Img/icon_contato.png" id="contato" />
-                	</a></li>
+                	<a href="#pagina-contato" id="nav_contact2" data-icon="custom" data-transition="" >Contato</a></li>
             	<li>
-            		<a href="#pagina-sobre" id="nav_about" data-transition=""><img src="images/Img/icon_sobre.png" id="sobre" />
-                	</a></li>
+            		<a href="#pagina-sobre" id="nav_about2" data-icon="custom" >Sobre</a></li>
+		</ul>
+	</div>
+	<div data-role="navbar" align="center"  class="nav-icons" id="navbar-rodape_en2" style="display:none">
+		<ul>
+        	<li id="lista1">
+                	<a href="#inicio" id="nav_home" data-icon="custom" >Home</a></li>
+     			<li id="lista2">
+                    <a href="#cadastro" id="nav_register" data-icon="custom" class="ui-btn-active ui-state-persist" >Register</a></li>
+     			<li>
+                	<a href="#pagina-contato" id="nav_contact" data-icon="custom">Contact</a></li>
+            	<li>
+            		<a href="#pagina-sobre" id="nav_about" data-icon="custom" >About</a></li>
 		</ul>
 	</div>
 </div><!-- /footer -->
@@ -480,21 +522,29 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
     </div><!-- /content-->
     
     <!-- ************************************************* -->
-<div data-role="footer" id="rodape-inicio" data-position="fixed" data-id="rodape" >
-	<div data-role="navbar" align="center" id="navbar-rodape">
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape3">
 		<ul>
         	<li id="lista1">
-                	<a href="#inicio"><img src="images/Img/icon_home.png" id="home"/>
-                    </a></li>
+                	<a href="#inicio" id="nav_home" data-icon="custom">Início</a></li>
      			<li id="lista2">
-                    <a href="#cadastro"><img src="images/Img/icon_cadastro.png" id="register"/>
-                    </a></li>
+                    <a href="#cadastro" id="nav_register" data-icon="custom">Cadastro</a></li>
      			<li>
-                	<a href="#pagina-contato" id="nav_contact"  class="ui-btn-active ui-state-persist"><img src="images/Img/icon_contato.png" id="contato" />
-                	</a></li>
+                	<a href="#pagina-contato" id="nav_contact" data-icon="custom"  class="ui-btn-active ui-state-persist" >Contato</a></li>
             	<li>
-            		<a href="#pagina-sobre" id="nav_about" data-transition=""><img src="images/Img/icon_sobre.png" id="sobre" />
-                	</a></li>
+            		<a href="#pagina-sobre" id="nav_about" data-icon="custom" >Sobre</a></li>
+		</ul>
+	</div>
+	<div data-role="navbar" align="center"  class="nav-icons" id="navbar-rodape_en3" style="display:none">
+		<ul>
+        	<li id="lista1">
+                	<a href="#inicio" id="nav_home" data-icon="custom" >Home</a></li>
+     			<li id="lista2">
+                    <a href="#cadastro" id="nav_register" data-icon="custom" >Register</a></li>
+     			<li>
+                	<a href="#pagina-contato" id="nav_contact" data-icon="custom" class="ui-btn-active ui-state-persist">Contact</a></li>
+            	<li>
+            		<a href="#pagina-sobre" id="nav_about" data-icon="custom" >About</a></li>
 		</ul>
 	</div>
 </div><!-- /footer -->
@@ -552,21 +602,29 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 </div><!-- /content-->
     
     <!-- ************************************************************ -->    
-<div data-role="footer" id="rodape-inicio" data-position="fixed" data-id="rodape" >
-	<div data-role="navbar" align="center" id="navbar-rodape">
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape4">
 		<ul>
         	<li id="lista1">
-                	<a href="#inicio"><img src="images/Img/icon_home.png" id="home"/>
-                     </a></li>
+                	<a href="#inicio" id="nav_home" data-icon="custom">Início</a></li>
      			<li id="lista2">
-                    <a href="#cadastro"><img src="images/Img/icon_cadastro.png" id="register"/>
-                    </a></li>
+                    <a href="#cadastro" id="nav_register" data-icon="custom">Cadastro</a></li>
      			<li>
-                	<a href="#pagina-contato" id="nav_contact" data-transition="" ><img src="images/Img/icon_contato.png" id="contato" />
-                	</a></li>
+                	<a href="#pagina-contato" id="nav_contact" data-icon="custom" data-transition="" >Contato</a></li>
             	<li>
-            		<a href="#pagina-sobre" id="nav_about" class="ui-btn-active ui-state-persist"><img src="images/Img/icon_sobre.png" id="sobre" />
-                	</a></li>
+            		<a href="#pagina-sobre" id="nav_about" data-icon="custom"  class="ui-btn-active ui-state-persist">Sobre</a></li>
+		</ul>
+	</div>
+	<div data-role="navbar" align="center"  class="nav-icons" id="navbar-rodape_en4" style="display:none">
+		<ul>
+        	<li id="lista1">
+                	<a href="#inicio" id="nav_home" data-icon="custom">Home</a></li>
+     			<li id="lista2">
+                    <a href="#cadastro" id="nav_register" data-icon="custom" >Register</a></li>
+     			<li>
+                	<a href="#pagina-contato" id="nav_contact" data-icon="custom">Contact</a></li>
+            	<li>
+            		<a href="#pagina-sobre" id="nav_about" data-icon="custom"  class="ui-btn-active ui-state-persist">About</a></li>
 		</ul>
 	</div>
 </div><!-- /footer-->
@@ -582,17 +640,7 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 	<p id="titulo" align="center">
     	<label id="titulo-ipip"><b>Invent&aacute;rio IPIP</b></label>
     </p>
-    <div data-role="navbar" id="navbar-header">
-    	<ul>
-        	<li><a href="#inicio" id="nav_home" data-transition="">
-            	<img src="images/Img/icon_home.png" id="home-ipip"/>
-                </a></li>
-            <li><a href="#cadastro" id="nav_register" data-transition="">
-            	<img src="images/Img/icon_cadastro.png" id="register-ipip"/>
-                </a></li>
-     		
-        </ul>
-    </div><!-- /navbar -->
+   
 </div><!-- /header-->
 	<!-- ********************************************************** -->
         
@@ -614,18 +662,32 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 </div><!-- content-->
 
 <!-- **************************************************** -->        
-<div data-role="footer" id="footer-sobre-IPIP">
-	<div data-role="navbar" id="navbar-rodape">
-    	<ul>
-        	<li><a href="#pagina-contato" id="nav_contact" data-transition="">
-            	<img src="images/Img/icon_contato.png" id="contato-ipip"/>
-                </a></li>
-       		<li><a href="#pagina-sobre" id="nav_about" data-transition="">
-            	<img src="images/Img/icon_sobre.png" id="sobre-ipip" />
-                </a></li>
-        </ul>
-    </div><!-- /navbar -->
-</div><!-- /footer-->
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape8">
+		<ul>
+        	<li id="lista1">
+                	<a href="#inicio" id="nav_home" data-icon="custom">Início</a></li>
+     			<li id="lista2">
+                    <a href="#cadastro" id="nav_register" data-icon="custom">Cadastro</a></li>
+     			<li>
+                	<a href="#pagina-contato" id="nav_contact" data-icon="custom" data-transition="" >Contato</a></li>
+            	<li>
+            		<a href="#pagina-sobre" id="nav_about" data-icon="custom"  class="ui-btn-active ui-state-persist">Sobre</a></li>
+		</ul>
+	</div>
+	<div data-role="navbar" align="center"  class="nav-icons" id="navbar-rodape_en8" style="display:none">
+		<ul>
+        	<li id="lista1">
+                	<a href="#inicio" id="nav_home" data-icon="custom" >Home</a></li>
+     			<li id="lista2">
+                    <a href="#cadastro" id="nav_register" data-icon="custom" >Register</a></li>
+     			<li>
+                	<a href="#pagina-contato" id="nav_contact" data-icon="custom">Contact</a></li>
+            	<li>
+            		<a href="#pagina-sobre" id="nav_about" data-icon="custom"  class="ui-btn-active ui-state-persist">About</a></li>
+		</ul>
+	</div>
+</div>
 <!-- **************************************************** --> 
 
 </div><!-- /page - Final da pagina Sobre-IPIP-->
@@ -638,17 +700,7 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 	<p id="titulo" align="center">
     	<label id="titulo-tipi"><b>Invent&aacute;rio TIPI</b></label>
     </p>
-	<div data-role="navbar" id="navbar-header">
-    	<ul>
-        	<li><a href="#inicio" id="nav_home" data-transition="">
-            	<img src="images/Img/icon_home.png" id="home-tipi"/>
-                </a></li>
-            <li><a href="#cadastro" id="nav_register" data-transition="">
-            	<img src="images/Img/icon_cadastro.png" id="register-tipi"/>
-                </a></li>
-     		
-     	</ul>
-    </div><!-- /navbar -->
+	
 </div><!-- /header-->
 <!-- ****************************************************** -->
         
@@ -670,18 +722,32 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 </div><!-- content-->
 
 	<!-- ********************************************** -->        
-<div data-role="footer" id="footer-sobre-TIPI">
-	<div data-role="navbar" id="navbar-rodape">
-    	<ul>
-        	<li><a href="#pagina-contato" id="nav_contact" data-transition="">
-                <img src="images/Img/icon_contato.png" id="contato-tipi"/>
-                </a></li>
-       		<li><a href="#pagina-sobre" id="nav_about" data-transition="">
-            	<img src="images/Img/icon_sobre.png" id="sobre-tipi" />
-                </a></li>
-        </ul>
-    </div><!-- /navbar -->
-</div><!-- /footer-->
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape9">
+		<ul>
+        	<li id="lista1">
+                	<a href="#inicio" id="nav_home" data-icon="custom">Início</a></li>
+     			<li id="lista2">
+                    <a href="#cadastro" id="nav_register" data-icon="custom">Cadastro</a></li>
+     			<li>
+                	<a href="#pagina-contato" id="nav_contact" data-icon="custom"  >Contato</a></li>
+            	<li>
+            		<a href="#pagina-sobre" id="nav_about" data-icon="custom"  class="ui-btn-active ui-state-persist">Sobre</a></li>
+		</ul>
+	</div>
+	<div data-role="navbar" align="center"  class="nav-icons" id="navbar-rodape_en9" style="display:none">
+		<ul>
+        	<li id="lista1">
+                	<a href="#inicio" id="nav_home" data-icon="custom" >Home</a></li>
+     			<li id="lista2">
+                    <a href="#cadastro" id="nav_register" data-icon="custom" >Register</a></li>
+     			<li>
+                	<a href="#pagina-contato" id="nav_contact" data-icon="custom">Contact</a></li>
+            	<li>
+            		<a href="#pagina-sobre" id="nav_about" data-icon="custom"  class="ui-btn-active ui-state-persist">About</a></li>
+		</ul>
+	</div>
+</div>
 	<!-- ********************************************** -->
  
 </div><!-- /page - Final da pagina Sobre-TIPI-->
@@ -693,16 +759,7 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 	<!-- ******************************************* -->
 <div data-role="header" id="header-escolha" data-backbtn="false">
 	<p id="titulo" align="center"><b>Personality Inventory</b></p>
-    <div data-role="navbar" id="navbar-header">
-		<ul>
-        	<li><a href="#inicio" id="nav_home" data-transition="">
-            	<img src="images/Img/icon_home.png" id="home-escolha" />
-                </a></li>
-     		<li><a href="#pagina-opcoes" id="nav_options" data-transition="">
-            	<img src="images/Img/icon_opcoes.png" id="opcoes-escolha" />
-                </a></li>	
-        </ul>
-	</div><!-- /navbar -->
+
 </div><!-- /header-->
 <!-- ********************************************** --> 
     
@@ -719,18 +776,36 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 </div><!-- /content-->
     
     <!-- ****************************************************** -->
-<div data-role="footer" id="footer-escolha" data-position="fixed">
-	<div data-role="navbar" id="navbar-rodape"> 
-    	<ul>
-         	<li><a href="#inicio" id="nav_exit" data-transition="">
-            	<img src="images/Img/icon_sair.png" id="sair-escolha" />
-                </a></li>
-   			<li><a href="#pagina-sobre" id="nav_about" data-transition="" >
-            	<img src="images/Img/icon_sobre.png" id="sobre-escolha" />
-                </a></li>
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape10">
+		<ul>
+        		<li>
+            		<a href="#inicio" id="nav_home" data-icon="custom" >Início</a></li>
+     			<li>
+                	<a href="#pagina-opcoes" id="nav_options" data-icon="custom" data-transition="" >Opções</a></li>
+                <li>
+                	<a href="#inicio" id="nav_exit" data-icon="custom">Sair</a></li>
+     			<li>
+                    <a href="#pagina-sobre" id="nav_about" data-icon="custom" >Sobre</a></li>
+            	
 		</ul>
-    </div><!-- /navbar -->
-</div><!-- /footer-->
+	</div>
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape_en10"  style="display:none">
+		<ul>
+        		<li>
+            		<a href="#inicio" id="nav_home" data-icon="custom" >Home</a></li>
+     			<li>
+                	<a href="#pagina-opcoes" id="nav_options" data-icon="custom" data-transition="" >Options</a></li>
+                <li>
+                	<a href="#inicio" id="nav_exit" data-icon="custom">Exit</a></li>
+     			<li>
+                    <a href="#pagina-sobre" id="nav_about" data-icon="custom" >About</a></li>
+            	
+		</ul>
+	</div>
+	
+</div>    
+
     <!-- ***************************************************** -->
     
 </div><!-- /page - Final da pagina Escolha-de-inventario-->
@@ -743,16 +818,7 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 	<p id="titulo" align="center">
     	<label id="titulo-opcoes"><b>Alterar Senha</b></label>
     </p>
-	<div data-role="navbar" id="navbar-header">
-		<ul>
-        	<li><a href="#inicio" id="nav_home" data-transition="">
-            	<img src="images/Img/icon_home.png" id="home-opcoes" />
-                </a></li>
-     		<li><a href="#pagina-opcoes" id="nav_options" data-transition="">
-            	<img src="images/Img/icon_opcoes.png" id="opcoes-opcoes" />
-                </a></li>
-        </ul>
-	</div><!-- /navbar -->
+
 </div><!-- /header-->
 <!-- ***************************************************** -->
     
@@ -774,18 +840,34 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 </div><!-- /content-->
 
 	<!-- ************************************************** -->    
-<div data-role="footer" id="footer-opcoes" data-position="fixed">
-	<div data-role="navbar" id="navbar-rodape">
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape11">
 		<ul>
-       	 	<li><a href="#inicio" id="nav_exit" data-transition="">
-            	<img src="images/Img/icon_sair.png" id="sair-opcoes" />
-                </a></li>
-     	 	<li><a href="#pagina-sobre" id="nav_about" data-transition="">
-            	<img src="images/Img/icon_sobre.png" id="sobre-opcoes" />
-                </a></li>
-        </ul>
-     </div><!-- /navbar -->
-</div><!-- /footer-->
+        		<li>
+            		<a href="#inicio" id="nav_home" data-icon="custom" >Início</a></li>
+     			<li>
+                	<a href="#pagina-opcoes" id="nav_options" data-icon="custom" data-transition="" >Opções</a></li>
+                <li>
+                	<a href="#inicio" id="nav_exit" data-icon="custom">Sair</a></li>
+     			<li>
+                    <a href="#pagina-sobre" id="nav_about" data-icon="custom" >Sobre</a></li>
+            	
+		</ul>
+	</div>
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape_en11"  style="display:none">
+		<ul>
+        		<li>
+            		<a href="#inicio" id="nav_home" data-icon="custom" >Home</a></li>
+     			<li>
+                	<a href="#pagina-opcoes" id="nav_options" data-icon="custom" data-transition="" >Options</a></li>
+                <li>
+                	<a href="#inicio" id="nav_exit" data-icon="custom">Exit</a></li>
+     			<li>
+                    <a href="#pagina-sobre" id="nav_about" data-icon="custom" >About</a></li>
+            	
+		</ul>
+	</div>
+</div>  
 	<!-- *************************************************** -->
     
 </div><!-- /page - Final da pagina opcoes-->
@@ -816,19 +898,29 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 
 </div><!-- /content-->
 
-	<!-- **************************************************************** -->    
-<div data-role="footer" id="rodape-questionario-neo" data-position="fixed">
-	<div data-role="navbar" id="navbar-rodape">
-    	<ul>
-         	<li><a href="#inicio" id="nav_exit" data-transition="">
-            	<img src="images/Img/icon_sair.png" id="sair-quest-neo"/>
-                </a></li>
-     	 	<li><a href="#pagina-sobre" id="nav_about" data-transition="">
-            	<img src="images/Img/icon_sobre.png" id="sobre-quest-neo" />
-                </a></li>
-         </ul>
-     </div><!-- /navbar -->
-</div><!-- /footer-->
+	<!-- **************************************************************** -->  
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape12">
+		<ul>
+
+                <li>
+                	<a href="#inicio" id="nav_exit" data-icon="custom">Sair</a></li>
+     			<li>
+                    <a href="#pagina-sobre" id="nav_about" data-icon="custom" >Sobre</a></li>
+            	
+		</ul>
+	</div>
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape_en12"  style="display:none">
+		<ul>
+
+                <li>
+                	<a href="#inicio" id="nav_exit" data-icon="custom">Exit</a></li>
+     			<li>
+                    <a href="#pagina-sobre" id="nav_about" data-icon="custom" >About</a></li>
+            	
+		</ul>
+	</div>
+</div>  
 	<!-- ************************************************************** -->
 
 </div><!-- /page questionario-NEO-IPIP - Final da pagina-->
@@ -861,18 +953,28 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 </div><!-- /content-->
 
 	<!-- ********************************************** -->    
-<div data-role="footer" id="rodape-questionario-tipi" data-position="fixed">
-	<div data-role="navbar" id="navbar-rodape">
-    	<ul>
-        	<li><a href="#inicio" id="nav_exit" data-transition="">
-            	<img src="images/Img/icon_sair.png" id="sair-quest-tipi"/>
-                </a></li>
-     	 	<li><a href="#pagina-sobre" id="nav_about" data-transition="">
-            	<img src="images/Img/icon_sobre.png" id="sobre-quest-tipi" />
-                </a></li>
-    	</ul>    
-	</div><!-- /navbar -->
-</div><!-- /footer-->
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape13">
+		<ul>
+
+                <li>
+                	<a href="#inicio" id="nav_exit" data-icon="custom">Sair</a></li>
+     			<li>
+                    <a href="#pagina-sobre" id="nav_about" data-icon="custom" >Sobre</a></li>
+            	
+		</ul>
+	</div>
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape_en13"  style="display:none">
+		<ul>
+
+                <li>
+                	<a href="#inicio" id="nav_exit" data-icon="custom">Exit</a></li>
+     			<li>
+                    <a href="#pagina-sobre" id="nav_about" data-icon="custom" >About</a></li>
+            	
+		</ul>
+	</div>
+</div>  
 	<!-- *********************************************** -->
     
 </div><!-- /page questionario-NEO-IPIP - Final da pagina-->
@@ -904,18 +1006,28 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 </div><!-- /content-->
 
 	<!-- ********************************************** -->    
-<div data-role="footer" id="rodape-saudacao-neo" data-theme="a"   data-position="fixed">
-	<div data-role="navbar" id="navbar-rodape">
-    	<ul>
-        	<li><a href="#escolha-de-inventario" id="nav_exit" data-transition="">
-            	<img src="images/Img/icon_sair.png" id="sair-saudacao-neo"/>
-                </a></li>
-     		<li><a href="#inicio" id="nav_home" data-transition="">
-            	<img src="images/Img/icon_home.png" id="home-saudacao-neo"/>
-                </a></li>
-    	</ul>    
-	</div><!-- /navbar -->
-</div><!-- /footer-->
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape14">
+		<ul>
+
+                <li>
+                	<a href="#inicio" id="nav_home" data-icon="custom">Início</a></li>
+     			<li>
+                    <a href="#escolha-de-inventario" id="nav_exit" data-icon="custom" >Sair</a></li>
+            	
+		</ul>
+	</div>
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape_en14"  style="display:none">
+		<ul>
+
+                <li>
+                	<a href="#inicio" id="nav_home" data-icon="custom">Home</a></li>
+     			<li>
+                    <a href="#escolha-de-inventario" id="nav_exit" data-icon="custom" >Exit</a></li>
+            	
+		</ul>
+	</div>
+</div>  
 	<!-- *********************************************** -->
     
 </div><!-- /page saudação-NEO - Final da pagina-->
@@ -941,25 +1053,35 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
             corespondente ao invent&aacute;rio.
         </label><br>
         <br><br>
-        <a href="#grafico-TIPI" id="button-saudacao-tipi" data-role="button" data-theme="c" data-transition="">
+        <a href="#grafico-TIPI" id="button-saudacao-tipi" data-role="button" data-theme="c" >
                 <label id="label-button-saudacao-tipi"><b>Gr&aacute;fico TIPI</b></label>
         </a>
     </div>
 </div><!-- /content-->
 
 	<!-- ********************************************** -->    
-<div data-role="footer" id="rodape-saudacao-tipi" data-theme="a"  data-position="fixed">
-	<div data-role="navbar" id="navbar-rodape">
-    	<ul>
-        	<li><a href="#escolha-de-inventario" id="nav_exit" data-transition="">
-            	<img src="images/Img/icon_sair.png" id="sair-saudacao-tipi"/>
-                </a></li>
-     		<li><a href="#inicio" id="nav_home" data-transition="">
-            	<img src="images/Img/icon_home.png" id="home-saudacao-tipi"/>
-                </a></li>
-    	</ul>    
-	</div><!-- /navbar -->
-</div><!-- /footer-->
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape15">
+		<ul>
+
+                <li>
+                	<a href="#inicio" id="nav_home" data-icon="custom">Início</a></li>
+     			<li>
+                    <a href="#escolha-de-inventario" id="nav_exit" data-icon="custom" >Sair</a></li>
+            	
+		</ul>
+	</div>
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape_en15"  style="display:none">
+		<ul>
+
+                <li>
+                	<a href="#inicio" id="nav_home" data-icon="custom">Home</a></li>
+     			<li>
+                    <a href="#escolha-de-inventario" id="nav_exit" data-icon="custom" >Exit</a></li>
+            	
+		</ul>
+	</div>
+</div>  
 	<!-- *********************************************** -->
     
 </div><!-- /page saudação-TIPI - Final da pagina-->
@@ -977,61 +1099,72 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 		
     	<div id="grafico_cinco_fatores" align="center">Gráfico 1 Download...</div>
         <div id="div-grandes-fatores" align="center" style="display:none">
-        	<a href="#sobre-os-fatores-NEO" id="button-grandes-fatores" data-role="button" data-transition="">
+        	<a href="#sobre-os-fatores-NEO" id="button-grandes-fatores" data-role="button" >
             	<label id="label-button-grafico-neo">Ver os 5 Fatores</label>
             </a>
         </div>
         
         <div id="grafico_extroversao" align="center">Grafico 2 Download...</div>
         <div id="div-detalhe-extroversão" align="center">
-        	<a href="#extroversão" id="button-extroversão" data-role="button" data-transition="">
+        	<a href="#extroversão" id="button-extroversão" data-role="button" >
             	<label id="label-button-ver-extroversão-neo">Ver Extrovers&atilde;o</label>
             </a>
         </div>
         
         <div id="grafico_socializacao" align="center">Grafico 3 Download...</div>
         <div id="div-detalhe-socializacao" align="center">
-        	<a href="#socializacao" id="button-socializacao" data-role="button" data-transition="">
+        	<a href="#socializacao" id="button-socializacao" data-role="button" >
             	<label id="label-button-ver-socializacao-neo">Ver Socializa&ccedil;&atilde;o</label>
             </a>
         </div>
         
         <div id="grafico_realizacao" align="center">Grafico 4 Download...</div>
         <div id="div-detalhe-realizacao" align="center">
-        	<a href="#realizacao" id="button-socializacao" data-role="button" data-transition="">
+        	<a href="#realizacao" id="button-socializacao" data-role="button" >
             	<label id="label-button-ver-realizacao-neo">Ver Realiza&ccedil;&atilde;o</label>
                 </a>
         </div>
         
         <div id="grafico_neuroticismo" align="center">Grafico 5 Download...</div>
         <div id="div-detalhe-neuroticismo" align="center">
-        	<a href="#neuroticismo" id="button-neuroticismo" data-role="button" data-transition="">
+        	<a href="#neuroticismo" id="button-neuroticismo" data-role="button" >
             	<label id="label-button-ver-neuroticismo-neo">Ver Neuroticismo</label>
             </a>
         </div>
         
         <div id="grafico_abertura" align="center">Grafico 6 Download...</div>
     	<div id="div-detalhe-realizacao" align="center">
-        	<a href="#abertura" id="button-abertura" data-role="button" data-transition="">
+        	<a href="#abertura" id="button-abertura" data-role="button" >
             	<label id="label-button-ver-abertura-neo">Ver Abertura</label>
             </a>
         </div>
         
 </div><!-- /content-->
 
-	<!-- ********************************************** -->    
-<div data-role="footer" id="rodape-grafico-NEO">
-	<div data-role="navbar" id="navbar-rodape">
-    	<ul>
-        	<li><a href="#escolha-de-inventario" id="nav_exit" data-transition="">
-            	<img src="images/Img/icon_sair.png" id="sair-grafico-neo"/>
-                </a></li>
-     		<li><a href="#inicio" id="nav_home" data-transition="">
-            	<img src="images/Img/icon_home.png" id="home-grafico-neo"/>
-                </a></li>
-    	</ul>    
-	</div><!-- /navbar -->
-</div><!-- /footer-->
+	<!-- ********************************************** -->  
+      
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape16">
+		<ul>
+
+                <li>
+                	<a href="#inicio" id="nav_home" data-icon="custom">Início</a></li>
+     			<li>
+                    <a href="#escolha-de-inventario" id="nav_exit" data-icon="custom" >Sair</a></li>
+            	
+		</ul>
+	</div>
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape_en16"  style="display:none">
+		<ul>
+
+                <li>
+                	<a href="#inicio" id="nav_home" data-icon="custom">Home</a></li>
+     			<li>
+                    <a href="#escolha-de-inventario" id="nav_exit" data-icon="custom" >Exit</a></li>
+            	
+		</ul>
+	</div>
+</div>  
 	<!-- *********************************************** -->
     
 </div><!-- /page grafico-NEO-IPIP - Final da pagina-->
@@ -1053,7 +1186,7 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
         <div id="grafico_extroversao" align="center">Grafico 2 Download...</div>
         <div id="grafico_extroversao-us" align="center" style="display:none">Graph 2 Download...</div>
         <div id="div-detalhe-extroversão" align="center">
-        	<a href="#extroversão" id="button-extroversão" data-role="button" data-transition="">
+        	<a href="#extroversão" id="button-extroversão" data-role="button" >
             	<label id="label-button-ver-extroversão-neo">Ver Extroversão</label>
                 <label id="label-button-ver-extroversão-neo-us" style="display:none">See Extroversion</label></a>
         </div>
@@ -1061,7 +1194,7 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
         <div id="grafico_socializacao" align="center">Grafico 3 Download...</div>
         <div id="grafico_socializacao-us" align="center" style="display:none">Graph 3 Download...</div>
         <div id="div-detalhe-socializacao" align="center">
-        	<a href="#socializacao" id="button-socializacao" data-role="button" data-transition="">
+        	<a href="#socializacao" id="button-socializacao" data-role="button" >
             	<label id="label-button-ver-socializacao-neo">Ver Socialização</label>
                 <label id="label-button-ver-socializacao-neo-us" style="display:none">See Socialization</label></a>
         </div>
@@ -1069,7 +1202,7 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
         <div id="grafico_realizacao" align="center">Grafico 4 Download...</div>
         <div id="grafico_realizacao-us" align="center" style="display:none">Graph 4 Download...</div>
         <div id="div-detalhe-realizacao" align="center">
-        	<a href="#realizacao" id="button-socializacao" data-role="button" data-transition="">
+        	<a href="#realizacao" id="button-socializacao" data-role="button" >
             	<label id="label-button-ver-realizacao-neo">Ver Realização</label>
                 <label id="label-button-ver-realizacao-neo-us" style="display:none">See Realization</label></a>
         </div>
@@ -1077,7 +1210,7 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
         <div id="grafico_neuroticismo" align="center">Grafico 5 Download...</div>
         <div id="grafico_neuroticismo-us" align="center" style="display:none">Graph 5 Download...</div>
         <div id="div-detalhe-neuroticismo" align="center">
-        	<a href="#neuroticismo" id="button-neuroticismo" data-role="button" data-transition="">
+        	<a href="#neuroticismo" id="button-neuroticismo" data-role="button" >
             	<label id="label-button-ver-neuroticismo-neo">Ver Neuroticismo</label>
                 <label id="label-button-ver-neuroticismo-neo-us" style="display:none">See Neuroticism</label></a>
         </div>
@@ -1085,7 +1218,7 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
         <div id="grafico_abertura" align="center">Grafico 6 Download...</div>
         <div id="grafico_abertura-us" align="center" style="display:none">Graph 6 Download...</div>
     	<div id="div-detalhe-realizacao" align="center">
-        	<a href="#abertura" id="button-abertura" data-role="button" data-transition="">
+        	<a href="#abertura" id="button-abertura" data-role="button" >
             	<label id="label-button-ver-abertura-neo">Ver Abertura</label>
                 <label id="label-button-ver-abertura-neo-us" style="display:none">See Opening</label></a>
         </div>
@@ -1096,10 +1229,10 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 <!--<div data-role="footer" id="rodape-grafico-NEO">
 	<div data-role="navbar" id="navbar-rodape">
     	<ul>
-        	<li><a href="#escolha-de-inventario"  id="nav_exit" data-transition="">
+        	<li><a href="#escolha-de-inventario"  id="nav_exit" >
             	<img src="images/Img/icon_sair.png" id="sair-grafico-neo"/>
                 </a></li>
-     		<li><a href="#inicio" id="nav_home" data-transition="">
+     		<li><a href="#inicio" id="nav_home" >
             	<img src="images/Img/icon_home.png" id="home-grafico-neo"/>
                 </a></li>
     	</ul>    
@@ -1135,18 +1268,28 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 </div><!-- /content-->
 
 	<!-- ********************************************** -->    
-<div data-role="footer" id="rodape-grafico-TIPI">
-	<div data-role="navbar" id="navbar-rodape">
-    	<ul>
-        	<li><a href="#escolha-de-inventario" id="nav_exit" data-transition="">
-            	<img src="images/Img/icon_sair.png" id="sair-grafico-tipi"/>
-                </a></li>
-     		<li><a href="#inicio" id="nav_home" data-transition="">
-            	<img src="images/Img/icon_home.png" id="home-grafico-tipi"/>
-                </a></li>
-    	</ul>    
-	</div><!-- /navbar -->
-</div><!-- /footer-->
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape17">
+		<ul>
+
+                <li>
+                	<a href="#inicio" id="nav_home" data-icon="custom">Início</a></li>
+     			<li>
+                    <a href="#escolha-de-inventario" id="nav_exit" data-icon="custom" >Sair</a></li>
+            	
+		</ul>
+	</div>
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape_en17"  style="display:none">
+		<ul>
+
+                <li>
+                	<a href="#inicio" id="nav_home" data-icon="custom">Home</a></li>
+     			<li>
+                    <a href="#escolha-de-inventario" id="nav_exit" data-icon="custom" >Exit</a></li>
+            	
+		</ul>
+	</div>
+</div>  
 	<!-- *********************************************** -->
     
 </div><!-- /page grafico-TIPI - Final da pagina-->
@@ -1179,18 +1322,29 @@ Aos introvertidos, falta a exuber&acirc;ncia, energia e os n&iacute;veis de ativ
     </p>
 </div><!-- /content -->
 
-<div data-role="footer" id="rodape-extroversão" >
-	<div data-role="navbar" id="navbar-rodape" >
-    	<ul>
-        	<li><a href="#grafico-NEO" id="nav_exit" data-transition="">
-            	<img src="images/Img/icon_sair.png" id="sair-extroversão"/>
-                </a></li>
-     		<li><a href="#inicio" id="nav_home" data-transition="" >
-            	<img src="images/Img/icon_home.png" id="home-extroversão"/>
-                </a></li>
-    	</ul>    
-	</div><!-- /navbar -->
-</div><!-- /footer -->
+
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape18">
+		<ul>
+
+                <li>
+                	<a href="#inicio" id="nav_home" data-icon="custom">Início</a></li>
+     			<li>
+                    <a href="#grafico-NEO" id="nav_exit" data-icon="custom" >Sair</a></li>
+            	
+		</ul>
+	</div>
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape_en18"  style="display:none">
+		<ul>
+
+                <li>
+                	<a href="#inicio" id="nav_home" data-icon="custom">Home</a></li>
+     			<li>
+                    <a href="#grafico-NEO" id="nav_exit" data-icon="custom" >Exit</a></li>
+            	
+		</ul>
+	</div>
+</div>  
 </div><!-- /Final pagina extroversão -->
 
 
@@ -1222,18 +1376,28 @@ A Socializa&ccedil;&atilde;o &eacute; obviamente vantajosa para atingir e manter
     </p>
 </div><!-- /content -->
 
-<div data-role="footer" id="rodape-socializacao">
-	<div data-role="navbar" id="navbar-rodape" >
-    	<ul>
-        	<li><a href="#grafico-NEO" id="nav_exit" data-transition="" >
-            	<img src="images/Img/icon_sair.png" id="sair-socializacao"/>
-                </a></li>
-     		<li><a href="#inicio" id="nav_home" data-transition="">
-            	<img src="images/Img/icon_home.png" id="home-socializacao"/>
-                </a></li>
-    	</ul>    
-	</div><!-- /navbar -->
-</div><!-- /footer -->
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape19">
+		<ul>
+
+                <li>
+                	<a href="#inicio" id="nav_home" data-icon="custom">Início</a></li>
+     			<li>
+                    <a href="#grafico-NEO" id="nav_exit" data-icon="custom" >Sair</a></li>
+            	
+		</ul>
+	</div>
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape_en19"  style="display:none">
+		<ul>
+
+                <li>
+                	<a href="#inicio" id="nav_home" data-icon="custom">Home</a></li>
+     			<li>
+                    <a href="#grafico-NEO" id="nav_exit" data-icon="custom" >Exit</a></li>
+            	
+		</ul>
+	</div>
+</div> 
 </div><!-- /Final pagina socialização -->
 
 
@@ -1265,18 +1429,28 @@ Os benef&iacute;cios de alta Realiza&ccedil;&atilde;o s&atilde;o &oacute;bvios. 
     </p>
 </div><!-- /content -->
 
-<div data-role="footer" id="rodape-realizacao">
-	<div data-role="navbar" id="navbar-rodape" >
-    	<ul>
-        	<li><a href="#grafico-NEO" id="nav_exit" data-transition="">
-            	<img src="images/Img/icon_sair.png" id="sair-realizacao"/>
-                </a></li>
-     		<li><a href="#inicio" id="nav_home" data-transition="" >
-            	<img src="images/Img/icon_home.png" id="home-realizacao"/>
-                </a></li>
-    	</ul>    
-	</div><!-- /navbar -->
-</div><!-- /footer -->
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape20">
+		<ul>
+
+                <li>
+                	<a href="#inicio" id="nav_home" data-icon="custom">Início</a></li>
+     			<li>
+                    <a href="#grafico-NEO" id="nav_exit" data-icon="custom" >Sair</a></li>
+            	
+		</ul>
+	</div>
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape_en20"  style="display:none">
+		<ul>
+
+                <li>
+                	<a href="#inicio" id="nav_home" data-icon="custom">Home</a></li>
+     			<li>
+                    <a href="#grafico-NEO" id="nav_exit" data-icon="custom" >Exit</a></li>
+            	
+		</ul>
+	</div>
+</div> 
 </div><!-- /Final pagina Realização -->
 
 
@@ -1307,18 +1481,28 @@ No outro extremo da escala, os indiv&iacute;duos com baixos escores em Neurotici
     </p>
 </div><!-- /content -->
 
-<div data-role="footer" id="rodape-neuroticismo">
-	<div data-role="navbar" id="navbar-rodape" >
-    	<ul>
-        	<li><a href="#grafico-NEO" id="nav_exit" data-transition="" >
-            	<img src="images/Img/icon_sair.png" id="sair-neuroticismo"/>
-                </a></li>
-     		<li><a href="#inicio" id="nav_home" data-transition="" >
-            	<img src="images/Img/icon_home.png" id="home-neuroticismo"/>
-                </a></li>
-    	</ul>    
-	</div><!-- /navbar -->
-</div><!-- /footer -->
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape21">
+		<ul>
+
+                <li>
+                	<a href="#inicio" id="nav_home" data-icon="custom">Início</a></li>
+     			<li>
+                    <a href="#grafico-NEO" id="nav_exit" data-icon="custom" >Sair</a></li>
+            	
+		</ul>
+	</div>
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape_en21"  style="display:none">
+		<ul>
+
+                <li>
+                	<a href="#inicio" id="nav_home" data-icon="custom">Home</a></li>
+     			<li>
+                    <a href="#grafico-NEO" id="nav_exit" data-icon="custom" >Exit</a></li>
+            	
+		</ul>
+	</div>
+</div> 
 </div><!-- /Final pagina Neuroticismo -->
 
 
@@ -1350,18 +1534,28 @@ A Abertura &eacute; muitas vezes apresentada como mais saud&aacute;vel ou mais m
     </p>
 </div><!-- /content -->
 
-<div data-role="footer" id="rodape-abertura">
-	<div data-role="navbar" id="navbar-rodape">
-    	<ul>
-        	<li><a href="#grafico-NEO" id="nav_exit" data-transition="" >
-            	<img src="images/Img/icon_sair.png" id="sair-abertura"/>
-                </a></li>
-     		<li><a href="#inicio" id="nav_home" data-transition="" >
-            	<img src="images/Img/icon_home.png" id="home-abertura"/>
-                </a></li>
-    	</ul>    
-	</div><!-- /navbar -->
-</div><!-- /footer -->
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape22">
+		<ul>
+
+                <li>
+                	<a href="#inicio" id="nav_home" data-icon="custom">Início</a></li>
+     			<li>
+                    <a href="#grafico-NEO" id="nav_exit" data-icon="custom" >Sair</a></li>
+            	
+		</ul>
+	</div>
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape_en22"  style="display:none">
+		<ul>
+
+                <li>
+                	<a href="#inicio" id="nav_home" data-icon="custom">Home</a></li>
+     			<li>
+                    <a href="#grafico-NEO" id="nav_exit" data-icon="custom" >Exit</a></li>
+            	
+		</ul>
+	</div>
+</div> 
 </div><!-- /Final pagina Abertura -->
 
 
@@ -1385,19 +1579,27 @@ Aos introvertidos, falta a exuber&acirc;ncia, energia e os n&iacute;veis de ativ
     </p>
 </div><!-- /content-->
 
-	<!-- ********************************************** -->    
-<div data-role="footer" id="rodape-extroversao-tipi">
-	<div data-role="navbar" id="navbar-rodape">
-    	<ul>
-        	<li><a href="#grafico-TIPI" id="nav_exit" data-transition="">
-            	<img src="images/Img/icon_sair.png" id="sair-extroversao-tipi"/>
-                </a></li>
-     		<li><a href="#inicio" id="nav_home" data-transition="">
-            	<img src="images/Img/icon_home.png" id="home-extroversao-tipi"/>
-                </a></li>
-    	</ul>    
-	</div><!-- /navbar -->
-</div><!-- /footer-->
+	<!-- ********************************************** -->  
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape23">
+		<ul>
+                <li>
+                	<a href="#inicio" id="nav_home" data-icon="custom">Início</a></li>
+     			<li>
+                    <a href="#grafico-TIPI" id="nav_exit" data-icon="custom" >Sair</a></li>
+		</ul>
+	</div>
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape_en23"  style="display:none">
+		<ul>
+
+                <li>
+                	<a href="#inicio" id="nav_home" data-icon="custom">Home</a></li>
+     			<li>
+                    <a href="#grafico-TIPI" id="nav_exit" data-icon="custom" >Exit</a></li>
+            	
+		</ul>
+	</div>
+</div>       
 	<!-- *********************************************** -->
     
 </div><!-- /page Extroversão-TIPI - Final da pagina-->
@@ -1424,18 +1626,26 @@ Aos introvertidos, falta a exuber&acirc;ncia, energia e os n&iacute;veis de ativ
 </div><!-- /content-->
 
 	<!-- ********************************************** -->    
-<div data-role="footer" id="rodape-socializacao-tipi">
-	<div data-role="navbar" id="navbar-rodape">
-    	<ul>
-        	<li><a href="#grafico-TIPI" id="nav_exit" data-transition="">
-            	<img src="images/Img/icon_sair.png" id="sair-socializacao-tipi"/>
-                </a></li>
-     		<li><a href="#inicio" id="nav_home" data-transition="">
-            	<img src="images/Img/icon_home.png" id="home-socializacao-tipi"/>
-                </a></li>
-    	</ul>    
-	</div><!-- /navbar -->
-</div><!-- /footer-->
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape24">
+		<ul>
+                <li>
+                	<a href="#inicio" id="nav_home" data-icon="custom">Início</a></li>
+     			<li>
+                    <a href="#grafico-TIPI" id="nav_exit" data-icon="custom" >Sair</a></li>
+		</ul>
+	</div>
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape_en24"  style="display:none">
+		<ul>
+
+                <li>
+                	<a href="#inicio" id="nav_home" data-icon="custom">Home</a></li>
+     			<li>
+                    <a href="#grafico-TIPI" id="nav_exit" data-icon="custom" >Exit</a></li>
+            	
+		</ul>
+	</div>
+</div>   
 	<!-- *********************************************** -->
     
 </div><!-- /page Socialização-TIPI - Final da pagina-->
@@ -1464,18 +1674,26 @@ Os benef&iacute;cios de alta Realiza&ccedil;&atilde;o s&atilde;o &oacute;bvios. 
 </div><!-- /content-->
 
 	<!-- ********************************************** -->    
-<div data-role="footer" id="rodape-realizacao-tipi">
-	<div data-role="navbar" id="navbar-rodape">
-    	<ul>
-        	<li><a href="#grafico-TIPI" id="nav_exit" data-transition="">
-            	<img src="images/Img/icon_sair.png" id="sair-realizacao-tipi"/>
-                </a></li>
-     		<li><a href="#inicio" id="nav_home" data-transition="">
-            	<img src="images/Img/icon_home.png" id="home-realizacao-tipi"/>
-                </a></li>
-    	</ul>    
-	</div><!-- /navbar -->
-</div><!-- /footer-->
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape25">
+		<ul>
+                <li>
+                	<a href="#inicio" id="nav_home" data-icon="custom">Início</a></li>
+     			<li>
+                    <a href="#grafico-TIPI" id="nav_exit" data-icon="custom" >Sair</a></li>
+		</ul>
+	</div>
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape_en25"  style="display:none">
+		<ul>
+
+                <li>
+                	<a href="#inicio" id="nav_home" data-icon="custom">Home</a></li>
+     			<li>
+                    <a href="#grafico-TIPI" id="nav_exit" data-icon="custom" >Exit</a></li>
+            	
+		</ul>
+	</div>
+</div>   
 	<!-- *********************************************** -->
     
 </div><!-- /page Realização-TIPI - Final da pagina-->
@@ -1503,18 +1721,26 @@ Aqueles com escores baixos em Estabilidade Emocional podem experimentar principa
 </div><!-- /content-->
 
 	<!-- ********************************************** -->    
-<div data-role="footer" id="rodape-estabilidade-emocional-tipi">
-	<div data-role="navbar" id="navbar-rodape">
-    	<ul>
-        	<li><a href="#grafico-TIPI" id="nav_exit" data-transition="">
-            	<img src="images/Img/icon_sair.png" id="sair-estabilidade-emocional-tipi"/>
-                </a></li>
-     		<li><a href="#inicio" id="nav_home" data-transition="">
-            	<img src="images/Img/icon_home.png" id="home-estabilidade-emocional-tipi"/>
-                </a></li>
-    	</ul>    
-	</div><!-- /navbar -->
-</div><!-- /footer-->
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape26">
+		<ul>
+                <li>
+                	<a href="#inicio" id="nav_home" data-icon="custom">Início</a></li>
+     			<li>
+                    <a href="#grafico-TIPI" id="nav_exit" data-icon="custom" >Sair</a></li>
+		</ul>
+	</div>
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape_en26"  style="display:none">
+		<ul>
+
+                <li>
+                	<a href="#inicio" id="nav_home" data-icon="custom">Home</a></li>
+     			<li>
+                    <a href="#grafico-TIPI" id="nav_exit" data-icon="custom" >Exit</a></li>
+            	
+		</ul>
+	</div>
+</div>   
 	<!-- *********************************************** -->
     
 </div><!-- /page Estabilidade Emocional-TIPI - Final da pagina-->
@@ -1542,18 +1768,26 @@ A Abertura &eacute; muitas vezes apresentada como mais saud&aacute;vel ou mais m
 </div><!-- /content-->
 
 	<!-- ********************************************** -->    
-<div data-role="footer" id="rodape-abertura-tipi">
-	<div data-role="navbar" id="navbar-rodape">
-    	<ul>
-        	<li><a href="#grafico-TIPI" id="nav_exit" data-transition="">
-            	<img src="images/Img/icon_sair.png" id="sair-abertura-tipi"/>
-                </li>
-     		<li><a href="#inicio" id="nav_home" data-transition="">
-            	<img src="images/Img/icon_home.png" id="home-abertura-tipi"/>
-                </a></li>
-    	</ul>    
-	</div><!-- /navbar -->
-</div><!-- /footer-->
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape27">
+		<ul>
+                <li>
+                	<a href="#inicio" id="nav_home" data-icon="custom">Início</a></li>
+     			<li>
+                    <a href="#grafico-TIPI" id="nav_exit" data-icon="custom" >Sair</a></li>
+		</ul>
+	</div>
+	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape_en27"  style="display:none">
+		<ul>
+
+                <li>
+                	<a href="#inicio" id="nav_home" data-icon="custom">Home</a></li>
+     			<li>
+                    <a href="#grafico-TIPI" id="nav_exit" data-icon="custom" >Exit</a></li>
+            	
+		</ul>
+	</div>
+</div>   
 	<!-- *********************************************** -->
     
 </div><!-- /page Abertura-TIPI - Final da pagina-->

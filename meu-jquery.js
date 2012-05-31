@@ -65,7 +65,7 @@ $(document).ready(function(){
 	$("#cadastrar").click(function(){
 		if($("#senha-cadastro").val() != $("#re_senha-cadastro").val()){
 		
-		alert("Senhas digitas não são iguais");
+		alert("Senhas digitadas não são iguais");
 		/*Apaga os itens digitos no campo senha */
 		document.getElementById("senha-cadastro").value = "";
 		document.getElementById("re_senha-cadastro").value = "";
@@ -73,13 +73,13 @@ $(document).ready(function(){
 	});
 	
 	$("#login").click(function(){
-		document.getElementById("email-inicio").value= "";
-		document.getElementById("senha-inicio").value = "";
+		document.getElementById("text_email-inicio").value= "";
+		document.getElementById("text_senha-inicio").value = "";
 	});
 	
 	$("#recuperar").click(function(){
-		document.getElementById("email-inicio").value= "";
-		document.getElementById("senha-inicio").value = "";
+		document.getElementById("text_email-inicio").value= "";
+		document.getElementById("text_senha-inicio").value = "";
 	});
 	
 	
@@ -90,7 +90,7 @@ $(document).ready(function(){
 		document.getElementById("text-senha-cadastro").value = "";
 		document.getElementById("text-re_senha-cadastro").value = "";
 		document.getElementById("text-idade").value = "";
- */
+		*/
 		
 	});
 		

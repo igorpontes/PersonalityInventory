@@ -132,15 +132,17 @@ var en_dict = {
 	'grafico_abertura':'Graph 6 Download...',
 	'label-button-ver-abertura-neo':'See Opening',
 	
-	'change_language':"<p align=\"center\"><img align=\"middle\" src=\"images/flag_brazil.png\" width=\"32\" height=\"32\" id=\"brasil\" onClick=\"mudaLingua()\" style=\"vertical-align:middle\"><label style=\"vertical-align:middle\"> PT</label></img></p>",
+	'change_language':"<p align=\"center\"><img align=\"middle\" src=\"images/flag_brazil.png\" width=\"32\" height=\"32\" id=\"brasil\" onClick=\"mudaLingua()\" style=\"vertical-align:middle\"><label style=\"vertical-align:middle\"> PT</label></img></p>"
+	//,
 	
-	'nav_home':'<img src="images/Img/Ingles/icon_home-us.png" id="home"/>',
-	'nav_register':'<img src="images/Img/Ingles/icon_register.png" id="register" />',
-	'nav_contact':'<img src="images/Img/Ingles/icon_contato-us.png" id="contato" />',
-	'nav_about':'<img src="images/Img/Ingles/icon_sobre-us.png" id="sobre" />',
-	'nav_options':'<img src="images/Img/Ingles/icon_opcoes-us.png" id="opcoes"/>',
-	'nav_exit':'<img src="images/Img/Ingles/icon_sair-us.png" id="sair" />',
-	'nav_continue':'<img src="images/Img/Ingles/icon_continuar-us.png" id="continuar" />'//,
+	/*'nav_home':'Home',
+	'nav_register':'Register',
+	'nav_contact':'Contact',
+	'nav_about':'About',
+	'nav_options':'Options',
+	'nav_exit':'Exit',
+	'nav_continue':'Continue'//,
+	*/
 	//'':'',
 	//'':'',
 }
@@ -285,16 +287,18 @@ var pt_dict = {
 	'grafico_abertura':'Gráfico 6 Download...',
 	'label-button-ver-abertura-neo':'Ver Abertura',
 	
-	'change_language':"<p align=\"center\"><img align=\"middle\" src=\"images/flag_uk.png\" width=\"32\" height=\"32\" id=\"uk\" onClick=\"mudaLingua()\" style=\"vertical-align:middle\"><label style=\"vertical-align:middle\"> EN</label></img></p>",
+	'change_language':"<p align=\"center\"><img align=\"middle\" src=\"images/flag_uk.png\" width=\"32\" height=\"32\" id=\"uk\" onClick=\"mudaLingua()\" style=\"vertical-align:middle\"><label style=\"vertical-align:middle\"> EN</label></img></p>"
+	//,
 	
-	'nav_home':'<img src="images/Img/icon_home.png" id="home"/>',
-	'nav_register':'<img src="images/Img/icon_cadastro.png" id="register"/>',
-	'nav_contact':'<img src="images/Img/icon_contato.png" id="contato" />',
-	'nav_about':'<img src="images/Img/icon_sobre.png" id="sobre" />',
-	'nav_options':'<img src="images/Img/icon_opcoes.png" id="opcoes-instrucao-NEO"/>',
-	'nav_exit':'<img src="images/Img/icon_sair.png" id="sair-instrucao-NEO"/>',
-	'nav_continue':'<img src="images/Img/icon_continuar.png" id="continuar-instrucao-NEO"/>'//,
-	
+	/*
+	'nav_home':'Início',
+	'nav_register':'Cadastro',
+	'nav_contact':'Contato',
+	'nav_about':'Sobre',
+	'nav_options':'Opções',
+	'nav_exit':'Sair',
+	'nav_continue':'Continuar'//,
+	*/
 	/*
 	'change_language':'<p align="center"><img align="middle" src="images/flag_uk.png" width="32" height="32" id="uk" onClick="inicializeLanguage(\'en\')" style="vertical-align:middle"><label style="vertical-align:middle"> EN</label></img></p>'/*,
 	
@@ -312,25 +316,49 @@ var pt_dict = {
 
 
 
-
+function changeNavbarLanguage(language){
+	var nenglish = "navbar-rodape_en";
+	var nportuguese = "navbar-rodape";
+	var naven;
+	var navpt;
+	var i=0;
+	for (i=1;i<=27;i++)
+	{
+		var tempen = nenglish+i;
+		var temppt = nportuguese+i;
+		naven = document.getElementById(tempen);
+		navpt = document.getElementById(temppt);
+		if(language == "en"){
+			naven.style.display = "block";
+			navpt.style.display ="none";
+		}else{
+			naven.style.display = "none";
+			navpt.style.display ="block";
+		}
+	}
+	
+}
 
 
 
 function inicializeLanguage(language) {
 	this.lang=language;
+	changeNavbarLanguage(language);
 	if(language == "en"){
 		$.i18n.setDictionary(en_dict);
-		alert("Entrou ingles");
+		//alert("Entrou ingles");
+		
 	}else{
 		$.i18n.setDictionary(pt_dict);
-		alert("Entrou portugues");
+		//alert("Entrou portugues");
+	
 	}
 	
 	document.getElementById("label-email-inicio").innerHTML = $.i18n._('Email');	
 	document.getElementById("label-senha-inicio-pt").innerHTML = $.i18n._('Password');
 	document.getElementById("button-login").innerHTML = $.i18n._('Login');
 	document.getElementById("esqueceu-senha").innerHTML = $.i18n._('ForgotPass');
-	document.getElementById("titulo-recuperar").innerHTML = $.i18n._('Recuperar');
+	document.getElementById("titulo-recuperar").innerHTML = $.i18n._('TitlePassRecovery');
 	document.getElementById("label-email").innerHTML = $.i18n._('Email');
 	document.getElementById("label-button-recuperar").innerHTML = $.i18n._('Recovery');
 	document.getElementById("titulo-instrucao-NEO").innerHTML = $.i18n._('TitleNEOIPIP_instructions');
@@ -446,6 +474,7 @@ function inicializeLanguage(language) {
 	document.getElementById("change_language4").innerHTML = $.i18n._('change_language');
 	document.getElementById("change_language5").innerHTML = $.i18n._('change_language');
 
+/*
 	document.getElementById("nav_home").innerHTML = $.i18n._('nav_home');
 	document.getElementById("nav_register").innerHTML = $.i18n._('nav_register');
 	document.getElementById("nav_contact").innerHTML = $.i18n._('nav_contact');
@@ -455,7 +484,11 @@ function inicializeLanguage(language) {
 	document.getElementById("nav_continue").innerHTML = $.i18n._('nav_continue');
 	//document.getElementById("").innerHTML = $.i18n._('');
 
-	
+	document.getElementById("nav_home2").innerHTML = $.i18n._('nav_home');
+	document.getElementById("nav_register2").innerHTML = $.i18n._('nav_register');
+	document.getElementById("nav_contact2").innerHTML = $.i18n._('nav_contact');
+	document.getElementById("nav_about2").innerHTML = $.i18n._('nav_about');
+	*/
 }
 
 /*
@@ -1103,7 +1136,6 @@ function arrayQuestions(x) {
 }
 
 function arrayQuestionsTIPI(x) {
-	alert("entrou nas questoes");
 	if (x == "pt"){
 		return questoesTIPI;
 	}else{ 
