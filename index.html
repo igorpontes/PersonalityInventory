@@ -11,7 +11,7 @@
 
 <script type="text/javascript" charset="utf-8" src="database.js"></script>
 <script src="jquery.mobile-1.1.0.min.js" type="text/javascript"></script>
-<!--<script src="jscharts.js" type="text/javascript" />-->
+<script src="jscharts.js" type="text/javascript"></script>
 <script type="text/javascript" charset="utf-8">
 
 var lang;
@@ -22,7 +22,7 @@ var pergunta = 1;
 var resposta = 0; 
 var perguntaTIPI = 1; 
 var respostaTIPI = 0; 
-
+var perguntaTemp = 1;
 
 questoes_IPIP = arrayQuestions("pt");
 questoes_TIPI = arrayQuestionsTIPI("pt");
@@ -62,51 +62,104 @@ $(document).ready(function(e) {
 
 //NEO-IPIP
 function armazenarResposta(resp){
+	this.perguntaTemp = this.pergunta;
 	this.pergunta = this.pergunta + 1;
 	this.resposta = resp;
-    document.getElementById("titulo-pergunta").innerHTML = questoes_IPIP[this.pergunta];
+	
 	db = window.openDatabase("personality", "1.0", "Personality DB", 1000000);
     db.transaction(gravarResposta, updateResposta_error, gravarRespostaSucess);	 
+	
+	if(this.pergunta > 300){
+		$.mobile.changePage($('#saudacao-neo'));
+	}else{
+		document.getElementById("titulo-pergunta").innerHTML = questoes_IPIP[this.pergunta];
+	}
 }
 
 
 function gravarResposta(tx){
-    var sqlcadastrar = "UPDATE ipip set q" + this.pergunta + " = " + this.resposta;
-    tx.executeSql(sqlcadastrar);
+	var sql;
+	if(perguntaTemp == 1){
+		sql = inserirQuestao("neo_ipip", perguntaTemp, resposta);
+	}else{
+		sql = atualizarQuestao("neo_ipip", perguntaTemp, resposta);
+	}
+    tx.executeSql(sql);
 }
 
 function gravarRespostaSucess() {
-	//alert("Resposta cadastrado com sucesso!");
+	//alert("Resposta cadastrada com sucesso!");
 }
 
-function updateResposta_error() {
-	alert("Erro ao cadastrar resposta!");
+function updateResposta_error(err) {
+	alert("Error: "+err.message);
+	//alert("Erro ao cadastrar resposta!");
 }
+
 
 //TIPI
 
 function armazenarRespostaTIPI(resp){
+	this.perguntaTemp = this.perguntaTIPI;
 	this.perguntaTIPI = this.perguntaTIPI + 1;
 	this.respostaTIPI = resp;
-    document.getElementById("titulo-pergunta-tipi").innerHTML = questoes_TIPI[this.perguntaTIPI];
 	
 	db = window.openDatabase("personality", "1.0", "Personality DB", 1000000);
-    db.transaction(gravarRespostaTIPI, updateResposta_errorTIPI, gravarRespostaSucessTIPI);	 
+    db.transaction(gravarRespostaTIPI, updateResposta_errorTIPI, gravarRespostaSucessTIPI);	
+	
+	if(this.perguntaTIPI > 10){
+		$.mobile.changePage($('#saudacao-tipi'));
+	}else{
+		document.getElementById("titulo-pergunta-tipi").innerHTML = questoes_TIPI[this.perguntaTIPI];
+	}
+	 
 }
 
 function gravarRespostaTIPI(tx){
-    var sqlcadastrarTIPI = "UPDATE tipi set q" + this.perguntaTIPI + " = " + this.respostaTIPI;
-    tx.executeSql(sqlcadastrarTIPI);
+	var sql;
+	if(perguntaTemp == 1){
+		sql = inserirQuestao("tipi", perguntaTemp, respostaTIPI);
+	}else{
+		sql = atualizarQuestao("tipi", perguntaTemp, respostaTIPI);
+	}
+    tx.executeSql(sql);
+	
+	
 }
 
 function gravarRespostaSucessTIPI() {
-	//alert("Resposta cadastrado com sucesso!");
+	//alert("Resposta cadastrada com sucesso!");
 }
 
-function updateResposta_errorTIPI() {
-	alert("Erro ao cadastrar resposta!");
+function updateResposta_errorTIPI(err) {
+	alert("Error: "+err.message);
+	//alert("Erro ao cadastrar resposta!");
 }
 
+/*
+function selecaoRespostaTIPI(){
+	db = window.openDatabase("personality", "1.0", "Personality DB", 1000000);
+    db.transaction(selecaoTIPI, updateResposta_errorTIPI, gravarRespostaSucessTIPI);	
+	
+	
+}
+
+function selecaoTIPI(tx){
+	var sql = "select id, user_id, numOfQuestion from tipi"
+	tx.executeSql(sql, [], resultadoTIPIupdate, updateResposta_errorTIPI);
+}
+
+function resultadoTIPIupdate(tx, results) {
+	var len = results.rows.length;
+	
+	alert("tam: "+len);
+	if(len >= 1){
+		var row = results.rows.item(0);
+		//this.user_id   = row['id'];
+		alert(row['id']+ " " + row['user_id']);
+	}
+}
+*/
 </script>
 
 <!-- This reference to phonegap.js will allow for code hints as long as the current site has been configured as a mobile application. 
@@ -129,7 +182,7 @@ function updateResposta_errorTIPI() {
 
 <div data-role="page" id="inicio"  class="fundo"><!-- /Inicio da pagina Inicio-->
 <!-- ************************************************************* -->
-<div data-role="header" class="header-inicio"  data-position="fixed" data-backbtn="false">
+<div data-role="header" class="header-inicio"  data-position="fixed" data-tap-toggle="false"  data-backbtn="false">
     <div id="titulo_home">
     	<p align="center">
         	<label id="titulo1">Personality Inventory</label>
@@ -153,7 +206,7 @@ function updateResposta_errorTIPI() {
             </p>
             <center>
             <p id="par-conteudo-inicio">
-            	<a href="#escolha-de-inventario" id="button_login" data-role="button"><label id="button-login"><b>Entrar</b></label></a>
+            	<a  id="button_login" data-role="button" onClick="authorize()"><label id="button-login" ><b>Entrar</b></label></a>
             	<a href="#recuperar" id="esqueceu_senha" data-role="button">
                     <label id="esqueceu-senha"><b>Esqueceu a Senha?</b></label>
                 </a>
@@ -163,7 +216,7 @@ function updateResposta_errorTIPI() {
 </div><!-- /content-->
                 
     <!-- ************************************************************** --> 
-<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-tap-toggle="false"  data-id="rodape" >
 	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape1">
 		<ul>
         	<li id="lista1">
@@ -195,7 +248,7 @@ function updateResposta_errorTIPI() {
 <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 <div data-role="page" id="recuperar"><!-- /Inicio da pagina recuperar-->
 	<!-- ***************************************************** -->
-<div data-role="header" class="header-inicio"  data-position="fixed" data-backbtn="false">
+<div data-role="header" class="header-inicio"  data-position="fixed" data-tap-toggle="false"  data-backbtn="false">
     <div id="titulo_home">
     	<p align="center">
         	<label id="titulo-recuperar"><b>Recuperar Senha</b></label>
@@ -223,7 +276,7 @@ function updateResposta_errorTIPI() {
 </div><!-- /content-->
            
     <!-- ************************************************ -->
-<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-tap-toggle="false"  data-id="rodape" >
 	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape5">
 		<ul>
         	<li id="lista1">
@@ -276,7 +329,7 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 </div><!-- /content-->
           
     <!-- ******************************************************** -->
-<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-tap-toggle="false"  data-id="rodape" >
 	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape6">
 		<ul>
         		<li>
@@ -293,7 +346,7 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape_en6"  style="display:none">
 		<ul>
         		<li>
-            		<a href="#inicio" id="nav_home" data-icon="custom" >Home</a></li>
+            		<a href="#escolha-de-inventario" id="nav_home" data-icon="custom" >Home</a></li>
      			<li>
                 	<a href="#pagina-opcoes" id="nav_options" data-icon="custom" >Options</a></li>
                 <li>
@@ -332,11 +385,11 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 </div><!-- /content-->
       
 	<!-- ********************************************************** -->
-<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-tap-toggle="false"  data-id="rodape" >
 	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape7">
 		<ul>
         		<li>
-            		<a href="#inicio" id="nav_home" data-icon="custom" >Início</a></li>
+            		<a href="#escolha-de-inventario" id="nav_home" data-icon="custom" >Início</a></li>
      			<li>
                 	<a href="#pagina-opcoes" id="nav_options" data-icon="custom" data-transition="" >Opções</a></li>
                 <li>
@@ -368,7 +421,7 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 <div data-role="page" id="cadastro"><!-- /Inicio da pagina-->
 	<!-- ************************************************* -->
-<div data-role="header" class="header-inicio"  data-position="fixed" data-backbtn="false">
+<div data-role="header" class="header-inicio"  data-position="fixed" data-tap-toggle="false"  data-backbtn="false">
     <div id="titulo_home">
     	<p align="center">
         	<label id="titulo-instrucao-cadastro"><b>Novo Usu&aacute;rio</b></label>
@@ -415,7 +468,7 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
         <p id="form-idioma">
         	<label id="idioma-cadastro"><b>Idioma:</b></label>
             <label id="idioma-cadastro-us" style="display:none"><b>Language:</b></label> 
-        	<select name="idioma" size="1">
+        	<select name="idioma" size="1" id="select_idioma">
                 <option value="English">English</option>
             	<option value="Portugues">Portugu&ecirc;s</option>
             </select><br></p>    
@@ -429,19 +482,19 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
         </p>
         <p id="aceita">
         <label id="aceita-cadastro"><b>Aceita?</b></label>
-        	<select id="escolha-de-idioma" size="1">
+        	<select id="select_aceita" size="1">
                	<option value="Sim">Sim</option>
                 <option value="Não">N&atilde;o</option>
             </select>
        </p>
        <center>
-        	<p id="par-button-cadastrar" align="center"><a href="#inicio" data-role="button" data-transition="" id="button-cadastrar" class="btn_cadastro">
+        	<p id="par-button-cadastrar" align="center"><a href="#" data-role="button" data-transition="" id="button-cadastrar" class="btn_cadastro" onClick="subscribe()">
             <label id="label-button-cadastrar"><b>Cadastrar</b></label></a></p></center>
         </form>
 </div><!-- /content-->
    
    <!-- ************************************************* --> 
-<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-tap-toggle="false"  data-id="rodape" >
 	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape2">
 		<ul>
         	<li id="lista1">
@@ -475,7 +528,7 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 <div data-role="page" id="pagina-contato"><!-- Inicio da pagina contato-->
 	<!-- *********************************************** -->
-<div data-role="header" class="header-inicio"  data-position="fixed" data-backbtn="false">
+<div data-role="header" class="header-inicio"  data-position="fixed" data-tap-toggle="false"  data-backbtn="false">
     <div id="titulo_home">
     	<p align="center">
         	<label id="titulo-contato"><b>Contato</b></label>
@@ -522,7 +575,7 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
     </div><!-- /content-->
     
     <!-- ************************************************* -->
-<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-tap-toggle="false"  data-id="rodape" >
 	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape3">
 		<ul>
         	<li id="lista1">
@@ -556,7 +609,7 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 <div data-role="page" id="pagina-sobre">
 	<!-- ************************************************ -->
-<div data-role="header" class="header-inicio"  data-position="fixed" data-backbtn="false">
+<div data-role="header" class="header-inicio"  data-position="fixed" data-tap-toggle="false"  data-backbtn="false">
     <div id="titulo_home">
     	<p align="center">
         	<label id="titulo-sobre"><b>Sobre</b></label>
@@ -602,7 +655,7 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 </div><!-- /content-->
     
     <!-- ************************************************************ -->    
-<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-tap-toggle="false"  data-id="rodape" >
 	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape4">
 		<ul>
         	<li id="lista1">
@@ -662,7 +715,7 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 </div><!-- content-->
 
 <!-- **************************************************** -->        
-<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-tap-toggle="false"  data-id="rodape" >
 	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape8">
 		<ul>
         	<li id="lista1">
@@ -722,7 +775,7 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 </div><!-- content-->
 
 	<!-- ********************************************** -->        
-<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-tap-toggle="false"  data-id="rodape" >
 	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape9">
 		<ul>
         	<li id="lista1">
@@ -770,13 +823,13 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
         </p>
         <br>
         <ul data-role="listview">
-        	<p><br><li id="list-neo"><a href="#instrução-neo"><b>NEO-IPIP</b></a></li></p>
-            <p><br><li id="list-tipi"><a href="#instrução-tipi"><b>TIPI</b></a></li></p>
+        	<p><li id="list-neo"><a href="#instrução-neo"><b>NEO-IPIP</b></a></li></p>
+            <p><li id="list-tipi"><a href="#instrução-tipi"><b>TIPI</b></a></li></p>
         </ul>
 </div><!-- /content-->
     
     <!-- ****************************************************** -->
-<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-tap-toggle="false"  data-id="rodape" >
 	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape10">
 		<ul>
         		<li>
@@ -840,11 +893,11 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 </div><!-- /content-->
 
 	<!-- ************************************************** -->    
-<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-tap-toggle="false"  data-id="rodape" >
 	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape11">
 		<ul>
         		<li>
-            		<a href="#inicio" id="nav_home" data-icon="custom" >Início</a></li>
+            		<a href="#escolha-de-inventario" id="nav_home" data-icon="custom" >Início</a></li>
      			<li>
                 	<a href="#pagina-opcoes" id="nav_options" data-icon="custom" data-transition="" >Opções</a></li>
                 <li>
@@ -899,7 +952,7 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 </div><!-- /content-->
 
 	<!-- **************************************************************** -->  
-<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-tap-toggle="false"  data-id="rodape" >
 	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape12">
 		<ul>
 
@@ -929,7 +982,7 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 <div data-role="page" id="questionario-TIPI" ><!-- /Inicio da pagina-->
 <div data-role="header" id="header-questionario-tipi" data-backbtn="false">
-	<a href="#saudacao-tipi" data-role="button" data-icon="back" style="margin-top:5px" data-transition="" id="button-voltar-tipi">
+	<a href="#" data-role="button" data-icon="back" style="margin-top:5px" data-transition="" id="button-voltar-tipi">
     <label id="label-button-voltar-tipi">Voltar</label>
 	</a>
 	<p id="titulo" align="center">TIPI</p>
@@ -953,7 +1006,7 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 </div><!-- /content-->
 
 	<!-- ********************************************** -->    
-<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-tap-toggle="false"  data-id="rodape" >
 	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape13">
 		<ul>
 
@@ -1006,7 +1059,7 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 </div><!-- /content-->
 
 	<!-- ********************************************** -->    
-<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-tap-toggle="false"  data-id="rodape" >
 	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape14">
 		<ul>
 
@@ -1060,7 +1113,7 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 </div><!-- /content-->
 
 	<!-- ********************************************** -->    
-<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-tap-toggle="false"  data-id="rodape" >
 	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape15">
 		<ul>
 
@@ -1143,7 +1196,7 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 
 	<!-- ********************************************** -->  
       
-<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-tap-toggle="false"  data-id="rodape" >
 	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape16">
 		<ul>
 
@@ -1268,7 +1321,7 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 </div><!-- /content-->
 
 	<!-- ********************************************** -->    
-<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-tap-toggle="false"  data-id="rodape" >
 	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape17">
 		<ul>
 
@@ -1298,8 +1351,7 @@ Estes s&atilde;o inventarios de Personalidade, que funcionam da seguinte maneira
 <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 <div data-role="page" id="extroversão" ><!-- /Inicio da pagina-->
 <div data-role="header" id="header-extroversão" data-backbtn="false">
-	<a href="#grafico-NEO" data-role="button" data-icon="back" style="margin-top:5px" data-transition="" id="button-voltar-extroversão">
-    	<label id="label-button-voltar-extroversão-neo">Voltar</label>
+	<a href="#grafico-NEO" data-role="button" data-icon="arrow-l" data-iconpos="notext"  style="margin-top:5px" data-transition="" id="button-voltar-extroversão">
     </a>
 	<p id="titulo" align="center">
     	<label id="titulo-ver-extroversão-neo">Extrovers&atilde;o NEO</label>
@@ -1318,12 +1370,12 @@ Aos introvertidos, falta a exuber&acirc;ncia, energia e os n&iacute;veis de ativ
         <b>N&iacute;vel de atividade</b> - Indiv&iacute;duos ativos levam vidas aceleradas e ocupadas. Elas se movem rapidamente, de forma en&eacute;rgica e vigorosa, e est&atilde;o envolvidas em muitas atividades.<br>
         <b>Procura por excita&ccedil;&atilde;o</b> - Pessoas com escores altos nesta escala ficam facilmente entediados se n&atilde;o tiverem altos n&iacute;veis de estimula&ccedil;&atilde;o. Elas adoram luzes, movimento e alvoro&ccedil;o.<br>
         <b>Bom humor</b> - Esta escala mensura o humor e sentimentos positivos, e n&atilde;o as emo&ccedil;&otilde;es negativas (que s&atilde;o uma parte do dom&iacute;nio do Neuroticismo).
-	</label>
+    </label>
     </p>
 </div><!-- /content -->
 
 
-<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-tap-toggle="false"  data-id="rodape" >
 	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape18">
 		<ul>
 
@@ -1351,7 +1403,7 @@ Aos introvertidos, falta a exuber&acirc;ncia, energia e os n&iacute;veis de ativ
 <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 <div data-role="page" id="socializacao" ><!-- /Inicio da pagina-->
 <div data-role="header" id="header-socializacao" data-backbtn="false">
-	<a href="#grafico-NEO" data-role="button" data-icon="back" style="margin-top:5px" data-transition="" id="button-voltar-socializacao">
+	<a href="#grafico-NEO" data-role="button" data-icon="arrow-l" data-iconpos="notext" style="margin-top:5px" data-transition="" id="button-voltar-socializacao">
     	<label id="label-button-voltar-socializacao-neo">Voltar</label>
     </a>
 	<p id="titulo" align="center">
@@ -1376,7 +1428,7 @@ A Socializa&ccedil;&atilde;o &eacute; obviamente vantajosa para atingir e manter
     </p>
 </div><!-- /content -->
 
-<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-tap-toggle="false"  data-id="rodape" >
 	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape19">
 		<ul>
 
@@ -1404,7 +1456,7 @@ A Socializa&ccedil;&atilde;o &eacute; obviamente vantajosa para atingir e manter
 <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 <div data-role="page" id="realizacao" ><!-- /Inicio da pagina-->
 <div data-role="header" id="header-realizacao" data-backbtn="false">
-	<a href="#grafico-NEO" data-role="button" data-icon="back" style="margin-top:5px" data-transition="" id="button-voltar-realizacao">
+	<a href="#grafico-NEO" data-role="button" data-icon="arrow-l" data-iconpos="notext" style="margin-top:5px" data-transition="" id="button-voltar-realizacao">
     	<label id="label-button-voltar-realizacao-neo">Voltar</label>
 	</a>
 	<p id="titulo" align="center">
@@ -1429,7 +1481,7 @@ Os benef&iacute;cios de alta Realiza&ccedil;&atilde;o s&atilde;o &oacute;bvios. 
     </p>
 </div><!-- /content -->
 
-<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-tap-toggle="false"  data-id="rodape" >
 	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape20">
 		<ul>
 
@@ -1457,7 +1509,7 @@ Os benef&iacute;cios de alta Realiza&ccedil;&atilde;o s&atilde;o &oacute;bvios. 
 <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 <div data-role="page" id="neuroticismo" ><!-- /Inicio da pagina-->
 <div data-role="header" id="header-neuroticismo" data-backbtn="false">
-	<a href="#grafico-NEO" data-role="button" data-icon="back" style="margin-top:5px" data-transition="" id="button-voltar-neuroticismo">
+	<a href="#grafico-NEO" data-role="button" data-icon="arrow-l" data-iconpos="notext" style="margin-top:5px" data-transition="" id="button-voltar-neuroticismo">
     	<label id="label-button-voltar-neuroticismo-neo">Voltar</label>
 	</a>
 	<p id="titulo" align="center">
@@ -1481,7 +1533,7 @@ No outro extremo da escala, os indiv&iacute;duos com baixos escores em Neurotici
     </p>
 </div><!-- /content -->
 
-<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-tap-toggle="false"  data-id="rodape" >
 	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape21">
 		<ul>
 
@@ -1509,7 +1561,7 @@ No outro extremo da escala, os indiv&iacute;duos com baixos escores em Neurotici
 <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 <div data-role="page" id="abertura" ><!-- /Inicio da pagina-->
 <div data-role="header" id="header-abertura" data-backbtn="false">
-	<a href="#grafico-NEO" data-role="button" data-icon="back" style="margin-top:5px" data-transition="" id="button-voltar-abertura">
+	<a href="#grafico-NEO" data-role="button" data-icon="arrow-l" data-iconpos="notext" style="margin-top:5px" data-transition="" id="button-voltar-abertura">
     	<label id="label-button-voltar-abertura-neo">Voltar</label>
     </a>
 	<p id="titulo" align="center">
@@ -1530,11 +1582,12 @@ A Abertura &eacute; muitas vezes apresentada como mais saud&aacute;vel ou mais m
 		<b>Senso aventureiro</b> - Pessoas com escores altos em senso aventureiro s&atilde;o ansiosas para experimentar atividades novas, viajar por terras estrangeiras e provar coisas diferentes. Eles acham a familiaridade e a rotina chatas, e ir&atilde;o fazer um caminho para casa s&oacute; porque ele &eacute; diferente.<br>
 		<b>Intelecto</b> - O intelecto e os interesses art&iacute;sticos s&atilde;o os dois aspectos mais importantes e centrais da Abertura. Pessoas com escores altos em Intelecto gostam de brincar com id&eacute;ias. Elas t&ecirc;m a mente aberta a ideias novas e inusitadas, e gostam de debater quest&otilde;es intelectuais. Elas gostam de charadas, enigmas e quebra-cabe&ccedil;as.<br>
 		<b>Liberalismo</b> - O liberalismo psicol&oacute;gico refere-se &agrave; vontade de desafiar a autoridade, a conven&ccedil;&atilde;o e os valores tradicionais. Em sua forma mais extrema, o liberalismo psicol&oacute;gico pode at&eacute; representar hostilidade para com as regras, simpatia por infratores e amor &agrave; ambiguidade, ao caos e &agrave; desordem. Conservadores psicol&oacute;gicos preferem a seguran&ccedil;a e a estabilidade trazidas pela conformidade com a tradi&ccedil;&atilde;o. O liberalismo e o conservadorismo psicol&oacute;gicos n&atilde;o s&atilde;o id&ecirc;nticos &agrave; filia&ccedil;&atilde;o partid&aacute;ria, mas certamente predisp&otilde;em as pessoas a determinados partidos pol&iacute;ticos.
-	</label>
+
+        </label>
     </p>
 </div><!-- /content -->
 
-<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-tap-toggle="false"  data-id="rodape" data-tap-toggle="false" >
 	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape22">
 		<ul>
 
@@ -1562,7 +1615,7 @@ A Abertura &eacute; muitas vezes apresentada como mais saud&aacute;vel ou mais m
 <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 <div data-role="page" id="extroversao-tipi" ><!-- /Inicio da pagina-->
 <div data-role="header" id="header-extroversao-tipi" data-backbtn="false">
-	<a href="#grafico-TIPI" data-role="button" data-icon="back" style="margin-top:5px" data-transition="" id="button-voltar-extroversao-tipi">
+	<a href="#grafico-TIPI" data-role="button" data-icon="arrow-l" data-iconpos="notext" style="margin-top:5px" data-transition="" id="button-voltar-extroversao-tipi">
     	<label id="label-button-voltar-extroversao-tipi">Voltar</label>
     </a>
 	<p id="titulo" align="center">
@@ -1580,7 +1633,8 @@ Aos introvertidos, falta a exuber&acirc;ncia, energia e os n&iacute;veis de ativ
 </div><!-- /content-->
 
 	<!-- ********************************************** -->  
-<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-tap-toggle="false"  data-id="rodape" data-tap-toggle="false">
 	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape23">
 		<ul>
                 <li>
@@ -1608,7 +1662,7 @@ Aos introvertidos, falta a exuber&acirc;ncia, energia e os n&iacute;veis de ativ
 <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 <div data-role="page" id="socializacao-tipi" ><!-- /Inicio da pagina-->
 <div data-role="header" id="header-socializacao-tipi" data-backbtn="false">
-	<a href="#grafico-TIPI" data-role="button" data-icon="back" style="margin-top:5px" data-transition="" id="button-voltar-socializacao-tipi">
+	<a href="#grafico-TIPI" data-role="button" data-icon="arrow-l" data-iconpos="notext" style="margin-top:5px" data-transition="" id="button-voltar-socializacao-tipi">
     	<label id="label-button-voltar-socializacao-tipi">Voltar</label>
     </a>
 	<p id="titulo" align="center">
@@ -1626,7 +1680,7 @@ Aos introvertidos, falta a exuber&acirc;ncia, energia e os n&iacute;veis de ativ
 </div><!-- /content-->
 
 	<!-- ********************************************** -->    
-<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-tap-toggle="false"  data-id="rodape" >
 	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape24">
 		<ul>
                 <li>
@@ -1654,7 +1708,7 @@ Aos introvertidos, falta a exuber&acirc;ncia, energia e os n&iacute;veis de ativ
 <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 <div data-role="page" id="realizacao-tipi" ><!-- /Inicio da pagina-->
 <div data-role="header" id="header-realizacao-tipi" data-backbtn="false">
-	<a href="#grafico-TIPI" data-role="button" data-icon="back" style="margin-top:5px" data-transition="" id="button-voltar-realizacao-tipi">
+	<a href="#grafico-TIPI" data-role="button" data-icon="arrow-l" data-iconpos="notext" style="margin-top:5px" data-transition="" id="button-voltar-realizacao-tipi">
     	<label id="label-button-voltar-realizacao-tipi">Voltar</label>
     </a>
 	<p id="titulo" align="center">
@@ -1674,7 +1728,7 @@ Os benef&iacute;cios de alta Realiza&ccedil;&atilde;o s&atilde;o &oacute;bvios. 
 </div><!-- /content-->
 
 	<!-- ********************************************** -->    
-<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-tap-toggle="false"  data-id="rodape" >
 	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape25">
 		<ul>
                 <li>
@@ -1702,7 +1756,7 @@ Os benef&iacute;cios de alta Realiza&ccedil;&atilde;o s&atilde;o &oacute;bvios. 
 <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 <div data-role="page" id="estabilidade-emocional-tipi" ><!-- /Inicio da pagina-->
 <div data-role="header" id="header-estabilidade-emocional-tipi" data-backbtn="false">
-	<a href="#grafico-TIPI" data-role="button" data-icon="back" style="margin-top:5px" data-transition="" id="button-voltar-estabilidade-emocional-tipi">
+	<a href="#grafico-TIPI" data-role="button" data-icon="arrow-l" data-iconpos="notext" style="margin-top:5px" data-transition="" id="button-voltar-estabilidade-emocional-tipi">
     	<label id="label-button-voltar-estabilidade-emocional-tipi">Voltar</label>
     </a>
 	<p id="titulo" >
@@ -1721,7 +1775,7 @@ Aqueles com escores baixos em Estabilidade Emocional podem experimentar principa
 </div><!-- /content-->
 
 	<!-- ********************************************** -->    
-<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-tap-toggle="false"  data-id="rodape" >
 	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape26">
 		<ul>
                 <li>
@@ -1749,7 +1803,7 @@ Aqueles com escores baixos em Estabilidade Emocional podem experimentar principa
 <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 <div data-role="page" id="abertura-tipi" ><!-- /Inicio da pagina-->
 <div data-role="header" id="header-abertura-tipi" data-backbtn="false">
-	<a href="#grafico-TIPI" data-role="button" data-icon="back" style="margin-top:5px" data-transition="" id="button-voltar-abertura-tipi">
+	<a href="#grafico-TIPI" data-role="button" data-icon="arrow-l" data-iconpos="notext" style="margin-top:5px" data-transition="" id="button-voltar-abertura-tipi">
     	<label id="label-button-voltar-abertura-tipi">Voltar</label>
     </a>
 	<p id="titulo" align="center">
@@ -1768,7 +1822,7 @@ A Abertura &eacute; muitas vezes apresentada como mais saud&aacute;vel ou mais m
 </div><!-- /content-->
 
 	<!-- ********************************************** -->    
-<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-id="rodape" >
+<div data-role="footer" id="rodape-inicio" class="nav-icons" data-position="fixed" data-tap-toggle="false"  data-id="rodape" >
 	<div data-role="navbar" align="center" class="nav-icons" id="navbar-rodape27">
 		<ul>
                 <li>
@@ -1821,30 +1875,6 @@ A Abertura &eacute; muitas vezes apresentada como mais saud&aacute;vel ou mais m
 	myChart.draw();
 </script> <!-- ******** Fim Grafico TIPI PORTUGUES **************** -->
 
-<script type="text/javascript"> <!-- Grafico em Ingles -->
-	var myData = new Array(["Extroversion",20], ["Emotional stability",10], ["Socialization",30], ["realization",10], ["Opening",5]);
-	var myChart = new JSChart('grafico_cinco_fatores-TIPI-us', 'pie');
-	var myColors = new Array('#C93', '#F90', '#333', '#999', '#900');/*Define as cores de cada parte do Grafico de Pizza*/
-	myChart.setDataArray(myData);/*Seta o Array de dados no myChart, criando o grafico*/
-	myChart.colorizePie(myColors);/*Seta as cores no grafico*/
-	//myChart.setBackgroundColor("#efe");/*usado para mudar a cor do plano de fundo do grafico*/
-	//myChart.setAxisNameX('Nome do Alunos');/*Usado para colocar uma descrição em baixo do grafico (Grafico de linha)*/
-	//myChart.setAxisNameY('Valor do Grafico');/*Usado para colocar uma descrição no lado do grafico (Grafico de liinha)*/
-	//myChart.setSize(600,520);/*Usado para determina o tamanho do grafico Cumprimento x Altura*/
-	myChart.setPiePosition(150,170);//determina a posição do grafico
-	myChart.setPieRadius(66);//Determina o tamanho do raio da pizza
-	myChart.setPieUnitsFontSize(9);//Determina o tamanho da fonte exterior ao grafico
-	myChart.setPieUnitsColor('#000');//Cor da fonte exterior ao grafico
-	myChart.setPieValuesOffset(-20);//Posição do valor dentro grafico
-	myChart.setPieUnitsOffset(1);//Posição do valor dentro grafico
-	myChart.setTitle('Distribution of the 5 big factors');/*Titulo para o grafico*/
-	myChart.setTitleColor('#5555AA');/*especifica a cor do titulo*/
-	myChart.setTitleFontSize(15);/*especifica o tamanho da font do titulo*/
-	myChart.set3D(false);/*Define se o grafico eh em 3D ou não*/
-	myChart.resize(320,300);/*Determina o tamanho em pixel melhor que o setSize().*/
-	myChart.setFontFamily("Arial");
-	myChart.draw();
-</script> <!-- ******** Fim Grafico TIPI INGLES **************** -->
 <!-- ****************** Grafico TIPI FIM ********************************** -->
 
 <!-- *************** Grafico NEO-IPIP ******************* -->
@@ -1871,29 +1901,7 @@ A Abertura &eacute; muitas vezes apresentada como mais saud&aacute;vel ou mais m
 	myChart.setFontFamily("Arial");
 	myChart.draw();
 </script><!-- Final Grafico 1 - Portugues -->
-<script type="text/javascript"><!-- Começo Grafico 1 - Ingles -->
-	var myData = new Array(["Extroversion",20], ["Socialization",10], ["Realization",30], ["Neuroticism",10], ["Opening",5]);
-	var myChart = new JSChart('grafico_cinco_fatores-us', 'pie');
-	var myColors = new Array('#C93', '#F90', '#333', '#999', '#900');/*Define as cores de cada parte do Grafico de Pizza*/
-	myChart.setDataArray(myData);/*Seta o Array de dados no myChart, criando o grafico*/
-	myChart.colorizePie(myColors);/*Seta as cores no grafico*/
-	//myChart.setBackgroundColor("#efe");/*usado para mudar a cor do plano de fundo do grafico*/
-	//myChart.setAxisNameX('Nome do Alunos');/*Usado para colocar uma descrição em baixo do grafico (Grafico de linha)*/
-	//myChart.setAxisNameY('Valor do Grafico');/*Usado para colocar uma descrição no lado do grafico (Grafico de liinha)*/
-	//myChart.setSize(600,520);/*Usado para determina o tamanho do grafico Cumprimento x Altura*/
-	myChart.setPiePosition(140,170);//determina a posição do grafico
-	myChart.setPieRadius(75);//Determina o tamanho do raio da pizza
-	myChart.setPieUnitsFontSize(10);//Determina o tamanho da fonte exterior ao grafico
-	myChart.setPieUnitsColor('#000');//Cor da fonte exterior ao grafico
-	//myChart.setPieValuesOffset(-20);//Posição do valor dentro grafico
-	myChart.setTitle('Distribution of the 5 big factors');/*Titulo para o grafico*/
-	myChart.setTitleColor('#5555AA');/*especifica a cor do titulo*/
-	myChart.setTitleFontSize(15);/*especifica o tamanho da font do titulo*/
-	myChart.set3D(false);/*Define se o grafico eh em 3D ou não*/
-	myChart.resize(310,300);/*Determina o tamanho em pixel melhor que o setSize().*/
-	myChart.setFontFamily("Arial");
-	myChart.draw();
-</script><!-- Final Grafico 1 - Portugues /-->
+
 
 <script type="text/javascript"><!-- Comeco Grafico 2 - Portugues -->
 	var myData = new Array(["Amigabilidade",20], ["Nível de Atividade",10], ["Bom humor",30], ["Gregarismo",10], ["Procurar por excitação",25], ["Assertividade", 15]);
@@ -1918,29 +1926,7 @@ A Abertura &eacute; muitas vezes apresentada como mais saud&aacute;vel ou mais m
 	myChart.setFontFamily("Arial");
 	myChart.draw();
 </script><!-- Final Grafico 2 - Portugues -->
-<script type="text/javascript"><!-- Comeco Grafico 2 - Ingles -->
-	var myData = new Array(["friendliness",20], ["Activity level",10], ["Good mood",30], ["Gregariousness",10], ["Search for excitation",25], ["Assertiveness", 15]);
-	var myChart = new JSChart('grafico_extroversao-us', 'pie');
-	var myColors = new Array('#C93', '#F90', '#333', '#999', '#900', "#909");/*Define as cores de cada parte do Grafico de Pizza*/
-	myChart.setDataArray(myData);
-	myChart.colorizePie(myColors);/*Seta as cores no grafico*/
-	//myChart.setBackgroundColor();/*usado para mudar a cor do plano de fundo do grafico*/
-	//myChart.setAxisNameX('Nome do Alunos');/*Usado para colocar uma descrição em baixo do grafico*/
-	//myChart.setAxisNameY('Valor do Grafico');/*Usado para colocar uma descrição no lado do grafico*/
-	//myChart.setSize(600,520);/*Usado para determina o tamanho do grafico Cumprimento x Altura*/
-	myChart.setPiePosition(140,170);//determina a posição do grafico
-	myChart.setPieRadius(75);//Determina o tamanho do raio da pizza
-	myChart.setPieUnitsFontSize(9);//Determina o tamanho da fonte exterior ao grafico
-	myChart.setPieUnitsColor('#000');//Cor da fonte exterior ao grafico
-	//myChart.setPieValuesOffset(-20);//Posição do valor dentro grafico
-	myChart.setTitle('Distribution of Extraversion');/*Titulo para o grafico*/
-	myChart.setTitleColor('#5555AA');/*especifica a cor do titulo*/
-	myChart.setTitleFontSize(15);/*especifica o tamanho da font do titulo*/
-	myChart.resize(310,300);/*Determina o tamanho em pixel melhor que o setSize().*/
-	myChart.set3D(false);/*Define se o grafico eh em 3D ou não*/
-	myChart.setFontFamily("Arial");
-	myChart.draw();
-</script><!-- Final Grafico 2 - Ingles -->
+
 
 <script type="text/javascript"><!-- Comeco Grafico 3 - Portugues -->
 	var myData = new Array(["Confiança",20], ["Moralidade",10], ["Altruísmo",30], ["Cooperação",10], ["Modéstia",15], ["Simpatia", 15]);
@@ -1965,29 +1951,6 @@ A Abertura &eacute; muitas vezes apresentada como mais saud&aacute;vel ou mais m
 	myChart.setFontFamily("Arial");
 	myChart.draw();
 </script><!-- Final Grafico 3 - Portugues -->
-<script type="text/javascript"><!-- Comeco Grafico 3 - Ingles -->
-	var myData = new Array(["Confidence",20], ["Morality",10], ["Altruism",30], ["Cooperation",10], ["Modesty",15], ["Sympathy", 15]);
-	var myChart = new JSChart('grafico_socializacao-us', 'pie');
-	var myColors = new Array('#909', '#999', '#900', '#C93', '#F90', '#333');/*Define as cores de cada parte do Grafico de Pizza*/
-	myChart.setDataArray(myData);
-	myChart.colorizePie(myColors);/*Seta as cores no grafico*/
-	//myChart.setBackgroundColor();/*usado para mudar a cor do plano de fundo do grafico*/
-	//myChart.setAxisNameX('Nome do Alunos');/*Usado para colocar uma descrição em baixo do grafico*/
-	//myChart.setAxisNameY('Valor do Grafico');/*Usado para colocar uma descrição no lado do grafico*/
-	//myChart.setSize(600,520);/*Usado para determina o tamanho do grafico Cumprimento x Altura*/
-	myChart.setPiePosition(140,170);//determina a posição do grafico
-	myChart.setPieRadius(75);//Aumenta o raio da pizza
-	myChart.setPieUnitsFontSize(10);//Determina o tamanho da fonte exterior ao grafico
-	myChart.setPieUnitsColor('#000');//Cor da fonte exterior ao grafico
-	//myChart.setPieValuesOffset(-20);//Posição do valor dentro grafico
-	myChart.setTitle('Distribution of Socialization');/*Titulo para o grafico*/
-	myChart.setTitleColor('#5555AA');/*especifica a cor do titulo*/
-	myChart.setTitleFontSize(15);/*especifica o tamanho da font do titulo*/
-	myChart.resize(310,300);/*Determina o tamanho em pixel melhor que o setSize().*/
-	myChart.set3D(false);/*Define se o grafico eh em 3D ou não*/
-	myChart.setFontFamily("Arial");
-	myChart.draw();
-</script><!-- Final Grafico 3 - Ingles -->
 
 <script type="text/javascript"><!-- Comeco Grafico 4 - Portugues -->
 	var myData = new Array(["Auto-Eficácia",20], ["Senso de dever",10], ["Empenho",30], ["Autodisciplina",10], ["Ordem",5], ["Prudência",13]);
@@ -2012,32 +1975,10 @@ A Abertura &eacute; muitas vezes apresentada como mais saud&aacute;vel ou mais m
 	myChart.setFontFamily("Arial");
 	myChart.draw();
 </script><!-- Final Grafico 4 - Portugues -->
-<script type="text/javascript"><!-- Comeco Grafico 4 - Ingles -->
-	var myData = new Array(["Self-efficacy",20], ["Sense of duty",10], ["Effort",30], ["Self-discipline",10], ["Order",5], ["Prudence",13]);
-	var myChart = new JSChart('grafico_realizacao-us', 'pie');
-	var myColors = new Array('#909', '#900', '#999', '#333', '#F90', "#C93");/*Define as cores de cada parte do Grafico de Pizza*/
-	myChart.setDataArray(myData);
-	myChart.colorizePie(myColors);/*Seta as cores no grafico*/
-	//myChart.setBackgroundColor();/*usado para mudar a cor do plano de fundo do grafico*/
-	//myChart.setAxisNameX('Nome do Alunos');/*Usado para colocar uma descrição em baixo do grafico*/
-	//myChart.setAxisNameY('Valor do Grafico');/*Usado para colocar uma descrição no lado do grafico*/
-	//myChart.setSize(600,520);/*Usado para determina o tamanho do grafico Cumprimento x Altura*/
-	myChart.setPiePosition(140,170);//determina a posição do grafico
-	myChart.setPieRadius(75);//Aumenta o raio da pizza
-	myChart.setPieUnitsFontSize(10);//Determina o tamanho da fonte exterior ao grafico
-	myChart.setPieUnitsColor('#000');//Cor da fonte exterior ao grafico
-	//myChart.setPieValuesOffset(-20);//Posição do valor dentro grafico
-	myChart.setTitle('Distribution of Realization');/*Titulo para o grafico*/
-	myChart.setTitleColor('#5555AA');/*especifica a cor do titulo*/
-	myChart.setTitleFontSize(15);/*especifica o tamanho da font do titulo*/
-	myChart.resize(310,300);/*Determina o tamanho em pixel melhor que o setSize().*/
-	myChart.set3D(false);/*Define se o grafico eh em 3D ou não*/
-	myChart.setFontFamily("Arial");
-	myChart.draw();
-</script><!-- Final Grafico 4 - Ingles -->
+
 
 <script type="text/javascript"><!-- Comeco do Grafico 4 - Portugues -->
-	var myData = new Array(["Ansiedade",20], ["Auto-percepção",10], ["Depressão",30], ["Raiva",10], ["Falta de moderação",15],["Vulnerabilidade", 17]);
+	var myData = new Array(["Ansiedade",20], ["Auto-percepção",10], ["Raiva",30], ["Depressão",10], ["Falta de moderação",15],["Vulnerabilidade", 17]);
 	var myChart = new JSChart('grafico_neuroticismo', 'pie');
 	var myColors = new Array('#C93', '#909', '#900', '#999', '#333', "#F90");/*Define as cores de cada parte do Grafico de Pizza*/
 	myChart.setDataArray(myData);
@@ -2052,29 +1993,6 @@ A Abertura &eacute; muitas vezes apresentada como mais saud&aacute;vel ou mais m
 	myChart.setPieUnitsColor('#000');//Cor da fonte exterior ao grafico
 	//myChart.setPieValuesOffset(-20);//Posição do valor dentro grafico
 	myChart.setTitle('Distribuição do Neuroticismo');/*Titulo para o grafico*/
-	myChart.setTitleColor('#5555AA');/*especifica a cor do titulo*/
-	myChart.setTitleFontSize(15);/*especifica o tamanho da font do titulo*/
-	myChart.resize(310,300);/*Determina o tamanho em pixel melhor que o setSize().*/
-	myChart.set3D(false);/*Define se o grafico eh em 3D ou não*/
-	myChart.setFontFamily("Arial");
-	myChart.draw();
-</script><!-- Final do Grafico 4 - Portugues -->
-<script type="text/javascript"><!-- Comeco do Grafico 4 - Portugues -->
-	var myData = new Array(["Anxiety",20], ["Self-perception",10], ["Depression",30], ["Anger",10], ["Lack of moderation",15],["Vulnerability", 17]);
-	var myChart = new JSChart('grafico_neuroticismo-us', 'pie');
-	var myColors = new Array('#C93', '#909', '#900', '#999', '#333', "#F90");/*Define as cores de cada parte do Grafico de Pizza*/
-	myChart.setDataArray(myData);
-	myChart.colorizePie(myColors);/*Seta as cores no grafico*/
-	//myChart.setBackgroundColor();/*usado para mudar a cor do plano de fundo do grafico*/
-	//myChart.setAxisNameX('Nome do Alunos');/*Usado para colocar uma descrição em baixo do grafico*/
-	//myChart.setAxisNameY('Valor do Grafico');/*Usado para colocar uma descrição no lado do grafico*/
-	//myChart.setSize(600,520);/*Usado para determina o tamanho do grafico Cumprimento x Altura*/
-	myChart.setPiePosition(140,170);//determina a posição do grafico
-	myChart.setPieRadius(75);//Aumenta o raio da pizza
-	myChart.setPieUnitsFontSize(10);//Determina o tamanho da fonte exterior ao grafico
-	myChart.setPieUnitsColor('#000');//Cor da fonte exterior ao grafico
-	//myChart.setPieValuesOffset(-20);//Posição do valor dentro grafico
-	myChart.setTitle('Distribution of Neuroticism');/*Titulo para o grafico*/
 	myChart.setTitleColor('#5555AA');/*especifica a cor do titulo*/
 	myChart.setTitleFontSize(15);/*especifica o tamanho da font do titulo*/
 	myChart.resize(310,300);/*Determina o tamanho em pixel melhor que o setSize().*/
@@ -2106,29 +2024,7 @@ A Abertura &eacute; muitas vezes apresentada como mais saud&aacute;vel ou mais m
 	myChart.setFontFamily("Arial");
 	myChart.draw();
 </script><!-- Final do Grafico 5 - Portugues -->
-<script type="text/javascript"><!-- Comeco do Grafico 5 - Ingles -->
-	var myData = new Array(["Imagination",20], ["Artistic interests",10], ["Intellect",30], ["Emotionality",10], ["Sense Adventurer",15], ["Liberalism",19]);
-	var myChart = new JSChart('grafico_abertura-us', 'pie');
-	var myColors = new Array('#C93', '#F90', '#333', '#999', '#900', "#909");/*Define as cores de cada parte do Grafico de Pizza*/
-	myChart.setDataArray(myData);
-	myChart.colorizePie(myColors);/*Seta as cores no grafico*/
-	//myChart.setBackgroundColor();/*usado para mudar a cor do plano de fundo do grafico*/
-	//myChart.setAxisNameX('Nome do Alunos');/*Usado para colocar uma descrição em baixo do grafico*/
-	//myChart.setAxisNameY('Valor do Grafico');/*Usado para colocar uma descrição no lado do grafico*/
-	//myChart.setSize(600,520);/*Usado para determina o tamanho do grafico Cumprimento x Altura*/
-	myChart.setPiePosition(140,170);//determina a posição do grafico
-	myChart.setPieRadius(75);//Aumenta o raio da pizza
-	myChart.setPieUnitsFontSize(10);//Determina o tamanho da fonte exterior ao grafico
-	myChart.setPieUnitsColor('#000');//Cor da fonte exterior ao grafico
-	//myChart.setPieValuesOffset(-20);//Posição do valor dentro grafico
-	myChart.setTitle('Distribution of Opening');/*Titulo para o grafico*/
-	myChart.setTitleColor('#5555AA');/*especifica a cor do titulo*/
-	myChart.setTitleFontSize(15);/*especifica o tamanho da font do titulo*/
-	myChart.resize(310,300);/*Determina o tamanho em pixel melhor que o setSize().*/
-	myChart.set3D(false);/*Define se o grafico eh em 3D ou não*/
-	myChart.setFontFamily("Arial");
-	myChart.draw();
-</script><!-- Final do Grafico 5 - Ingles --> 
+
 <!-- *********** Fim Grafico NEO-IPIP *********************** -->
 
 </body>

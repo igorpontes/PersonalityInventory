@@ -118,6 +118,10 @@ body{
 	font-size:16px; 
 	font-weight:bold;
 }
+#titulo-pergunta-tipi{
+	font-size:16px; 
+	font-weight:bold;
+}
 #navbar-header{
 	margin-left:2px; 
 	margin-right:2px; 
@@ -742,41 +746,6 @@ body{
 /* FINAL - PAGINA RECUPERAR - */
 
 
-/* @@@@@@@@@@@@@@@@@@@@@@@ */
-/* COMECO - PAGINA INSTRUÇÃO-NEO*/
-#instrução-neo{
-	position:relative;
-	margin: 0 auto;
-	width:100%; 
-	height:100%;	
-}
-#conteudo-instrução-neo{	
-	font-size:16px;
-}
-#rodape-instrução-neo{
-	height:45px;
-}
-/* FINAL - PAGINA INSTRUÇÃO-NEO*/
-/* @@@@@@@@@@@@@@@@@@@@@@@@ */
-
-
-/* @@@@@@@@@@@@@@@@@@@@@@@ */
-/* COMECO - PAGINA INSTRUÇÃO-TIPI*/
-#instrução-tipi{
-	position:relative;
-	margin: 0 auto;
-	width:100%; 
-	height:100%;	
-}
-#conteudo-instrução-tipi{	
-	font-size:16px;
-}
-#rodape-instrução-tipi{
-	height:45px;
-}
-/* FINAL - PAGINA INSTRUÇÃO-TIPI*/
-/* @@@@@@@@@@@@@@@@@@@@@@@@ */
-
 
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
 /* COMECO - PAGINA CADASTRO */
@@ -979,40 +948,6 @@ body{
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
 
 
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* COMECO - PAGINA QUESTIONARIO-NEO-IPIP*/
-#questionario-NEO-IPIP{
-	position:relative;
-	margin: 0 auto;
-	width:100%; 
-	height:100%;
-}
-#conteudo-questionario-neo{
-	font-size:16px;
-}
-#rodape-questionario-neo{
-	height:45px;
-}
-/* FINAL - PAGINA QUESTIONARIO-NEO-IPIP*/
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
-
-
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* COMECO - PAGINA QUESTIONARIO-TIPI*/
-#questionario-TIPI{
-	position:relative;
-	margin: 0 auto;
-	width:100%; 
-	height:100%;
-}
-#conteudo-questionario-tipi{
-	font-size:16px;
-}
-#rodape-questionario-tipi{
-	height:45px;
-}
-/* FINAL - PAGINA QUESTIONARIO-TIPI*/
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
 
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
 /* COMECO - PAGINA SOBRE OS 5 FATORES TIPI */
@@ -1062,37 +997,6 @@ body{
 	height:840px;
 }
 /* FINAL - PAGINA SOBRE OS 5 FATORES TIPI */
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
-
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* COMECO - PAGINA EXTROVERSÃO */
-#extroversão{
-	position:relative;
-	margin: 0 auto;
-	width:100%; 
-	height:100%;
-}
-#conteudo-extroversão{
-	font-size:16px;
-}
-/* FINAL - PAGINA EXTROVERSÃO*/
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
-
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* COMECO - PAGINA ABERTURA */
-#abertura{
-	position:relative;
-	margin: 0 auto;
-	width:100%; 
-	height:100%;
-}
-#conteudo-abertura{
-	font-size:16px;
-}
-#rodape-abertura{
-	height:45px;
-}
-/* FINAL - PAGINA EXTROVERSÃO*/
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
 
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@ */

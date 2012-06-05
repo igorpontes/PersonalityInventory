@@ -43,18 +43,24 @@ function populateDB(tx) {
 		"age INTEGER, " +
 		"language VARCHAR(10))";
     tx.executeSql(table_user);
-    var table_neo_ipip = 
-		"CREATE TABLE IF NOT EXISTS neo_ipip ( "+
+    var table_tipi = 
+		"CREATE TABLE IF NOT EXISTS tipi ( "+
 		"id INTEGER PRIMARY KEY AUTOINCREMENT, " +
 		"user_id VARCHAR(50), " +
 		"numOfQuestion INTEGER, " +
 		"q1 INTEGER, " +
 		"q2 INTEGER, " + 
 		"q3 INTEGER, " +
-		"q4 INTEGER)";
-    tx.executeSql(table_neo_ipip);
-    var table_tipi = 
-		"CREATE TABLE IF NOT EXISTS tipi ( "+
+		"q4 INTEGER, " +
+		"q5 INTEGER, " +
+		"q6 INTEGER, " +
+		"q7 INTEGER, " +
+		"q8 INTEGER, " +
+		"q9 INTEGER, " +
+		"q10 INTEGER)";
+    tx.executeSql(table_tipi);
+    var table_neo_ipip = 
+		"CREATE TABLE IF NOT EXISTS neo_ipip ( "+
 		"id INTEGER PRIMARY KEY AUTOINCREMENT, " +
 		"user_id VARCHAR(50), " +
 		"numOfQuestion INTEGER, " +
@@ -359,7 +365,7 @@ function populateDB(tx) {
 		"q299 INTEGER, " +
 		"q300 INTEGER )";
 
-    tx.executeSql(table_tipi);
+    tx.executeSql(table_neo_ipip);
 }
 
 function errorDB(tx, error) {
@@ -394,7 +400,7 @@ function getAuthorization(tx) {
             'OK'                  // buttonName
 		);
 	}else{
-		var sql = "select name, email " + 
+		var sql = "select id, name, email " + 
 				"from user where email='"+email+"' and password='"+pass+"'";
 		
 		tx.executeSql(sql, [], getAuthorizationSucess, errorDB);
@@ -403,9 +409,24 @@ function getAuthorization(tx) {
 		
 }
 
+var user_id = "";
+function getUserID(){
+	return this.user_id;	
+}
+
+function setUserID(id){
+	this.user_id = id;	
+}
+
 function getAuthorizationSucess(tx, results) {
 	var len = results.rows.length;
+	
+	
 	if(len >= 1){
+		var row = results.rows.item(0);
+		//this.user_id   = row['id'];
+		setUserID(row['id']);
+		//alert("user "+getUserID());
 		$.mobile.changePage($('#escolha-de-inventario'));
 	}else{
 		navigator.notification.alert(
@@ -420,9 +441,15 @@ function getAuthorizationSucess(tx, results) {
 	*/
 }
 
-function inserirQuestao(){
-	var cadastrar = "UPDATE tipi set " + q + pergunta + "=" + resposta;
-				
+
+function atualizarQuestao(teste, pergunta, resposta){
+	var atualizar = "UPDATE "+teste+" set q" + pergunta + " = " + resposta + ",numOfQuestion = "+pergunta+" where user_id = "+this.user_id;
+	return atualizar;		
+}
+
+function inserirQuestao(teste, pergunta, resposta){
+	var cadastrar = "insert into "+teste+" (user_id, numOfQuestion, q1) values ("+this.user_id+","+pergunta+", "+resposta+")";
+	return cadastrar;		
 }
 
 function subscribe(){
@@ -445,19 +472,24 @@ function getSubscribe(tx) {
 	var email = document.getElementById('text-email-cadastro').value;
 	var password = document.getElementById('text-senha-cadastro').value;
 	var repassword = document.getElementById('text-re_senha-cadastro').value;
-	var gender = document.getElementById('select_sexo');
+	var gender = document.getElementById('escolha-sexo');
 	var age = document.getElementById('text-idade').value;
 	var language = document.getElementById('select_idioma');
 	var accept = document.getElementById('select_aceita');
 	
+		
+	
 	var index_gender = gender.selectedIndex;
 	var index_lang = language.selectedIndex;
 	var index_accept = accept.selectedIndex;
-
+	
     gender = gender.options[index_gender].text;
 	language = language.options[index_lang].text;
 	accept = accept.options[index_accept].text;
 	
+	
+
+
 	if (password != repassword)
 	{
 		navigator.notification.alert(
@@ -495,7 +527,7 @@ function getSubscribe(tx) {
 
 
 function getSubscribeSucess() {
-	//alert("Usuário cadastrado com sucesso!");
+	alert("Usuário cadastrado com sucesso!");
 	$.mobile.changePage($('#inicio'));
 }
 
